@@ -281,8 +281,8 @@
 
 			<control type="label">
 				<include>DialogID</include>
-				<label>DialogSeekbar.xml</label>
-				<visible>Window.IsVisible(DialogSeekbar.xml)</visible>
+				<label>DialogSeekBar.xml</label>
+				<visible>Window.IsVisible(DialogSeekBar.xml)</visible>
 			</control>
 
 			<control type="label">

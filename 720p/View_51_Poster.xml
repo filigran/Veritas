@@ -27,7 +27,7 @@
             <visible>!IsEmpty(ListItem.Icon)</visible>
         </control>
 		<control type="fixedlist" id="51">
-			<posx>-97</posx>
+			<posx>-77</posx>
 			<posy>141</posy>
 			<width>1377</width>
 			<height>644</height>
@@ -42,17 +42,16 @@
 				<effect type="fade" start="100" end="50" time="200" />
 				<effect type="zoom" center="860,360" start="100" end="90" time="200" />
 			</animation>
-            <orientation>horizontal</orientation>
-            <focusposition>1</focusposition>
-			<itemlayout width="197" height="280">
+			<orientation>horizontal</orientation>
+      <focusposition>1</focusposition>
+			<itemlayout width="177" height="280">
                 <control type="group">
-                    <visible>!System.IdleTime(3)</visible>
-                    <animation effect="fade" start="100" end="0" time="500">Hidden</animation>
+                    <animation effect="fade" start="100" end="0" time="500" condition="System.IdleTime(3) + Control.HasFocus(51)">conditional</animation>
                     <control type="image">
                         <posx>-6</posx>
-                        <posy>17</posy>
-                        <width>201</width>
-                        <height>294</height>
+                        <posy>47</posy>
+                        <width>181</width>
+                        <height>264</height>
                         <fadetime>100</fadetime>
                         <aspectratio align="left" aligny="top">stretch</aspectratio>
                         <texture fallback="DefaultAddonNone.png">veritas/poster_outer_glow.png</texture>
@@ -60,9 +59,9 @@
                     </control>
                     <control type="image">
                         <posx>1</posx>
-                        <posy>24</posy>
-                        <width>187</width>
-                        <height>280</height>
+                        <posy>54</posy>
+                        <width>167</width>
+                        <height>250</height>
                         <fadetime>100</fadetime>
                         <aspectratio align="left" aligny="top">stretch</aspectratio>
                         <texture fallback="DefaultAddonNone.png">$INFO[ListItem.Icon]</texture>
@@ -71,8 +70,8 @@
                     <control type="image">
                         <posx>1</posx>
                         <posy>304</posy>
-                        <width>187</width>
-                        <height>280</height>
+                        <width>167</width>
+                        <height>250</height>
                         <fadetime>100</fadetime>
                         <aspectratio align="left" aligny="top">stretch</aspectratio>
                         <texture diffuse="veritas/poster_gradient.png" flipy="true" fallback="DefaultAddonNone.png">$INFO[ListItem.Icon]</texture>
@@ -126,7 +125,7 @@
             <control type="label">
                 <description>Movie info</description>
                 <posy>510</posy>
-                <width>600</width>
+                <width>1000</width>
                 <font>Light_Uppercase_19</font>
                 <textcolor>ffa1a1a1</textcolor>
                 <label>$INFO[ListItem.Year,, • ]$INFO[ListItem.Genre]$INFO[ListItem.Duration, • , min]</label>
