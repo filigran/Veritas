@@ -3,7 +3,6 @@
 <includes>
 
 	<include file="Defaults.xml" />
-	<include file="CommonViews.xml" />
 	<include file="View_50_List.xml" />
     <include file="View_51_Poster.xml" />
 
