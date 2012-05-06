@@ -16,16 +16,6 @@
             <colordiffuse>ff1774b5</colordiffuse>
             <visible>!IsEmpty(ListItem.Icon)</visible>
         </control>
-        <control type="image">
-            <posx>40</posx>
-            <posy>454</posy>
-            <width>298</width>
-            <height>22</height>
-            <fadetime>100</fadetime>
-            <aspectratio align="left" aligny="top">stretch</aspectratio>
-            <texture fallback="DefaultAddonNone.png">veritas/poster_shadow.png</texture>
-            <visible>!IsEmpty(ListItem.Icon)</visible>
-        </control>
 		<control type="fixedlist" id="51">
 			<posx>-77</posx>
 			<posy>141</posy>
@@ -48,10 +38,10 @@
                 <control type="group">
                     <animation effect="fade" start="100" end="0" time="500" condition="System.IdleTime(3) + Control.HasFocus(51)">conditional</animation>
                     <control type="image">
-                        <posx>-6</posx>
-                        <posy>47</posy>
-                        <width>181</width>
-                        <height>264</height>
+                        <posx>-5</posx>
+                        <posy>38</posy>
+                        <width>179</width>
+                        <height>262</height>
                         <fadetime>100</fadetime>
                         <aspectratio align="left" aligny="top">stretch</aspectratio>
                         <texture fallback="DefaultAddonNone.png">veritas/poster_outer_glow.png</texture>
@@ -59,17 +49,18 @@
                     </control>
                     <control type="image">
                         <posx>1</posx>
-                        <posy>54</posy>
+                        <posy>44</posy>
                         <width>167</width>
                         <height>250</height>
                         <fadetime>100</fadetime>
                         <aspectratio align="left" aligny="top">stretch</aspectratio>
                         <texture fallback="DefaultAddonNone.png">$INFO[ListItem.Icon]</texture>
+                        <colordiffuse>ff8f8f8f</colordiffuse>
                         <visible>!IsEmpty(ListItem.Icon)</visible>
                     </control>
                     <control type="image">
                         <posx>1</posx>
-                        <posy>304</posy>
+                        <posy>294</posy>
                         <width>167</width>
                         <height>250</height>
                         <fadetime>100</fadetime>
@@ -82,6 +73,17 @@
 			</itemlayout>
 
 			<focusedlayout width="202" height="316">
+                <control type="image">
+                    <posx>-62</posx>
+                    <posy>312</posy>
+                    <width>298</width>
+                    <height>22</height>
+                    <fadetime>100</fadetime>
+                    <aspectratio align="left" aligny="top">stretch</aspectratio>
+                    <texture fallback="DefaultAddonNone.png">veritas/poster_shadow.png</texture>
+                    <colordiffuse>ff000000</colordiffuse>
+                    <visible>!IsEmpty(ListItem.Icon)</visible>
+                </control>
                 <control type="image">
                     <posx>0</posx>
                     <posy>24</posy>
@@ -143,17 +145,17 @@
             </control>
         </control>
         <control type="scrollbar" id="60">
-			<posx>10</posx>
-			<posy>680</posy>
-            <width>1260</width>
-			<height>32</height>
+			<posx>20</posx>
+			<posy>700</posy>
+            <width>1240</width>
+			<height>5</height>
 			<onup>51</onup>
 			<ondown>9000</ondown>
 			<visible allowhiddenfocus="true">Control.HasFocus(60) | Container.Scrolling</visible>
 			<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(60) | Container.Scrolling">Conditional</animation>
-            <texturesliderbackground border="14,0,14,0">other_textures/ScrollBarH.png</texturesliderbackground>
-            <texturesliderbar border="14,0,14,0">other_textures/ScrollBarH_bar_focus.png</texturesliderbar>
-            <texturesliderbarfocus border="14,0,14,0">other_textures/ScrollBarH_bar_focus.png</texturesliderbarfocus>
+            <texturesliderbackground>veritas/scrollbar_h.png</texturesliderbackground>
+            <texturesliderbar>veritas/scrollbar_h_focus.png</texturesliderbar>
+            <texturesliderbarfocus>veritas/scrollbar_h_focus.png</texturesliderbarfocus>
             <textureslidernib>other_textures/ScrollBarNib.png</textureslidernib>
             <textureslidernibfocus>other_textures/ScrollBarNib.png</textureslidernibfocus>
             <showonepage>true</showonepage>
