@@ -128,7 +128,7 @@
 					<height>200</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[Container(50).ListItem.Icon]</texture>
-					<bordertexture border="5">other_textures/ButtonFo.png</bordertexture>
+					<bordertexture border="5">other_textures/ButtonFO.png</bordertexture>
 					<bordersize>8</bordersize>
 				</control>
 
@@ -152,7 +152,7 @@
 					<height>200</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[Container(100).ListItem.Icon]</texture>
-					<bordertexture border="5">other_textures/ButtonFo.png</bordertexture>
+					<bordertexture border="5">other_textures/ButtonFO.png</bordertexture>
 					<bordersize>8</bordersize>
 				</control>
 
