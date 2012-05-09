@@ -18,6 +18,11 @@
             <filename>Futura_Normal.ttf</filename>
             <size>19</size>
         </font>
+        <font>
+            <name>Normal_40</name>
+            <filename>Futura_Normal.ttf</filename>
+            <size>40</size>
+        </font>
 		<font>
 			<name>Home</name>
 			<filename>Arial.ttf</filename>
