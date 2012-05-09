@@ -55,7 +55,7 @@
 		<textcolor>White</textcolor>
 		<focusedcolor>White</focusedcolor>
 		<disabledcolor>Red</disabledcolor>
-		<texturefocus border="5">other_textures/ButtonFo.png</texturefocus>
+		<texturefocus border="5">other_textures/ButtonFO.png</texturefocus>
 		<texturenofocus border="2">other_textures/ButtonNF.png</texturenofocus>
 		<pulseonselect>false</pulseonselect>
 	</default>
@@ -72,9 +72,9 @@
 		<focusedcolor>White</focusedcolor>
 		<disabledcolor>Red</disabledcolor>
 		<texturenofocus border="2">other_textures/ButtonNF.png</texturenofocus>
-		<texturefocus border="5">other_textures/ButtonFo.png</texturefocus>
+		<texturefocus border="5">other_textures/ButtonFO.png</texturefocus>
 		<alttexturenofocus border="2">other_textures/ButtonNF.png</alttexturenofocus>
-		<alttexturefocus border="5">other_textures/ButtonFo.png</alttexturefocus>
+		<alttexturefocus border="5">other_textures/ButtonFO.png</alttexturefocus>
 		<align>center</align>
 		<aligny>center</aligny>
 		<pulseonselect>false</pulseonselect>
@@ -95,8 +95,8 @@
 		<radiowidth>30</radiowidth>
 		<radioheight>30</radioheight>
 		<texturenofocus border="2">other_textures/ButtonNF.png</texturenofocus>
-		<texturefocus border="5">other_textures/ButtonFo.png</texturefocus>
-		<textureradiofocus>other_textures/RadiobuttonFo.png</textureradiofocus>
+		<texturefocus border="5">other_textures/ButtonFO.png</texturefocus>
+		<textureradiofocus>other_textures/RadiobuttonFO.png</textureradiofocus>
 		<textureradionofocus>other_textures/RadiobuttonNF.png</textureradionofocus>
 		<textoffsetx>20</textoffsetx>
 		<pulseonselect>false</pulseonselect>
@@ -112,11 +112,11 @@
 		<spinwidth>26</spinwidth>
 		<spinheight>26</spinheight>
 		<texturenofocus border="2">other_textures/ButtonNF.png</texturenofocus>
-		<texturefocus border="5">other_textures/ButtonFo.png</texturefocus>
+		<texturefocus border="5">other_textures/ButtonFO.png</texturefocus>
 		<textureup>other_textures/ArrowUpNF.png</textureup>
 		<texturedown>other_textures/ArrowDownNF.png</texturedown>
-		<textureupfocus>other_textures/ArrowUpFo.png</textureupfocus>
-		<texturedownfocus>other_textures/ArrowDownFo.png</texturedownfocus>
+		<textureupfocus>other_textures/ArrowUpFO.png</textureupfocus>
+		<texturedownfocus>other_textures/ArrowDownFO.png</texturedownfocus>
 		<textcolor>White</textcolor>
 		<focusedcolor>White</focusedcolor>
 		<disabledcolor>Red</disabledcolor>
@@ -136,8 +136,8 @@
 		<spinheight>26</spinheight>
 		<textureup>other_textures/ArrowUpNF.png</textureup>
 		<texturedown>other_textures/ArrowDownNF.png</texturedown>
-		<textureupfocus>other_textures/ArrowUpFo.png</textureupfocus>
-		<texturedownfocus>other_textures/ArrowDownFo.png</texturedownfocus>
+		<textureupfocus>other_textures/ArrowUpFO.png</textureupfocus>
+		<texturedownfocus>other_textures/ArrowDownFO.png</texturedownfocus>
 		<font>Small</font>
 		<textcolor>White</textcolor>
 		<focusedcolor>White</focusedcolor>

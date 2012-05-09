@@ -15,7 +15,7 @@
 				<fadetime>200</fadetime>
 				<texture background="true">$INFO[VideoPlayer.Cover]</texture>
 				<aspectratio align="left" aligny="top">keep</aspectratio>
-				<bordertexture border="5">other_textures/ButtonFo.png</bordertexture>
+				<bordertexture border="5">other_textures/ButtonFO.png</bordertexture>
 				<bordersize>8</bordersize>
 				<visible>!VideoPlayer.Content(Movies)</visible>
 			</control>
@@ -29,7 +29,7 @@
 				<fadetime>200</fadetime>
 				<texture background="true">$INFO[VideoPlayer.Cover]</texture>
 				<aspectratio  align="left" aligny="top">keep</aspectratio>
-				<bordertexture border="5">other_textures/ButtonFo.png</bordertexture>
+				<bordertexture border="5">other_textures/ButtonFO.png</bordertexture>
 				<bordersize>8</bordersize>
 				<visible>VideoPlayer.Content(Movies)</visible>
 			</control>

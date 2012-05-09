@@ -135,7 +135,7 @@
 				<posy>320</posy>
 				<width>255</width>
 				<height>44</height>				
-				<texture border="5">other_textures/ButtonFo.png</texture>
+				<texture border="5">other_textures/ButtonFO.png</texture>
 				<visible>!ControlGroup(9000).HasFocus</visible>
 			</control>
 

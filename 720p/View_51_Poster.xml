@@ -109,6 +109,7 @@
                     <animation type="Conditional" condition="true">
                         <effect type="zoom" center="130,210" start="100" end="114" time="200" />
                     </animation>
+                    <colordiffuse>ffffffff</colordiffuse>
                 </control>
                 
 			</focusedlayout>

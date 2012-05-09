@@ -40,7 +40,7 @@
 				<control type="image">
 					<width>240</width>
 					<height>44</height>
-					<texture border="5">other_textures/ButtonFo.png</texture>
+					<texture border="5">other_textures/ButtonFO.png</texture>
 				</control>
 
 				<control type="label">
