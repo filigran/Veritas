@@ -117,21 +117,21 @@
 		</control>
         <control type="group">
             <posx>80</posx>
-            <control type="label">
-                <description>Movie title</description>
-                <posy>480</posy>
-                <width>1180</width>
-                <font>Light_Uppercase_36</font>
-                <textcolor>ffd3d3d3</textcolor>
-                <label>$INFO[ListItem.Label]</label>
-            </control>
-            <control type="label">
+			<control type="label">
+				<description>Movie title</description>
+				<posy>480</posy>
+				<width min="29" max="1050">auto</width>
+				<font>Light_Uppercase_36</font>
+				<textcolor>ffd3d3d3</textcolor>
+				<label>$INFO[ListItem.Label,, ]</label>
+			</control>
+		    <control type="label">
                 <description>Movie info</description>
                 <posy>510</posy>
                 <width>1000</width>
                 <font>Light_Uppercase_19</font>
                 <textcolor>ffa1a1a1</textcolor>
-                <label>$INFO[ListItem.Year,, • ]$INFO[ListItem.Genre]$INFO[ListItem.Duration, • , min]</label>
+                <label>$INFO[ListItem.Year,, • ]$INFO[ListItem.Genre]$INFO[ListItem.Duration, • , min]$INFO[ListItem.Rating, • ]</label>
             </control>
             <control type="textbox">
                 <description>Movie plot</description>
