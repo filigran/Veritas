@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
+<!-- Veritas -->
 <includes>
 
 	<include name="View_51_Poster">
@@ -109,7 +109,6 @@
                     <animation type="Conditional" condition="true">
                         <effect type="zoom" center="130,210" start="100" end="114" time="200" />
                     </animation>
-                    <colordiffuse>ffffffff</colordiffuse>
                 </control>
                 
 			</focusedlayout>
@@ -141,7 +140,7 @@
                 <font>Normal_19</font>
                 <textcolor>ffd3d3d3</textcolor>
                 <label>$INFO[ListItem.Plot]</label>
-                <autoscroll delay="10000" time="3500" repeat="10000">true</autoscroll>
+                <autoscroll delay="10000" time="4500" repeat="10000">true</autoscroll>
                 <visible>!IsEmpty(ListItem.Plot)</visible>
             </control>
         </control>
