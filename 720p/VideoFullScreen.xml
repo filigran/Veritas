@@ -34,12 +34,14 @@
 
 		<control type="label" id="24">
 			<description>buffering label</description>
-			<posx>0</posx>
-			<posy>350</posy>
-			<width>1280</width>
-			<label>$LOCALIZE[15107] $INFO[Player.CacheLevel]%</label>
-			<align>center</align>
-			<font>Large</font>
+			<posx>320</posx>
+            <posy>660</posy>
+            <width>640</width>
+            <height>30</height>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>Light_Uppercase_19</font>
+            <label>$LOCALIZE[15107] $INFO[Player.CacheLevel]%</label>
 		</control>
 
 	</controls>
