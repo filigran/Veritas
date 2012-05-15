@@ -1,0 +1,11 @@
+<includes>
+    <include name="Template_CenteredLabel">
+        <posx>340</posx>
+        <posy>0</posy>
+        <width>600</width>
+        <height>30</height>
+        <align>center</align>
+        <aligny>center</aligny>
+        <font>Light_Uppercase_19</font>
+    </include>
+</includes>

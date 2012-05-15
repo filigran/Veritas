@@ -1,10 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!-- Veritas -->
 <includes>
-
-	<include name="View_51_Poster">
-	
-		<description>Poster View (id=51)</description>
+    <include name="View_51_Poster">
+        <description>Poster View (id=51)</description>
         <control type="image">
             <posx>1</posx>
             <posy>324</posy>
@@ -16,25 +14,25 @@
             <colordiffuse>ff1774b5</colordiffuse>
             <visible>!IsEmpty(ListItem.Icon)</visible>
         </control>
-		<control type="fixedlist" id="51">
-			<posx>-77</posx>
-			<posy>141</posy>
-			<width>1377</width>
-			<height>644</height>
-			<onleft>51</onleft>
-			<onright>51</onright>
-			<onup>9000</onup>
-			<ondown>60</ondown>
-			<pagecontrol>60</pagecontrol>
-			<viewtype label="Poster">list</viewtype>
-			<scrolltime>200</scrolltime>
-			<animation type="Conditional" condition="ControlGroup(9000).HasFocus()">
-				<effect type="fade" start="100" end="50" time="200" />
-				<effect type="zoom" center="860,360" start="100" end="90" time="200" />
-			</animation>
-			<orientation>horizontal</orientation>
+        <control type="fixedlist" id="51">
+            <posx>-77</posx>
+            <posy>141</posy>
+            <width>1377</width>
+            <height>644</height>
+            <onleft>51</onleft>
+            <onright>51</onright>
+            <onup>9000</onup>
+            <ondown>60</ondown>
+            <pagecontrol>60</pagecontrol>
+            <viewtype label="Poster">list</viewtype>
+            <scrolltime>200</scrolltime>
+            <animation type="Conditional" condition="ControlGroup(9000).HasFocus()">
+                <effect type="fade" start="100" end="50" time="200" />
+                <effect type="zoom" center="860,360" start="100" end="90" time="200" />
+            </animation>
+            <orientation>horizontal</orientation>
             <focusposition>1</focusposition>
-			<itemlayout width="177" height="280">
+            <itemlayout width="177" height="280">
                 <control type="group">
                     <animation effect="fade" start="100" end="0" time="500" condition="System.IdleTime(3) + Control.HasFocus(51)">conditional</animation>
                     <control type="image">
@@ -70,9 +68,8 @@
                         <visible>!IsEmpty(ListItem.Icon)</visible>
                     </control>
                 </control>
-			</itemlayout>
-
-			<focusedlayout width="202" height="316">
+            </itemlayout>
+            <focusedlayout width="202" height="316">
                 <control type="image">
                     <posx>-62</posx>
                     <posy>312</posy>
@@ -110,27 +107,25 @@
                         <effect type="zoom" center="130,210" start="100" end="114" time="200" />
                     </animation>
                 </control>
-                
-			</focusedlayout>
-
-		</control>
+            </focusedlayout>
+        </control>
         <control type="group">
             <posx>80</posx>
-			<control type="label">
-				<description>Movie title</description>
-				<posy>480</posy>
-				<width min="29" max="1050">auto</width>
-				<font>Light_Uppercase_36</font>
-				<textcolor>ffd3d3d3</textcolor>
-				<label>$INFO[ListItem.Label,, ]</label>
-			</control>
-		    <control type="label">
+            <control type="label">
+                <description>Movie title</description>
+                <posy>480</posy>
+                <width min="29" max="1050">auto</width>
+                <font>Light_Uppercase_36</font>
+                <textcolor>ffd3d3d3</textcolor>
+                <label>$INFO[ListItem.Label,, ]</label>
+            </control>
+            <control type="label">
                 <description>Movie info</description>
                 <posy>510</posy>
                 <width>1000</width>
                 <font>Light_Uppercase_19</font>
                 <textcolor>ffa1a1a1</textcolor>
-                <label>$INFO[ListItem.Year,, • ]$INFO[ListItem.Genre]$INFO[ListItem.Duration, • , min]$INFO[ListItem.Rating, • ]</label>
+                <label>$INFO[ListItem.Year,, • ]$INFO[ListItem.Genre]$INFO[ListItem.Duration, • , min]$INFO[ListItem.Rating, • ]</label>  <!-- localize -->
             </control>
             <control type="textbox">
                 <description>Movie plot</description>
@@ -145,14 +140,14 @@
             </control>
         </control>
         <control type="scrollbar" id="60">
-			<posx>20</posx>
-			<posy>700</posy>
+            <posx>20</posx>
+            <posy>700</posy>
             <width>1240</width>
-			<height>5</height>
-			<onup>51</onup>
-			<ondown>9000</ondown>
-			<visible allowhiddenfocus="true">Control.HasFocus(60) | Container.Scrolling</visible>
-			<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(60) | Container.Scrolling">Conditional</animation>
+            <height>5</height>
+            <onup>51</onup>
+            <ondown>9000</ondown>
+            <visible allowhiddenfocus="true">Control.HasFocus(60) | Container.Scrolling</visible>
+            <animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(60) | Container.Scrolling">Conditional</animation>
             <texturesliderbackground>veritas/scrollbar_h.png</texturesliderbackground>
             <texturesliderbar>veritas/scrollbar_h_focus.png</texturesliderbar>
             <texturesliderbarfocus>veritas/scrollbar_h_focus.png</texturesliderbarfocus>
@@ -161,7 +156,5 @@
             <showonepage>true</showonepage>
             <orientation>horizontal</orientation>
         </control>
-
-	</include>
-
+    </include>
 </includes>

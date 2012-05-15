@@ -7,7 +7,30 @@
 	<controls>
 
 		<include>GlobalOverlay</include>
-
+<!--<control type="label">
+				<posx>320</posx>
+				<posy>0</posy>
+				<width>640</width>
+                <height>30</height>
+                <align>center</align>
+                <aligny>center</aligny>
+                <font>Light_Uppercase_19</font>
+				<label>$INFO[Player.Chapter,Chapter ]$INFO[Player.Chaptercount, / ] $INFO[Player.FinishTime,• End time:]</label>
+				<textcolor>ffa1a1a1</textcolor>
+                <visible>Player.ChapterCount + ![Player.Paused | Player.Forwarding | Player.Rewinding]</visible>
+			</control>
+			<control type="label">
+				<posx>320</posx>
+				<posy>0</posy>
+				<width>640</width>
+                <height>30</height>
+                <align>center</align>
+                <aligny>center</aligny>
+                <font>Light_Uppercase_19</font>
+				<label>$INFO[Player.FinishTime, End time:]</label>
+                <visible>!Player.ChapterCount + ![Player.Paused | Player.Forwarding | Player.Rewinding]</visible>
+			</control>
+	-->		
 		<control type="group">
 			<posx>200</posx>
 			<posy>80</posy>
