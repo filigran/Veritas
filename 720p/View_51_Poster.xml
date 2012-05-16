@@ -34,7 +34,7 @@
             <focusposition>1</focusposition>
             <itemlayout width="177" height="280">
                 <control type="group">
-                    <animation effect="fade" start="100" end="0" time="500" condition="System.IdleTime(3) + Control.HasFocus(51)">conditional</animation>
+                    <animation effect="fade" start="100" end="0" time="500" condition="[System.IdleTime(3) + Control.HasFocus(51)] | Window.IsVisible(2003)">conditional</animation>
                     <control type="image">
                         <posx>-5</posx>
                         <posy>38</posy>
@@ -70,42 +70,45 @@
                 </control>
             </itemlayout>
             <focusedlayout width="202" height="316">
-                <control type="image">
-                    <posx>-62</posx>
-                    <posy>312</posy>
-                    <width>298</width>
-                    <height>22</height>
-                    <fadetime>100</fadetime>
-                    <aspectratio align="left" aligny="top">stretch</aspectratio>
-                    <texture fallback="DefaultAddonNone.png">veritas/poster_shadow.png</texture>
-                    <colordiffuse>ff000000</colordiffuse>
-                    <visible>!IsEmpty(ListItem.Icon)</visible>
-                </control>
-                <control type="image">
-                    <posx>0</posx>
-                    <posy>24</posy>
-                    <width>187</width>
-                    <height>280</height>
-                    <fadetime>100</fadetime>
-                    <aspectratio align="center" aligny="top">stretch</aspectratio>
-                    <texture fallback="DefaultAddonNone.png">$INFO[ListItem.Icon]</texture>
-                    <visible>!IsEmpty(ListItem.Icon)</visible>
-                    <animation type="Conditional" condition="true">
-                        <effect type="zoom" center="130,210" start="100" end="114" time="200" />
-                    </animation>
-                </control>
-                <control type="image">
-                    <posx>-8</posx>
-                    <posy>16</posy>
-                    <width>203</width>
-                    <height>296</height>
-                    <fadetime>100</fadetime>
-                    <aspectratio align="center" aligny="top">stretch</aspectratio>
-                    <texture fallback="DefaultAddonNone.png">veritas/poster_frame.png</texture>
-                    <visible>!IsEmpty(ListItem.Icon)</visible>
-                    <animation type="Conditional" condition="true">
-                        <effect type="zoom" center="130,210" start="100" end="114" time="200" />
-                    </animation>
+                <control type="group">
+                    <visible>!Control.HasFocus(50)</visible>
+                    <control type="image">
+                        <posx>-62</posx>
+                        <posy>312</posy>
+                        <width>298</width>
+                        <height>22</height>
+                        <fadetime>100</fadetime>
+                        <aspectratio align="left" aligny="top">stretch</aspectratio>
+                        <texture fallback="DefaultAddonNone.png">veritas/poster_shadow.png</texture>
+                        <colordiffuse>ff000000</colordiffuse>
+                        <visible>!IsEmpty(ListItem.Icon)</visible>
+                    </control>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>24</posy>
+                        <width>187</width>
+                        <height>280</height>
+                        <fadetime>100</fadetime>
+                        <aspectratio align="center" aligny="top">stretch</aspectratio>
+                        <texture fallback="DefaultAddonNone.png">$INFO[ListItem.Icon]</texture>
+                        <visible>!IsEmpty(ListItem.Icon)</visible>
+                        <animation type="Conditional" condition="true">
+                            <effect type="zoom" center="130,210" start="100" end="114" time="200" />
+                        </animation>
+                    </control>
+                    <control type="image">
+                        <posx>-8</posx>
+                        <posy>16</posy>
+                        <width>203</width>
+                        <height>296</height>
+                        <fadetime>100</fadetime>
+                        <aspectratio align="center" aligny="top">stretch</aspectratio>
+                        <texture fallback="DefaultAddonNone.png">veritas/poster_frame.png</texture>
+                        <visible>!IsEmpty(ListItem.Icon)</visible>
+                        <animation type="Conditional" condition="true">
+                            <effect type="zoom" center="130,210" start="100" end="114" time="200" />
+                        </animation>
+                    </control>
                 </control>
             </focusedlayout>
         </control>
