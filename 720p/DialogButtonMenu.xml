@@ -43,10 +43,8 @@
 				<control type="button" id="3112">
 					<description>Master mode button</description>
 					<width>380</width>
-					<label>20046</label>
-					<altlabel>20045</altlabel>
-					<onclick>xbmc.mastermode</onclick>
-					<visible>System.HasLocks</visible>
+					<label>Inställningar</label>
+					<onclick>ActivateWindow(Settings)</onclick>
 				</control>
 
 				<control type="button" id="3113">
