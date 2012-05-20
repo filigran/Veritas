@@ -4,6 +4,23 @@
     <defaultcontrol always="true">9000</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
     <controls>
+        <control type="button" id="7050">
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onfocus>SendClick(MovieInformation,5)</onfocus>
+			<onfocus>SetFocus(9000)</onfocus>
+		</control>
+        <control type="button" id="7051">
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onfocus>SendClick(MovieInformation,5)</onfocus>
+			<onfocus>SetFocus(50)</onfocus>
+		</control>
+		<control type="button" id="5">
+			<label>-</label>
+			<font>-</font>
+			<onfocus>SetFocus(50)</onfocus>
+		</control>
         <control type="group">
             <posx>0</posx>
             <posy>0</posy>
@@ -49,6 +66,17 @@
                     </animation>
                 </control>
             </control>
+            <control type="label">
+				<posx>350</posx>
+				<posy>141</posy>
+				<width>540</width>
+				<height>230</height>
+				<align>left</align>
+				<font>Normal_19</font>
+                <textcolor>white</textcolor>
+				<label fallback="hej">$INFO[ListItem.CastAndRole]</label>
+                <visible>!Control.IsVisible(50)</visible>
+			</control>
             <control type="grouplist" id="9000">
                 <posx>350</posx>
                 <posy>420</posy>
@@ -57,28 +85,17 @@
                 <itemgap>2</itemgap>
                 <onleft>-</onleft>
                 <onright>-</onright>
-                <onup>50</onup>
+                <onup>7051</onup>
                 <ondown>-</ondown>
                 <orientation>horizontal</orientation>
-                <control type="button" id ="5">
-                    <description>Plot/Cast</description>
-                    <width>255</width>
-                    <texturefocus>-</texturefocus>
-                    <texturenofocus>-</texturenofocus>
-                    <focusedcolor>ff1774b5</focusedcolor>
-                    <disabledcolor>Red</disabledcolor>
-                    <font>Light_Uppercase_19</font>
-                    <label>hej</label>
-                    <altlabel>hej</altlabel>
-                </control>
                 <control type="button" id ="8">
                     <description>Play</description>
                     <width>255</width>
                     <texturefocus>-</texturefocus>
                     <texturenofocus>-</texturenofocus>
                     <focusedcolor>ff1774b5</focusedcolor>
-                    <disabledcolor>Red</disabledcolor>
-                    <font>Light_Uppercase_19</font>
+                    <disabledcolor>ffa1a1a1</disabledcolor>
+                    <font>Light_Uppercase_36</font>
                     <label>208</label>
                 </control>
                 <control type="button" id ="9">
@@ -87,9 +104,10 @@
                     <texturefocus>-</texturefocus>
                     <texturenofocus>-</texturenofocus>
                     <focusedcolor>ff1774b5</focusedcolor>
-                    <disabledcolor>Red</disabledcolor>
-                    <font>Light_Uppercase_19</font>
+                    <disabledcolor>ffa1a1a1</disabledcolor>
+                    <font>Light_Uppercase_36</font>
                     <label>13404</label>
+                    <visible>Listitem.IsResumable</visible>
                 </control>
                 <control type="button" id ="6">
                     <description>Refresh</description>
@@ -97,8 +115,8 @@
                     <texturefocus>-</texturefocus>
                     <texturenofocus>-</texturenofocus>
                     <focusedcolor>ff1774b5</focusedcolor>
-                    <disabledcolor>Red</disabledcolor>
-                    <font>Light_Uppercase_19</font>
+                    <disabledcolor>ffa1a1a1</disabledcolor>
+                    <font>Light_Uppercase_36</font>
                     <label>184</label>
                 </control>
                 <control type="button" id="11">
@@ -107,8 +125,8 @@
                     <texturefocus>-</texturefocus>
                     <texturenofocus>-</texturenofocus>
                     <focusedcolor>ff1774b5</focusedcolor>
-                    <disabledcolor>Red</disabledcolor>
-                    <font>Light_Uppercase_19</font>
+                    <disabledcolor>ffa1a1a1</disabledcolor>
+                    <font>Light_Uppercase_36</font>
                     <label>20410</label>
                 </control>
                 <control type="button" id ="10">
@@ -117,8 +135,8 @@
                     <texturefocus>-</texturefocus>
                     <texturenofocus>-</texturenofocus>
                     <focusedcolor>ff1774b5</focusedcolor>
-                    <disabledcolor>Red</disabledcolor>
-                    <font>Light_Uppercase_19</font>
+                    <disabledcolor>ffa1a1a1</disabledcolor>
+                    <font>Light_Uppercase_36</font>
                     <label>13405</label>
                 </control>
                 <control type="button" id="12">
@@ -128,8 +146,8 @@
                     <texturenofocus>-</texturenofocus>
                     <textcolor>White</textcolor>
                     <focusedcolor>ff1774b5</focusedcolor>
-                    <disabledcolor>Red</disabledcolor>
-                    <font>Light_Uppercase_19</font>
+                    <disabledcolor>ffa1a1a1</disabledcolor>
+                    <font>Light_Uppercase_36</font>
                     <label>20413</label>
                 </control>
             </control>
@@ -138,27 +156,30 @@
                 <posx>350</posx>
                 <posy>141</posy>
                 <width>580</width>
-                <height>276</height>
+                <height>230</height>
                 <onup>-</onup>
                 <ondown>-</ondown>
-                <onleft>9000</onleft>
-                <onright>9000</onright>
+                <onleft>7050</onleft>
+                <onright>7050</onright>
                 <orientation>vertical</orientation>
                 <scrolltime>200</scrolltime>
-
-                <itemlayout height="46">
+                <itemlayout height="23">
                     <control type="label">
-                        <posx>20</posx>
+                        <posx>0</posx>
+                        <posy>0</posy>
                         <width>540</width>
+                        <height>23</height>
                         <font>Normal_19</font>
                         <shadowcolor>black</shadowcolor>
                         <info>ListItem.Label</info>
                     </control>
                 </itemlayout>
-                <focusedlayout height="46">
+                <focusedlayout height="23">
                     <control type="label">
-                        <posx>20</posx>
+                        <posx>0</posx>
+                        <posy>0</posy>
                         <width>540</width>
+                        <height>23</height>
                         <textcolor>ff1774b5</textcolor>
                         <shadowcolor>black</shadowcolor>
                         <font>Normal_19</font>

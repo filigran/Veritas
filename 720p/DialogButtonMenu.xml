@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
-<window type="buttonMenu" id="111">
-	<defaultcontrol always="true">3110</defaultcontrol>
+<window type="buttonMenu" id="110">
+	<defaultcontrol always="true">410</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 
 	<controls>
-
-		<include>GlobalOverlay</include>
-
+        <control type="button" id="410">
+            <onfocus>Dialog.Close(movieinformation)</onfocus>
+            <onfocus>Dialog.Close(contextmenu)</onfocus>
+            <onfocus>SetFocus(3110)</onfocus>
+        </control>
+        <include>GlobalOverlay</include>
 		<control type="group">
 			<posx>440</posx>
 			<posy>140</posy>
-
 			<control type="image">
 				<posx>-20</posx>
 				<posy>-20</posy>
@@ -19,7 +21,6 @@
 				<height>496</height>
 				<texture border="22">other_textures/ContentPanel.png</texture>
 			</control>
-
 			<control type="grouplist" id="3110">
 				<posx>10</posx>
 				<posy>40</posy>
