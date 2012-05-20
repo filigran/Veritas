@@ -68,7 +68,8 @@
                     <focusedcolor>ff1774b5</focusedcolor>
                     <disabledcolor>Red</disabledcolor>
                     <font>Light_Uppercase_19</font>
-                    <label>206</label>
+                    <label>hej</label>
+                    <altlabel>hej</altlabel>
                 </control>
                 <control type="button" id ="8">
                     <description>Play</description>
