@@ -9,6 +9,11 @@
             <size>19</size>
         </font>
 		<font>
+            <name>Light_Uppercase_24</name>
+            <filename>Futura_Light_Uppercase.ttf</filename>
+            <size>30</size>
+        </font>
+        <font>
             <name>Light_Uppercase_36</name>
             <filename>Futura_Light_Uppercase.ttf</filename>
             <size>36</size>
