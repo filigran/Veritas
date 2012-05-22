@@ -121,6 +121,11 @@
                     <label>$LOCALIZE[15107] $INFO[Player.CacheLevel]%</label>  <!-- localize -->
                     <visible>[Player.Paused + Player.Caching] + !Player.Seeking</visible>
                 </control>
+                <control type="label">
+                    <include>Template_CenteredLabel</include>
+                    <label>Seeking $INFO[Player.SeekOffset]</label>  <!-- localize -->
+                    <visible>Player.DisplayAfterSeek</visible>
+                </control>
             </control>
             <control type="label">
                 <posx>1260</posx>
@@ -130,7 +135,7 @@
                 <align>right</align>
                 <aligny>center</aligny>
                 <font>Light_Uppercase_19</font>
-                <label>$INFO[Player.Duration] $INFO[Player.FinishTime,(End time: ,)]</label>  <!-- localize -->
+                <label>$INFO[Player.FinishTime,(End time: ,)] $INFO[Player.Duration]</label>  <!-- localize -->
             </control>
         </control>
     </controls>
