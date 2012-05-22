@@ -3,24 +3,27 @@
 <window id="2003">
     <defaultcontrol always="true">9000</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
+    <animation effect="fade" start="0" end="100" time="500">WindowOpen</animation>>
     <controls>
         <control type="button" id="7050">
-			<texturefocus>-</texturefocus>
-			<texturenofocus>-</texturenofocus>
-			<onfocus>SendClick(MovieInformation,5)</onfocus>
-			<onfocus>SetFocus(9000)</onfocus>
-		</control>
+            <texturefocus>-</texturefocus>
+            <texturenofocus>-</texturenofocus>
+            <onfocus>SendClick(MovieInformation,5)</onfocus>
+            <onfocus>SetFocus(9000)</onfocus>
+        </control>
         <control type="button" id="7051">
-			<texturefocus>-</texturefocus>
-			<texturenofocus>-</texturenofocus>
-			<onfocus>SendClick(MovieInformation,5)</onfocus>
-			<onfocus>SetFocus(50)</onfocus>
-		</control>
-		<control type="button" id="5">
-			<label>-</label>
-			<font>-</font>
-			<onfocus>SetFocus(50)</onfocus>
-		</control>
+            <texturefocus>-</texturefocus>
+            <texturenofocus>-</texturenofocus>
+            <onfocus>SendClick(MovieInformation,5)</onfocus>
+            <onfocus>SetFocus(50)</onfocus>
+        </control>
+        <control type="button" id="5">
+            <texturefocus>-</texturefocus>
+            <texturenofocus>-</texturenofocus>
+            <label>-</label>
+            <font>-</font>
+            <onfocus>SetFocus(50)</onfocus>
+        </control>
         <control type="group">
             <posx>0</posx>
             <posy>0</posy>
@@ -69,15 +72,15 @@
             </control>
             <control type="label">
                 <description>Director label</description>
-				<posx>343</posx>
-				<posy>141</posy>
-				<width>540</width>
-				<height>20</height>
-				<align>left</align>
+                <posx>343</posx>
+                <posy>141</posy>
+                <width>110</width>
+                <height>20</height>
+                <align>left</align>
                 <aligny>top</aligny>
-				<font>Light_Uppercase_19</font>
+                <font>Light_Uppercase_19</font>
                 <textcolor>ffb2b2b2</textcolor>
-				<label>Directed by</label>
+                <label>Directed by</label>
             </control>
             <control type="image">
                 <description>Divider #1</description>
@@ -91,15 +94,15 @@
             </control>
             <control type="label">
                 <description>Writer label</description>
-				<posx>343</posx>
-				<posy>176</posy>
-				<width>540</width>
-				<height>20</height>
-				<align>left</align>
+                <posx>343</posx>
+                <posy>176</posy>
+                <width>110</width>
+                <height>20</height>
+                <align>left</align>
                 <aligny>top</aligny>
-				<font>Light_Uppercase_19</font>
+                <font>Light_Uppercase_19</font>
                 <textcolor>ffb2b2b2</textcolor>
-				<label>Written by</label>
+                <label>Written by</label>
             </control>
             <control type="image">
                 <description>Divider #2</description>
@@ -113,15 +116,15 @@
             </control>
             <control type="label">
                 <description>Path label</description>
-				<posx>343</posx>
-				<posy>211</posy>
-				<width>540</width>
-				<height>20</height>
-				<align>left</align>
+                <posx>343</posx>
+                <posy>211</posy>
+                <width>110</width>
+                <height>20</height>
+                <align>left</align>
                 <aligny>top</aligny>
-				<font>Light_Uppercase_19</font>
+                <font>Light_Uppercase_19</font>
                 <textcolor>ffb2b2b2</textcolor>
-				<label>Path</label>
+                <label>Path</label>
             </control>
             <control type="image">
                 <description>Divider #3</description>
@@ -135,66 +138,66 @@
             </control>
             <control type="label">
                 <description>Cast label</description>
-				<posx>343</posx>
-				<posy>246</posy>
-				<width>540</width>
-				<height>20</height>
-				<align>left</align>
+                <posx>343</posx>
+                <posy>246</posy>
+                <width>110</width>
+                <height>20</height>
+                <align>left</align>
                 <aligny>top</aligny>
-				<font>Light_Uppercase_19</font>
+                <font>Light_Uppercase_19</font>
                 <textcolor>ffb2b2b2</textcolor>
-				<label>Starring</label>
+                <label>Starring</label>
             </control>
             <control type="label">
                 <description>Director info</description>
-				<posx>498</posx>
-				<posy>141</posy>
-				<width>540</width>
-				<height>100</height>
-				<align>left</align>
+                <posx>498</posx>
+                <posy>141</posy>
+                <width>700</width>
+                <height>100</height>
+                <align>left</align>
                 <aligny>top</aligny>
-				<font>Light_Uppercase_19</font>
+                <font>Light_Uppercase_19</font>
                 <textcolor>white</textcolor>
-				<label fallback="N/A">$INFO[ListItem.Director]</label>
+                <label fallback="N/A">$INFO[ListItem.Director]</label>
             </control>
             <control type="label">
                 <description>Writer info</description>
-				<posx>498</posx>
-				<posy>176</posy>
-				<width>540</width>
-				<height>100</height>
-				<align>left</align>
+                <posx>498</posx>
+                <posy>176</posy>
+                <width>700</width>
+                <height>100</height>
+                <align>left</align>
                 <aligny>top</aligny>
-				<font>Light_Uppercase_19</font>
+                <font>Light_Uppercase_19</font>
                 <textcolor>white</textcolor>
-				<label fallback="N/A">$INFO[ListItem.Writer]</label>
+                <label fallback="N/A">$INFO[ListItem.Writer]</label>
             </control>
             <control type="fadelabel">
                 <description>Path info</description>
-				<posx>498</posx>
-				<posy>211</posy>
-				<width>540</width>
-				<height>100</height>
-				<align>left</align>
+                <posx>498</posx>
+                <posy>211</posy>
+                <width>700</width>
+                <height>100</height>
+                <align>left</align>
                 <aligny>top</aligny>
-				<font>Light_Uppercase_19</font>
+                <font>Light_Uppercase_19</font>
                 <textcolor>white</textcolor>
                 <pauseatend>5000</pauseatend>
                 <label fallback="N/A">$INFO[ListItem.Path]</label>
             </control>
             <control type="label">
                 <description>Cast info</description>
-				<posx>498</posx>
-				<posy>246</posy>
-				<width>540</width>
-				<height>100</height>
-				<align>left</align>
+                <posx>498</posx>
+                <posy>246</posy>
+                <width>700</width>
+                <height>100</height>
+                <align>left</align>
                 <aligny>top</aligny>
-				<font>Light_Uppercase_19</font>
+                <font>Light_Uppercase_19</font>
                 <textcolor>white</textcolor>
-				<label fallback="N/A">$INFO[ListItem.CastAndRole]</label>
+                <label fallback="N/A">$INFO[ListItem.CastAndRole]</label>
                 <visible>!Control.IsVisible(50)</visible>
-			</control>
+            </control>
             <control type="grouplist" id="9000">
                 <posx>343</posx>
                 <posy>420</posy>
@@ -217,7 +220,7 @@
                     <label>208</label>
                     <align>left</align>
                     <aligny>top</aligny>
-				</control>
+                </control>
                 <control type="button" id ="9">
                     <description>Resume</description>
                     <width>200</width>
@@ -285,7 +288,7 @@
                 <description>Cast</description>
                 <posx>498</posx>
                 <posy>245</posy>
-                <width>540</width>
+                <width>700</width>
                 <height>115</height>
                 <onup>-</onup>
                 <ondown>-</ondown>
@@ -297,9 +300,11 @@
                     <control type="label">
                         <posx>0</posx>
                         <posy>0</posy>
-                        <width>540</width>
+                        <width>700</width>
                         <height>23</height>
                         <font>Light_Uppercase_19</font>
+                        <aligny>top</aligny>
+                        <align>left</align>
                         <shadowcolor>black</shadowcolor>
                         <label fallback="N/A">$INFO[ListItem.Label]</label>
                     </control>
@@ -308,8 +313,10 @@
                     <control type="label">
                         <posx>0</posx>
                         <posy>0</posy>
-                        <width>540</width>
+                        <width>700</width>
                         <height>23</height>
+                        <aligny>top</aligny>
+                        <align>left</align>
                         <textcolor>ff1774b5</textcolor>
                         <shadowcolor>black</shadowcolor>
                         <font>Light_Uppercase_19</font>
