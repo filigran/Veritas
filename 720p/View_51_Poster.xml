@@ -4,7 +4,7 @@
     <include name="View_51_Poster">
         <description>Poster View (id=51)</description>
         <control type="image">
-            <posx>1</posx>
+            <posx>175</posx>
             <posy>324</posy>
             <width>403</width>
             <height>252</height>
@@ -12,7 +12,6 @@
             <aspectratio align="left" aligny="top">stretch</aspectratio>
             <texture fallback="DefaultAddonNone.png">veritas/poster_glow.png</texture>
             <colordiffuse>ff1774b5</colordiffuse>
-            <visible>!IsEmpty(ListItem.Icon)</visible>
         </control>
         <control type="fixedlist" id="51">
             <posx>-77</posx>
@@ -31,7 +30,7 @@
                 <effect type="zoom" center="860,360" start="100" end="90" time="200" />
             </animation>
             <orientation>horizontal</orientation>
-            <focusposition>1</focusposition>
+            <focusposition>2</focusposition>
             <itemlayout width="177" height="280">
                 <control type="group">
                     <animation effect="fade" start="100" end="0" time="500" condition="[System.IdleTime(3) + Control.HasFocus(51)] | Window.IsVisible(2003)">conditional</animation>
@@ -43,7 +42,6 @@
                         <fadetime>100</fadetime>
                         <aspectratio align="left" aligny="top">stretch</aspectratio>
                         <texture fallback="DefaultAddonNone.png">veritas/poster_outer_glow.png</texture>
-                        <visible>!IsEmpty(ListItem.Icon)</visible>
                     </control>
                     <control type="image">
                         <posx>1</posx>
@@ -54,7 +52,6 @@
                         <aspectratio align="left" aligny="top">stretch</aspectratio>
                         <texture fallback="DefaultAddonNone.png">$INFO[ListItem.Icon]</texture>
                         <colordiffuse>ff8f8f8f</colordiffuse>
-                        <visible>!IsEmpty(ListItem.Icon)</visible>
                     </control>
                     <control type="image">
                         <posx>1</posx>
@@ -65,7 +62,6 @@
                         <aspectratio align="left" aligny="top">stretch</aspectratio>
                         <texture diffuse="veritas/poster_gradient.png" flipy="true" fallback="DefaultAddonNone.png">$INFO[ListItem.Icon]</texture>
                         <colordiffuse>22ffffff</colordiffuse>
-                        <visible>!IsEmpty(ListItem.Icon)</visible>
                     </control>
                 </control>
             </itemlayout>
@@ -81,7 +77,6 @@
                         <aspectratio align="left" aligny="top">stretch</aspectratio>
                         <texture fallback="DefaultAddonNone.png">veritas/poster_shadow.png</texture>
                         <colordiffuse>ff000000</colordiffuse>
-                        <visible>!IsEmpty(ListItem.Icon)</visible>
                     </control>
                     <control type="image">
                         <posx>0</posx>
@@ -91,7 +86,6 @@
                         <fadetime>100</fadetime>
                         <aspectratio align="center" aligny="top">stretch</aspectratio>
                         <texture fallback="DefaultAddonNone.png">$INFO[ListItem.Icon]</texture>
-                        <visible>!IsEmpty(ListItem.Icon)</visible>
                         <animation type="Conditional" condition="true">
                             <effect type="zoom" center="130,210" start="100" end="114" time="200" />
                         </animation>
@@ -104,7 +98,6 @@
                         <fadetime>100</fadetime>
                         <aspectratio align="center" aligny="top">stretch</aspectratio>
                         <texture fallback="DefaultAddonNone.png">veritas/poster_frame.png</texture>
-                        <visible>!IsEmpty(ListItem.Icon)</visible>
                         <animation type="Conditional" condition="true">
                             <effect type="zoom" center="130,210" start="100" end="114" time="200" />
                         </animation>
@@ -113,11 +106,11 @@
             </focusedlayout>
         </control>
         <control type="group">
-            <posx>80</posx>
+            <posx>260</posx>
             <control type="label">
                 <description>Movie title</description>
                 <posy>480</posy>
-                <width min="29" max="1050">auto</width>
+                <width>900</width>
                 <font>Light_Uppercase_36</font>
                 <textcolor>ffd3d3d3</textcolor>
                 <label>$INFO[ListItem.Label,, ]</label>
@@ -125,7 +118,7 @@
             <control type="label">
                 <description>Movie info</description>
                 <posy>510</posy>
-                <width>1000</width>
+                <width>900</width>
                 <font>Light_Uppercase_19</font>
                 <textcolor>ffa1a1a1</textcolor>
                 <label>$INFO[ListItem.Year,, • ]$INFO[ListItem.Genre]$INFO[ListItem.Duration, • , min]$INFO[ListItem.Rating, • ]</label>  <!-- localize -->
