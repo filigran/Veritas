@@ -121,14 +121,14 @@
                 <width>900</width>
                 <font>Light_Uppercase_19</font>
                 <textcolor>ffa1a1a1</textcolor>
-                <label>$INFO[ListItem.Year,, • ]$INFO[ListItem.Genre]$INFO[ListItem.Duration, • , min]$INFO[ListItem.Rating, • ]</label>  <!-- localize -->
+                <label>$INFO[ListItem.Year]$INFO[ListItem.Genre, • ]$INFO[ListItem.Duration, • , min]$INFO[ListItem.Rating, • ]</label>  <!-- localize -->
             </control>
             <control type="textbox">
                 <description>Movie plot</description>
                 <posy>560</posy>
-                <width>700</width>
+                <width>800</width>
                 <height>118</height>
-                <font>Normal_19</font>
+                <font>Normal_24</font>
                 <textcolor>ffd3d3d3</textcolor>
                 <label>$INFO[ListItem.Plot]</label>
                 <autoscroll delay="10000" time="4500" repeat="10000">true</autoscroll>
