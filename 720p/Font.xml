@@ -18,6 +18,11 @@
             <size>36</size>
         </font>
         <font>
+            <name>Normal_19</name>
+            <filename>Futura_Normal.ttf</filename>
+            <size>19</size>
+        </font>
+        <font>
             <name>Normal_24</name>
             <filename>Futura_Normal.ttf</filename>
             <size>24</size>
