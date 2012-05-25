@@ -14,7 +14,7 @@
                 <width>1280</width>
                 <height>30</height>
                 <texture>veritas/white.png</texture>
-                <colordiffuse>cc222222</colordiffuse>
+                <colordiffuse>aa000000</colordiffuse>
             </control>
             <control type="progress">
                 <description>Progress Bar</description>
@@ -67,7 +67,6 @@
                 <height>30</height>
                 <align>left</align>
                 <aligny>center</aligny>
-                <textcolor>ffb2b2b2</textcolor>
                 <font>Light_Uppercase_19</font>
                 <label>$INFO[Player.TimeRemaining,Remaining: ]</label> <!-- localize -->
             </control>
@@ -149,7 +148,6 @@
                 <align>right</align>
                 <aligny>center</aligny>
                 <font>Light_Uppercase_19</font>
-                <textcolor>ffb2b2b2</textcolor>
                 <label>$INFO[Player.FinishTime,End time: ]</label>  <!-- localize -->
             </control>
             <control type="label">
