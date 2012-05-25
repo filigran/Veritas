@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Veritas -->
+<window id="115">
+    <defaultcontrol always="true">901</defaultcontrol>
+    <allowoverlay>yes</allowoverlay>
+    <visible>[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsVisible(FullScreenInfo)]</visible>
+    <controls>
+        <control type="group">
+            <posx>0</posx>
+            <posy>690</posy>
+            <control type="image">
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>1280</width>
+                <height>30</height>
+                <texture>veritas/white.png</texture>
+                <colordiffuse>cc222222</colordiffuse>
+            </control>
+            <control type="progress">
+                <description>Progress Bar</description>
+                <posx>0</posx>
+                <posy>-4</posy>
+                <width>1300</width>
+                <height>30</height>
+                <info>Player.Progress</info>
+                <reveal>false</reveal>
+                <texturebg>-</texturebg>
+                <lefttexture>-</lefttexture>
+                <midtexture border="15">veritas/white.png</midtexture>
+                <righttexture>-</righttexture>
+                <overlaytexture></overlaytexture>
+                <colordiffuse>ff1774b5</colordiffuse>
+                <visible>true</visible>
+            </control>
+            <control type="progress">
+                <description>Cache Bar</description>
+                <posx>0</posx>
+                <posy>-4</posy>
+                <width>1300</width>
+                <height>30</height>
+                <info>Player.ProgressCache</info>
+                <reveal>false</reveal>
+                <texturebg>-</texturebg>
+                <lefttexture>-</lefttexture>
+                <midtexture border="15">veritas/white.png</midtexture>
+                <righttexture>-</righttexture>
+                <overlaytexture></overlaytexture>
+                <colordiffuse>221774b5</colordiffuse>
+                <visible>true</visible>
+            </control>
+            <control type="label">
+                <description>Elapsed time label</description>
+                <posx>20</posx>
+                <posy>0</posy>
+                <width>100</width>
+                <height>30</height>
+                <align>left</align>
+                <aligny>center</aligny>
+                <font>Normal_19</font>
+                <label>$INFO[Player.Time]</label>
+            </control>
+            <control type="label">
+                <description>Remaining time label</description>
+                <posx>120</posx>
+                <posy>0</posy>
+                <width>350</width>
+                <height>30</height>
+                <align>left</align>
+                <aligny>center</aligny>
+                <textcolor>ffb2b2b2</textcolor>
+                <font>Light_Uppercase_19</font>
+                <label>$INFO[Player.TimeRemaining,Remaining: ]</label> <!-- localize -->
+            </control>
+            <control type="group">
+                <description>Center labels (ff, rew, paused, buffering)</description>
+                <control type="label">
+                    <include>Template_CenteredLabel</include>
+                    <label>Paused</label>  <!-- localize -->
+                    <visible>[Player.Paused + !Player.Caching] + !Player.Seeking + !Player.DisplayAfterSeek</visible>
+                </control>
+                <control type="label">
+                    <include>Template_CenteredLabel</include>
+                    <label>Rewind (2x)</label>  <!-- localize -->
+                    <visible>Player.Rewinding2x</visible>
+                </control>
+                <control type="label">
+                    <include>Template_CenteredLabel</include>
+                    <label>Rewind (4x)</label>  <!-- localize -->
+                    <visible>Player.Rewinding4x</visible>
+                </control>
+                <control type="label">
+                    <include>Template_CenteredLabel</include>
+                    <label>Rewind (8x)</label>  <!-- localize -->
+                    <visible>Player.Rewinding8x</visible>
+                </control>
+                <control type="label">
+                    <include>Template_CenteredLabel</include>
+                    <label>Rewind (16x)</label>  <!-- localize -->
+                    <visible>Player.Rewinding16x</visible>
+                </control>
+                <control type="label">
+                    <include>Template_CenteredLabel</include>
+                    <label>Rewind (32x)</label>  <!-- localize -->
+                    <visible>Player.Rewinding32x</visible>
+                </control>
+                <control type="label">
+                    <include>Template_CenteredLabel</include>
+                    <label>Fast-forwarding (2x)</label>  <!-- localize -->
+                    <visible>Player.Forwarding2x</visible>
+                </control>
+                <control type="label">
+                    <include>Template_CenteredLabel</include>
+                    <label>Fast-forward (4x)</label>  <!-- localize -->
+                    <visible>Player.Forwarding4x</visible>
+                </control>
+                <control type="label">
+                    <include>Template_CenteredLabel</include>
+                    <label>Fast-forward (8x)</label>  <!-- localize -->
+                    <visible>Player.Forwarding8x</visible>
+                </control>
+                <control type="label">
+                    <include>Template_CenteredLabel</include>
+                    <label>Fast-foward (16x)</label>  <!-- localize -->
+                    <visible>Player.Forwarding16x</visible>
+                </control>
+                <control type="label">
+                    <include>Template_CenteredLabel</include>
+                    <label>Fast-forward (32x)</label>  <!-- localize -->
+                    <visible>Player.Forwarding32x</visible>
+                </control>
+                <control type="label">
+                    <description>Cache label</description>
+                    <include>Template_CenteredLabel</include>
+                    <label>$LOCALIZE[15107] $INFO[Player.CacheLevel]%</label>  <!-- localize -->
+                    <visible>[Player.Paused + Player.Caching] + !Player.Seeking</visible>
+                </control>
+                <control type="label">
+                    <include>Template_CenteredLabel</include>
+                    <label>Seeking $INFO[Player.SeekOffset]</label>  <!-- localize -->
+                    <visible>Player.DisplayAfterSeek + ![Player.Forwarding | Player.Rewinding]</visible>
+                </control>
+            </control>
+            <control type="label">
+                <description>End time</description>
+                <posx>120r</posx>
+                <posy>0</posy>
+                <width>350</width>
+                <height>30</height>
+                <align>right</align>
+                <aligny>center</aligny>
+                <font>Light_Uppercase_19</font>
+                <textcolor>ffb2b2b2</textcolor>
+                <label>$INFO[Player.FinishTime,End time: ]</label>  <!-- localize -->
+            </control>
+            <control type="label">
+                <description>Running time</description>
+                <posx>20r</posx>
+                <posy>0</posy>
+                <width>100</width>
+                <height>30</height>
+                <align>right</align>
+                <aligny>center</aligny>
+                <font>Normal_19</font>
+                <label>$INFO[Player.Duration]</label>
+            </control>
+        </control>
+    </controls>
+</window>
