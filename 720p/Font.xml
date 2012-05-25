@@ -2,7 +2,6 @@
 <!-- Foundation -->
 <fonts>
     <fontset id="default" unicode="true">
-
         <font>
             <name>Light_Uppercase_19</name>
             <filename>Futura_Light_Uppercase.ttf</filename>
@@ -33,31 +32,26 @@
             <filename>Arial.ttf</filename>
             <size>64</size>
         </font>
-       
         <font>
             <name>Large</name>
             <filename>Arial.ttf</filename>
             <size>32</size>
         </font>
-        
         <font>
             <name>Medium</name>
             <filename>Arial.ttf</filename>
             <size>26</size>
         </font>
-        
         <font>
             <name>Small</name>
             <filename>Arial.ttf</filename>
             <size>20</size>
         </font>
-
         <!-- Required for system -->
         <font>
             <name>font13</name>
             <filename>Arial.ttf</filename>
             <size>20</size>
         </font>
-
     </fontset>
 </fonts>
