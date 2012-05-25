@@ -2,141 +2,226 @@
 <!-- Veritas -->
 <window type="dialog" id="142">
     <defaultcontrol always="true">603</defaultcontrol>
+    <animation effect="fade" start="0" end="100" time="500">WindowOpen</animation>>
+    <animation effect="fade" start="100" end="0" time="500">WindowClose</animation>>
     <controls>
-<!--<control type="label">
-                <posx>320</posx>
-                <posy>0</posy>
-                <width>640</width>
-                <height>30</height>
-                <align>center</align>
-                <aligny>center</aligny>
-                <font>Light_Uppercase_19</font>
-                <label>$INFO[Player.Chapter,Chapter ]$INFO[Player.Chaptercount, / ] $INFO[Player.FinishTime,• End time:]</label>
-                <textcolor>ffa1a1a1</textcolor>
-                <visible>Player.ChapterCount + ![Player.Paused | Player.Forwarding | Player.Rewinding]</visible>
-            </control>
-            <control type="label">
-                <posx>320</posx>
-                <posy>0</posy>
-                <width>640</width>
-                <height>30</height>
-                <align>center</align>
-                <aligny>center</aligny>
-                <font>Light_Uppercase_19</font>
-                <label>$INFO[Player.FinishTime, End time:]</label>
-                <visible>!Player.ChapterCount + ![Player.Paused | Player.Forwarding | Player.Rewinding]</visible>
-            </control>
-    -->     
-
-        <control type="group">
-
-            <control type="image">
-                <description>Non Movie cover image</description>
-                <posx>30</posx>
-                <posy>30</posy>
-                <width>340</width>
-                <height>260</height>
-                <fadetime>200</fadetime>
-                <texture background="true">$INFO[VideoPlayer.Cover]</texture>
-                <aspectratio align="left" aligny="top">keep</aspectratio>
-                <bordertexture border="5">other_textures/ButtonFO.png</bordertexture>
-                <bordersize>8</bordersize>
-                <visible>!VideoPlayer.Content(Movies)</visible>
-            </control>
-
-            <control type="image">
-                <description>Movie cover image</description>
-                <posx>30</posx>
-                <posy>30</posy>
-                <width>340</width>
-                <height>320</height>
-                <fadetime>200</fadetime>
-                <texture background="true">$INFO[VideoPlayer.Cover]</texture>
-                <aspectratio  align="left" aligny="top">keep</aspectratio>
-                <bordertexture border="5">other_textures/ButtonFO.png</bordertexture>
-                <bordersize>8</bordersize>
-                <visible>VideoPlayer.Content(Movies)</visible>
-            </control>
-
-            <control type="label">
-                <description>Chapter Count</description>
-                <posx>30</posx>
-                <posy>576</posy>
-                <width>300</width>
-                <label>$INFO[Player.Chapter,[COLOR=blue]$LOCALIZE[21396]:[/COLOR] ]$INFO[Player.ChapterCount, / ]</label>
-                <align>left</align>
-                <font>Medium</font>
-                <shadowcolor>black</shadowcolor>
-                <visible>Player.ChapterCount</visible>
-                <animation effect="slide" end="0,34" condition="!VideoPlayer.Content(Episodes) + !VideoPlayer.Content(MusicVideos)">Conditional</animation>
-            </control>
-
-            <control type="label">
-                <posx>30</posx>
-                <posy>610</posy>
-                <width>880</width>
-                <label>$INFO[VideoPlayer.TVShowTitle] - ($INFO[VideoPlayer.Season]$INFO[VideoPlayer.Episode,x])</label>
-                <align>left</align>
-                <font>Medium</font>
-                <shadowcolor>black</shadowcolor>
-                <visible>VideoPlayer.Content(Episodes)</visible>
-            </control>
-
-            <control type="label">
-                <posx>30</posx>
-                <posy>610</posy>
-                <width>880</width>
-                <label>$INFO[VideoPlayer.Artist]$INFO[VideoPlayer.Album, - ]</label>
-                <align>left</align>
-                <font>Medium</font>
-                <shadowcolor>black</shadowcolor>
-                <visible>VideoPlayer.Content(MusicVideos)</visible>
-            </control>
-
-            <control type="label">
-                <posx>30</posx>
-                <posy>644</posy>
-                <width>880</width>
-                <label>$INFO[VideoPlayer.Title]</label>
-                <scroll>true</scroll>
-                <align>left</align>
-                <font>Medium</font>
-                <shadowcolor>black</shadowcolor>
-            </control>
-
-            <control type="label">
-                <description>Player Times</description>
-                <posx>1250</posx>
-                <posy>610</posy>
-                <width>500</width>
-                <label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
-                <align>right</align>
-                <font>Medium</font>
-                <shadowcolor>black</shadowcolor>
-            </control>
-
-            <control type="label">
-                <description>Current Video End Time</description>
-                <posx>1250</posx>
-                <posy>644</posy>
-                <width>890</width>
-                <label>[COLOR=blue]$LOCALIZE[31000][/COLOR] : $INFO[Player.FinishTime]</label>
-                <align>right</align>
-                <font>Medium</font>
-                <shadowcolor>black</shadowcolor>
-            </control>
-
-            <control type="progress">
-                <description>Progressbar</description>
-                <posx>30</posx>
-                <posy>30r</posy>
-                <width>1220</width>
-                <height>14</height>
-                <info>Player.Progress</info>
-            </control>
-
+        <control type="image">
+            <description>Info background</description>
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>1280</width>
+            <height>690</height>
+            <texture>veritas/white.png</texture>
+            <colordiffuse>aa000000</colordiffuse>
         </control>
-
+        <control type="group">
+            <posx>284</posx>
+            <posy>70</posy>
+            <control type="group">
+                <description>Cover image</description>
+                <posx>0</posx>
+                <posy>26</posy>
+                <visible>VideoPlayer.Content(Movies)</visible>
+                <control type="image">
+                    <posx>-100</posx>
+                    <posy>160</posy>
+                    <width>403</width>
+                    <height>252</height>
+                    <fadetime>100</fadetime>
+                    <aspectratio align="left" aligny="top">stretch</aspectratio>
+                    <texture fallback="DefaultAddonNone.png">veritas/poster_glow.png</texture>
+                    <colordiffuse>ff1774b5</colordiffuse>
+                </control>
+                <control type="image">
+                    <posx>-62</posx>
+                    <posy>296</posy>
+                    <width>298</width>
+                    <height>22</height>
+                    <fadetime>100</fadetime>
+                    <aspectratio align="left" aligny="top">stretch</aspectratio>
+                    <texture>veritas/poster_shadow.png</texture>
+                    <colordiffuse>ff000000</colordiffuse>
+                </control>
+                <control type="image">
+                    <posx>0</posx>
+                    <posy>8</posy>
+                    <width>187</width>
+                    <height>280</height>
+                    <fadetime>100</fadetime>
+                    <aspectratio align="center" aligny="top">scale</aspectratio>
+                    <texture fallback="DefaultVideoCover.png">$INFO[VideoPlayer.Cover]</texture>
+                    <animation type="Conditional" condition="true">
+                        <effect type="zoom" center="130,210" start="100" end="114" time="200" />
+                    </animation>
+                </control>
+                <control type="image">
+                    <posx>-8</posx>
+                    <posy>0</posy>
+                    <width>203</width>
+                    <height>296</height>
+                    <fadetime>100</fadetime>
+                    <aspectratio align="center" aligny="top">stretch</aspectratio>
+                    <texture>veritas/poster_frame.png</texture>
+                    <animation type="Conditional" condition="true">
+                        <effect type="zoom" center="130,210" start="100" end="114" time="200" />
+                    </animation>
+                </control>
+            </control>
+            <control type="group">
+                <posx>240</posx>
+                <posy>0</posy>
+                <control type="group">
+                    <control type="label">
+                        <description>Director label</description>
+                        <width>110</width>
+                        <height>20</height>
+                        <align>left</align>
+                        <aligny>top</aligny>
+                        <font>Light_Uppercase_19</font>
+                        <textcolor>ffb2b2b2</textcolor>
+                        <label>Directed by</label>
+                    </control>
+                    <control type="image">
+                        <description>Divider #1</description>
+                        <posy>28</posy>
+                        <width>644</width>
+                        <height>1</height>
+                        <aspectratio align="center" aligny="center">keep</aspectratio>
+                        <texture>veritas/horiz_divider.png</texture>
+                        <colordiffuse>22ffffff</colordiffuse>
+                    </control>
+                    <control type="label">
+                        <description>Writer label</description>
+                        <posy>35</posy>
+                        <width>110</width>
+                        <height>20</height>
+                        <align>left</align>
+                        <aligny>top</aligny>
+                        <font>Light_Uppercase_19</font>
+                        <textcolor>ffb2b2b2</textcolor>
+                        <label>Written by</label>
+                    </control>
+                    <control type="image">
+                        <description>Divider #2</description>
+                        <posy>63</posy>
+                        <width>644</width>
+                        <height>1</height>
+                        <aspectratio align="center" aligny="center">keep</aspectratio>
+                        <texture>veritas/horiz_divider.png</texture>
+                        <colordiffuse>22ffffff</colordiffuse>
+                    </control>
+                    <control type="label">
+                        <description>Path label</description>
+                        <posy>70</posy>
+                        <width>110</width>
+                        <height>20</height>
+                        <align>left</align>
+                        <aligny>top</aligny>
+                        <font>Light_Uppercase_19</font>
+                        <textcolor>ffb2b2b2</textcolor>
+                        <label>Path</label>
+                    </control>
+                    <control type="image">
+                        <description>Divider #3</description>
+                        <posy>98</posy>
+                        <width>644</width>
+                        <height>1</height>
+                        <aspectratio align="center" aligny="center">keep</aspectratio>
+                        <texture>veritas/horiz_divider.png</texture>
+                        <colordiffuse>22ffffff</colordiffuse>
+                    </control>
+                    <control type="label">
+                        <description>Cast label</description>
+                        <posy>105</posy>
+                        <width>110</width>
+                        <height>20</height>
+                        <align>left</align>
+                        <aligny>top</aligny>
+                        <font>Light_Uppercase_19</font>
+                        <textcolor>ffb2b2b2</textcolor>
+                        <label>Starring</label>
+                    </control>
+                </control>
+                <control type="group">
+                    <posx>135</posx>
+                    <control type="fadelabel">
+                        <description>Director info</description>
+                        <width>550</width>
+                        <height>100</height>
+                        <align>left</align>
+                        <aligny>top</aligny>
+                        <font>Light_Uppercase_19</font>
+                        <textcolor>white</textcolor>
+                        <pauseatend>5000</pauseatend>
+                        <label fallback="N/A">$INFO[VideoPlayer.Director]</label>
+                    </control>
+                    <control type="fadelabel">
+                        <description>Writer info</description>
+                        <posy>35</posy>
+                        <width>550</width>
+                        <height>100</height>
+                        <align>left</align>
+                        <aligny>top</aligny>
+                        <font>Light_Uppercase_19</font>
+                        <textcolor>white</textcolor>
+                        <pauseatend>5000</pauseatend>
+                        <label fallback="N/A">$INFO[VideoPlayer.Writer]</label>
+                    </control>
+                    <control type="fadelabel">
+                        <description>Path info</description>
+                        <posy>70</posy>
+                        <width>550</width>
+                        <height>100</height>
+                        <align>left</align>
+                        <aligny>top</aligny>
+                        <font>Light_Uppercase_19</font>
+                        <textcolor>white</textcolor>
+                        <pauseatend>5000</pauseatend>
+                        <label fallback="N/A">$INFO[Player.FilenameAndPath]</label>
+                    </control>
+                    <control type="label">
+                        <description>Cast</description>
+                        <posy>105</posy>
+                        <width>550</width>
+                        <height>184</height>
+                        <font>Light_Uppercase_19</font>
+                        <aligny>top</aligny>
+                        <align>left</align>
+                        <shadowcolor>black</shadowcolor>
+                        <label fallback="N/A">$INFO[VideoPlayer.CastAndRole]</label>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <posx>-19</posx>
+                <posy>349</posy>
+                <control type="label">
+                    <description>Movie title</description>
+                    <width>900</width>
+                    <font>Light_Uppercase_36</font>
+                    <textcolor>ffd3d3d3</textcolor>
+                    <label>$INFO[VideoPlayer.Title]</label>
+                </control>
+                <control type="label">
+                    <description>Movie info</description>
+                    <posy>30</posy>
+                    <width>900</width>
+                    <font>Light_Uppercase_19</font>
+                    <textcolor>ffa1a1a1</textcolor>
+                    <label>$INFO[VideoPlayer.Year,, • ]$INFO[VideoPlayer.Genre]$INFO[VideoPlayer.Duration, • , min]$INFO[VideoPlayer.Rating, • ]</label>  <!-- localize -->
+                </control>
+                <control type="textbox">
+                    <description>Movie plot</description>
+                    <posy>80</posy>
+                    <width>700</width>
+                    <height>118</height>
+                    <font>Normal_19</font>
+                    <textcolor>ffd3d3d3</textcolor>
+                    <label>$INFO[VideoPlayer.Plot]</label>
+                    <autoscroll delay="10000" time="4500" repeat="10000">true</autoscroll>
+                    <visible>!IsEmpty(VideoPlayer.Plot)</visible>
+                </control>
+            </control>
+        </control>
     </controls>
-
 </window>
