@@ -64,34 +64,34 @@
             <content>
                 <item id="1">
                     <description>Play Disc</description>
-                    <label>31014</label>
+                    <label>31014</label> <!-- localize -->
                     <onclick>PlayDVD</onclick>
                     <thumb>/storage/backup/xbmc-stuff/xbmc-backdrops/playdisc.jpg</thumb>
-                    <visible>!System.HasMediadvd</visible>
+                    <visible>System.HasMediadvd</visible>
                 </item>
                 <item id="2">
                     <description>Movies</description>
-                    <label>31006</label>
+                    <label>31006</label> <!-- localize -->
                     <onclick>ActivateWindow(Video,movietitles)</onclick>
                     <thumb>/storage/backup/xbmc-stuff/xbmc-backdrops/movies</thumb>
                     <visible>Library.HasContent(Movies)</visible>
                 </item>
                 <item id="3">
                     <description>TV Shows</description>
-                    <label>31007</label>
+                    <label>31007</label> <!-- localize -->
                     <onclick>ActivateWindow(Video,tvshowtitles)</onclick>
                     <thumb>/storage/backup/xbmc-stuff/xbmc-backdrops/tvshows</thumb>
                     <visible>Library.HasContent(TVShows)</visible>
                 </item>
                 <item id="4">
                     <description>Weather</description>
-                    <label>31010</label>
+                    <label>31010</label> <!-- localize -->
                     <thumb>/storage/backup/xbmc-stuff/xbmc-backdrops/weather</thumb>
                     <onclick>ActivateWindow(weather)</onclick>
                 </item>
                 <item id="5">
                     <description>Games</description>
-                    <label>Spel</label>
+                    <label>Spel</label> <!-- localize -->
                     <onclick>PlayDVD</onclick>
                     <thumb>/storage/backup/xbmc-stuff/xbmc-backdrops/games.jpg</thumb>
                     <visible>!System.HasMediadvd</visible>
