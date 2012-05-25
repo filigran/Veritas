@@ -3,7 +3,7 @@
 <window id="115">
     <defaultcontrol always="true">901</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
-    <visible>!Window.IsVisible(fullscreeninfo) + [VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]</visible>
+    <visible>[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsVisible(FullScreenInfo)]</visible>
     <controls>
         <control type="group">
             <posx>0</posx>
@@ -49,15 +49,27 @@
                 <visible>true</visible>
             </control>
             <control type="label">
-                <description>Elapsed + remaining time label</description>
+                <description>Elapsed time label</description>
                 <posx>20</posx>
+                <posy>0</posy>
+                <width>100</width>
+                <height>30</height>
+                <align>left</align>
+                <aligny>center</aligny>
+                <font>Normal_19</font>
+                <label>$INFO[Player.Time]</label>
+            </control>
+            <control type="label">
+                <description>Remaining time label</description>
+                <posx>120</posx>
                 <posy>0</posy>
                 <width>350</width>
                 <height>30</height>
                 <align>left</align>
                 <aligny>center</aligny>
+                <textcolor>ffb2b2b2</textcolor>
                 <font>Light_Uppercase_19</font>
-                <label>$INFO[Player.Time] $INFO[Player.TimeRemaining, (Remaining: ,)]</label> <!-- localize -->
+                <label>$INFO[Player.TimeRemaining,Remaining: ]</label> <!-- localize -->
             </control>
             <control type="group">
                 <description>Center labels (ff, rew, paused, buffering)</description>
@@ -117,6 +129,7 @@
                     <visible>Player.Forwarding32x</visible>
                 </control>
                 <control type="label">
+                    <description>Cache label</description>
                     <include>Template_CenteredLabel</include>
                     <label>$LOCALIZE[15107] $INFO[Player.CacheLevel]%</label>  <!-- localize -->
                     <visible>[Player.Paused + Player.Caching] + !Player.Seeking</visible>
@@ -124,18 +137,31 @@
                 <control type="label">
                     <include>Template_CenteredLabel</include>
                     <label>Seeking $INFO[Player.SeekOffset]</label>  <!-- localize -->
-                    <visible>Player.DisplayAfterSeek</visible>
+                    <visible>Player.DisplayAfterSeek + ![Player.Forwarding | Player.Rewinding]</visible>
                 </control>
             </control>
             <control type="label">
-                <posx>1260</posx>
+                <description>End time</description>
+                <posx>120r</posx>
                 <posy>0</posy>
                 <width>350</width>
                 <height>30</height>
                 <align>right</align>
                 <aligny>center</aligny>
                 <font>Light_Uppercase_19</font>
-                <label>$INFO[Player.FinishTime,(End time: ,)] $INFO[Player.Duration]</label>  <!-- localize -->
+                <textcolor>ffb2b2b2</textcolor>
+                <label>$INFO[Player.FinishTime,End time: ]</label>  <!-- localize -->
+            </control>
+            <control type="label">
+                <description>Running time</description>
+                <posx>20r</posx>
+                <posy>0</posy>
+                <width>100</width>
+                <height>30</height>
+                <align>right</align>
+                <aligny>center</aligny>
+                <font>Normal_19</font>
+                <label>$INFO[Player.Duration]</label>
             </control>
         </control>
     </controls>
