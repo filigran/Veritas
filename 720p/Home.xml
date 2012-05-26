@@ -72,14 +72,14 @@
                 <item id="2">
                     <description>Movies</description>
                     <label>31006</label> <!-- localize -->
-                    <onclick>ActivateWindow(Video,movietitles)</onclick>
+                    <onclick>ActivateWindow(Video,movietitles,return)</onclick>
                     <thumb>/storage/backup/xbmc-stuff/xbmc-backdrops/movies</thumb>
                     <visible>Library.HasContent(Movies)</visible>
                 </item>
                 <item id="3">
                     <description>TV Shows</description>
                     <label>31007</label> <!-- localize -->
-                    <onclick>ActivateWindow(Video,tvshowtitles)</onclick>
+                    <onclick>ActivateWindow(Video,tvshowtitles,return)</onclick>
                     <thumb>/storage/backup/xbmc-stuff/xbmc-backdrops/tvshows</thumb>
                     <visible>Library.HasContent(TVShows)</visible>
                 </item>

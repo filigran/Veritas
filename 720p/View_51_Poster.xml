@@ -35,6 +35,7 @@
                 <control type="group">
                     <animation effect="fade" start="100" end="0" time="500" condition="[System.IdleTime(3) + Control.HasFocus(51)] | Window.IsVisible(2003)">conditional</animation>
                     <control type="image">
+                        <description>Poster glow</description>
                         <posx>-5</posx>
                         <posy>38</posy>
                         <width>179</width>
@@ -44,6 +45,7 @@
                         <texture fallback="DefaultAddonNone.png">veritas/poster_outer_glow.png</texture>
                     </control>
                     <control type="image">
+                        <description>Poster</description>
                         <posx>1</posx>
                         <posy>44</posy>
                         <width>167</width>
@@ -54,6 +56,7 @@
                         <colordiffuse>ff8f8f8f</colordiffuse>
                     </control>
                     <control type="image">
+                        <description>Poster reflection</description>
                         <posx>1</posx>
                         <posy>294</posy>
                         <width>167</width>
@@ -63,44 +66,63 @@
                         <texture diffuse="veritas/poster_gradient.png" flipy="true" fallback="DefaultAddonNone.png">$INFO[ListItem.Icon]</texture>
                         <colordiffuse>22ffffff</colordiffuse>
                     </control>
+                    <control type="image">
+                        <posx>123</posx>
+                        <posy>270</posy>
+                        <width>40</width>
+                        <height>40</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture background="true">special://skin/media/veritas/$INFO[ListItem.Overlay]</texture>
+                        <colordiffuse>8800ff00</colordiffuse>
+                        <visible>StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+                    </control>
                 </control>
             </itemlayout>
             <focusedlayout width="202" height="316">
                 <control type="group">
+                    <posx>7</posx>
+                    <posy>35</posy>
+                    <animation type="Conditional" condition="true">
+                        <effect type="zoom" center="130,200" start="100" end="128" time="200" />
+                    </animation>
                     <visible>!Control.HasFocus(50)</visible>
                     <control type="image">
-                        <posx>-62</posx>
-                        <posy>312</posy>
-                        <width>298</width>
-                        <height>22</height>
+                        <posx>-33</posx>
+                        <posy>254</posy>
+                        <width>235</width>
+                        <height>15</height>
                         <fadetime>100</fadetime>
                         <aspectratio align="left" aligny="top">stretch</aspectratio>
                         <texture fallback="DefaultAddonNone.png">veritas/poster_shadow.png</texture>
                         <colordiffuse>ff000000</colordiffuse>
                     </control>
                     <control type="image">
-                        <posx>0</posx>
-                        <posy>24</posy>
-                        <width>187</width>
-                        <height>280</height>
+                        <posx>6</posx>
+                        <posy>6</posy>
+                        <width>169</width>
+                        <height>250</height>
                         <fadetime>100</fadetime>
                         <aspectratio align="center" aligny="top">stretch</aspectratio>
                         <texture fallback="DefaultAddonNone.png">$INFO[ListItem.Icon]</texture>
-                        <animation type="Conditional" condition="true">
-                            <effect type="zoom" center="130,210" start="100" end="114" time="200" />
-                        </animation>
                     </control>
                     <control type="image">
-                        <posx>-8</posx>
-                        <posy>16</posy>
-                        <width>203</width>
-                        <height>296</height>
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>181</width>
+                        <height>263</height>
                         <fadetime>100</fadetime>
                         <aspectratio align="center" aligny="top">stretch</aspectratio>
                         <texture fallback="DefaultAddonNone.png">veritas/poster_frame.png</texture>
-                        <animation type="Conditional" condition="true">
-                            <effect type="zoom" center="130,210" start="100" end="114" time="200" />
-                        </animation>
+                    </control>
+                    <control type="image">
+                        <posx>135</posx>
+                        <posy>237</posy>
+                        <width>35</width>
+                        <height>35</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture background="true">special://skin/media/veritas/$INFO[ListItem.Overlay]</texture>
+                        <colordiffuse>ff00ff00</colordiffuse>
+                        <visible>StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
                     </control>
                 </control>
             </focusedlayout>
@@ -117,7 +139,7 @@
             </control>
             <control type="label">
                 <description>Movie info</description>
-                <posy>510</posy>
+                <posy>515</posy>
                 <width>900</width>
                 <font>Light_Uppercase_19</font>
                 <textcolor>ffa1a1a1</textcolor>

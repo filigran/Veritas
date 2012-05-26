@@ -6,171 +6,230 @@
     <animation effect="fade" start="0" end="100" time="500">WindowOpen</animation>>
     <controls>
         <control type="group">
-            <posx>177</posx>
-            <posy>0</posy>
+            <posx>277</posx>
+            <posy>159</posy>
             <control type="group">
                 <description>Actor image</description>
-                <posx>100</posx>
-                <posy>141</posy>
+                <posx>0</posx>
+                <posy>0</posy>
                 <visible>Control.HasFocus(50)</visible>
                 <control type="image">
                     <posx>-62</posx>
-                    <posy>312</posy>
+                    <posy>294</posy>
                     <width>298</width>
                     <height>22</height>
                     <fadetime>100</fadetime>
                     <aspectratio align="left" aligny="top">stretch</aspectratio>
                     <texture>veritas/poster_shadow.png</texture>
                     <colordiffuse>ff000000</colordiffuse>
-                    <visible>!IsEmpty(ListItem.Icon)</visible>
                 </control>
                 <control type="image">
                     <posx>0</posx>
-                    <posy>24</posy>
+                    <posy>8</posy>
                     <width>187</width>
                     <height>280</height>
                     <fadetime>100</fadetime>
                     <aspectratio align="center" aligny="top">scale</aspectratio>
                     <texture fallback="DefaultActor.png">$INFO[Container(50).ListItem.Icon]</texture>
-                    <visible>!IsEmpty(ListItem.Icon)</visible>
                     <animation type="Conditional" condition="true">
                         <effect type="zoom" center="130,210" start="100" end="114" time="200" />
                     </animation>
                 </control>
                 <control type="image">
                     <posx>-8</posx>
-                    <posy>16</posy>
+                    <posy>0</posy>
                     <width>203</width>
                     <height>296</height>
                     <fadetime>100</fadetime>
                     <aspectratio align="center" aligny="top">stretch</aspectratio>
                     <texture>veritas/poster_frame.png</texture>
-                    <visible>!IsEmpty(ListItem.Icon)</visible>
                     <animation type="Conditional" condition="true">
                         <effect type="zoom" center="130,210" start="100" end="114" time="200" />
                     </animation>
                 </control>
             </control>
-            <control type="label">
-                <description>Director label</description>
-                <posx>343</posx>
-                <posy>141</posy>
-                <width>110</width>
-                <height>20</height>
-                <align>left</align>
-                <aligny>top</aligny>
-                <font>Light_Uppercase_19</font>
-                <textcolor>ffb2b2b2</textcolor>
-                <label>Directed by</label>
+            <control type="group">
+                <posx>229</posx>
+                <posy>-26</posy>
+                <control type="label">
+                    <description>Director label</description>
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>110</width>
+                    <height>20</height>
+                    <align>left</align>
+                    <aligny>top</aligny>
+                    <font>Light_Uppercase_19</font>
+                    <textcolor>ffb2b2b2</textcolor>
+                    <label>Directed by</label>
+                </control>
+                <control type="image">
+                    <description>Divider #1</description>
+                    <posx>0</posx>
+                    <posy>28</posy>
+                    <width>644</width>
+                    <height>1</height>
+                    <aspectratio align="center" aligny="center">keep</aspectratio>
+                    <texture>veritas/horiz_divider.png</texture>
+                    <colordiffuse>22ffffff</colordiffuse>
+                </control>
+                <control type="label">
+                    <description>Writer label</description>
+                    <posx>0</posx>
+                    <posy>35</posy>
+                    <width>110</width>
+                    <height>20</height>
+                    <align>left</align>
+                    <aligny>top</aligny>
+                    <font>Light_Uppercase_19</font>
+                    <textcolor>ffb2b2b2</textcolor>
+                    <label>Written by</label>
+                </control>
+                <control type="image">
+                    <description>Divider #2</description>
+                    <posx>0</posx>
+                    <posy>63</posy>
+                    <width>644</width>
+                    <height>1</height>
+                    <aspectratio align="center" aligny="center">keep</aspectratio>
+                    <texture>veritas/horiz_divider.png</texture>
+                    <colordiffuse>22ffffff</colordiffuse>
+                </control>
+                <control type="label">
+                    <description>Path label</description>
+                    <posx>0</posx>
+                    <posy>70</posy>
+                    <width>110</width>
+                    <height>20</height>
+                    <align>left</align>
+                    <aligny>top</aligny>
+                    <font>Light_Uppercase_19</font>
+                    <textcolor>ffb2b2b2</textcolor>
+                    <label>Path</label>
+                </control>
+                <control type="image">
+                    <description>Divider #3</description>
+                    <posx>0</posx>
+                    <posy>98</posy>
+                    <width>644</width>
+                    <height>1</height>
+                    <aspectratio align="center" aligny="center">keep</aspectratio>
+                    <texture>veritas/horiz_divider.png</texture>
+                    <colordiffuse>22ffffff</colordiffuse>
+                </control>
+                <control type="label">
+                    <description>Cast label</description>
+                    <posx>0</posx>
+                    <posy>105</posy>
+                    <width>110</width>
+                    <height>20</height>
+                    <align>left</align>
+                    <aligny>top</aligny>
+                    <font>Light_Uppercase_19</font>
+                    <textcolor>ffb2b2b2</textcolor>
+                    <label>Starring</label>
+                </control>
             </control>
-            <control type="image">
-                <description>Divider #1</description>
-                <posx>343</posx>
-                <posy>169</posy>
-                <width>644</width>
-                <height>1</height>
-                <aspectratio align="center" aligny="center">keep</aspectratio>
-                <texture>veritas/horiz_divider.png</texture>
-                <colordiffuse>22ffffff</colordiffuse>
-            </control>
-            <control type="label">
-                <description>Writer label</description>
-                <posx>343</posx>
-                <posy>176</posy>
-                <width>110</width>
-                <height>20</height>
-                <align>left</align>
-                <aligny>top</aligny>
-                <font>Light_Uppercase_19</font>
-                <textcolor>ffb2b2b2</textcolor>
-                <label>Written by</label>
-            </control>
-            <control type="image">
-                <description>Divider #2</description>
-                <posx>343</posx>
-                <posy>204</posy>
-                <width>644</width>
-                <height>1</height>
-                <aspectratio align="center" aligny="center">keep</aspectratio>
-                <texture>veritas/horiz_divider.png</texture>
-                <colordiffuse>22ffffff</colordiffuse>
-            </control>
-            <control type="label">
-                <description>Path label</description>
-                <posx>343</posx>
-                <posy>211</posy>
-                <width>110</width>
-                <height>20</height>
-                <align>left</align>
-                <aligny>top</aligny>
-                <font>Light_Uppercase_19</font>
-                <textcolor>ffb2b2b2</textcolor>
-                <label>Path</label>
-            </control>
-            <control type="image">
-                <description>Divider #3</description>
-                <posx>343</posx>
-                <posy>239</posy>
-                <width>644</width>
-                <height>1</height>
-                <aspectratio align="center" aligny="center">keep</aspectratio>
-                <texture>veritas/horiz_divider.png</texture>
-                <colordiffuse>22ffffff</colordiffuse>
-            </control>
-            <control type="label">
-                <description>Cast label</description>
-                <posx>343</posx>
-                <posy>246</posy>
-                <width>110</width>
-                <height>20</height>
-                <align>left</align>
-                <aligny>top</aligny>
-                <font>Light_Uppercase_19</font>
-                <textcolor>ffb2b2b2</textcolor>
-                <label>Starring</label>
-            </control>
-            <control type="fadelabel">
-                <description>Director info</description>
-                <posx>498</posx>
-                <posy>141</posy>
-                <width>550</width>
-                <height>100</height>
-                <align>left</align>
-                <aligny>top</aligny>
-                <font>Light_Uppercase_19</font>
-                <textcolor>white</textcolor>
-                <pauseatend>5000</pauseatend>
-                <label fallback="N/A">$INFO[ListItem.Director]</label>
-            </control>
-            <control type="fadelabel">
-                <description>Writer info</description>
-                <posx>498</posx>
-                <posy>176</posy>
-                <width>550</width>
-                <height>100</height>
-                <align>left</align>
-                <aligny>top</aligny>
-                <font>Light_Uppercase_19</font>
-                <textcolor>white</textcolor>
-                <pauseatend>5000</pauseatend>
-                <label fallback="N/A">$INFO[ListItem.Writer]</label>
-            </control>
-            <control type="fadelabel">
-                <description>Path info</description>
-                <posx>498</posx>
-                <posy>211</posy>
-                <width>550</width>
-                <height>100</height>
-                <align>left</align>
-                <aligny>top</aligny>
-                <font>Light_Uppercase_19</font>
-                <textcolor>white</textcolor>
-                <pauseatend>5000</pauseatend>
-                <label fallback="N/A">$INFO[ListItem.Path]</label>
+            <control type="group">
+                <posx>379</posx>
+                <posy>-26</posy>
+                <control type="fadelabel">
+                    <description>Director info</description>
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>550</width>
+                    <height>100</height>
+                    <align>left</align>
+                    <aligny>top</aligny>
+                    <font>Light_Uppercase_19</font>
+                    <textcolor>white</textcolor>
+                    <pauseatend>5000</pauseatend>
+                    <label fallback="N/A">$INFO[ListItem.Director]</label>
+                </control>
+                <control type="fadelabel">
+                    <description>Writer info</description>
+                    <posx>0</posx>
+                    <posy>35</posy>
+                    <width>550</width>
+                    <height>100</height>
+                    <align>left</align>
+                    <aligny>top</aligny>
+                    <font>Light_Uppercase_19</font>
+                    <textcolor>white</textcolor>
+                    <pauseatend>5000</pauseatend>
+                    <label fallback="N/A">$INFO[ListItem.Writer]</label>
+                </control>
+                <control type="fadelabel">
+                    <description>Path info</description>
+                    <posx>0</posx>
+                    <posy>70</posy>
+                    <width>550</width>
+                    <height>100</height>
+                    <align>left</align>
+                    <aligny>top</aligny>
+                    <font>Light_Uppercase_19</font>
+                    <textcolor>white</textcolor>
+                    <pauseatend>5000</pauseatend>
+                    <label fallback="N/A">$INFO[ListItem.Path]</label>
+                </control>
+                <control type="list" id="50">
+                    <description>Cast</description>
+                    <posx>0</posx>
+                    <posy>105</posy>
+                    <width>550</width>
+                    <height>138</height>
+                    <onup>-</onup>
+                    <ondown>-</ondown>
+                    <onleft>9000</onleft>
+                    <onright>9000</onright>
+                    <orientation>vertical</orientation>
+                    <scrolltime>200</scrolltime>
+                    <visible>true</visible>
+                    <itemlayout height="23">
+                        <control type="label">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>550</width>
+                            <height>23</height>
+                            <font>Light_Uppercase_19</font>
+                            <aligny>top</aligny>
+                            <align>left</align>
+                            <shadowcolor>black</shadowcolor>
+                            <label fallback="N/A">$INFO[ListItem.Label]</label>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout height="23">
+                        <control type="label">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>550</width>
+                            <height>23</height>
+                            <aligny>top</aligny>
+                            <align>left</align>
+                            <shadowcolor>black</shadowcolor>
+                            <font>Light_Uppercase_19</font>
+                            <label fallback="N/A">$INFO[ListItem.Label]</label>
+                            <visible>!Control.HasFocus(50)</visible>
+                        </control>
+                        <control type="label">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>550</width>
+                            <height>23</height>
+                            <aligny>top</aligny>
+                            <align>left</align>
+                            <textcolor>ff1774b5</textcolor>
+                            <shadowcolor>black</shadowcolor>
+                            <font>Light_Uppercase_19</font>
+                            <label fallback="N/A">$INFO[ListItem.Label]</label>
+                            <visible>Control.HasFocus(50)</visible>
+                        </control>
+                    </focusedlayout>
+                </control>
             </control>
             <control type="grouplist" id="9000">
-                <posx>343</posx>
-                <posy>420</posy>
+                <posx>229</posx>
+                <posy>260</posy>
                 <width>800</width>
                 <height>100</height>
                 <itemgap>0</itemgap>
@@ -253,60 +312,6 @@
                     <align>left</align>
                     <aligny>top</aligny>
                 </control>
-            </control>
-            <control type="list" id="50">
-                <description>Cast</description>
-                <posx>498</posx>
-                <posy>246</posy>
-                <width>550</width>
-                <height>138</height>
-                <onup>-</onup>
-                <ondown>-</ondown>
-                <onleft>9000</onleft>
-                <onright>9000</onright>
-                <orientation>vertical</orientation>
-                <scrolltime>200</scrolltime>
-                <visible>true</visible>
-                <itemlayout height="23">
-                    <control type="label">
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <width>550</width>
-                        <height>23</height>
-                        <font>Light_Uppercase_19</font>
-                        <aligny>top</aligny>
-                        <align>left</align>
-                        <shadowcolor>black</shadowcolor>
-                        <label fallback="N/A">$INFO[ListItem.Label]</label>
-                    </control>
-                </itemlayout>
-                <focusedlayout height="23">
-                    <control type="label">
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <width>550</width>
-                        <height>23</height>
-                        <aligny>top</aligny>
-                        <align>left</align>
-                        <shadowcolor>black</shadowcolor>
-                        <font>Light_Uppercase_19</font>
-                        <label fallback="N/A">$INFO[ListItem.Label]</label>
-                        <visible>!Control.HasFocus(50)</visible>
-                    </control>
-                    <control type="label">
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <width>550</width>
-                        <height>23</height>
-                        <aligny>top</aligny>
-                        <align>left</align>
-                        <textcolor>ff1774b5</textcolor>
-                        <shadowcolor>black</shadowcolor>
-                        <font>Light_Uppercase_19</font>
-                        <label fallback="N/A">$INFO[ListItem.Label]</label>
-                        <visible>Control.HasFocus(50)</visible>
-                    </control>
-                </focusedlayout>
             </control>
         </control>
     </controls>
