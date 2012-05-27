@@ -146,6 +146,28 @@
                 <font>Light_Uppercase_19</font>
                 <textcolor>ffa1a1a1</textcolor>
                 <label>$INFO[ListItem.Year]$INFO[ListItem.Genre, • ]$INFO[ListItem.Duration, • , min]$INFO[ListItem.Rating, • ]</label>  <!-- localize -->
+                <visible>Container.Content(Movies)</visible>
+            </control>
+            <control type="fadelabel">
+                <description>TV Show info</description>
+                <posy>515</posy>
+                <width>900</width>
+                <font>Light_Uppercase_19</font>
+                <textcolor>ffa1a1a1</textcolor>
+                <label>$INFO[ListItem.Year]$INFO[ListItem.Genre, • ]$INFO[ListItem.Duration, • , min]$INFO[ListItem.Rating, • ]</label>
+                <label>$INFO[ListItem.Property(TotalEpisodes),, episodes]$INFO[ListItem.Property(WatchedEpisodes), • , watched]$INFO[ListItem.Property(UnWatchedEpisodes), • , unwatched]</label>  <!-- localize -->
+                <pauseatend>3000</pauseatend>
+                <visible>Container.Content(TVShows)</visible>
+            </control>
+            <control type="fadelabel">
+                <description>TV Show info</description>
+                <posy>515</posy>
+                <width>900</width>
+                <font>Light_Uppercase_19</font>
+                <textcolor>ffa1a1a1</textcolor>
+                <label>$INFO[ListItem.Property(TotalEpisodes),, episodes]$INFO[ListItem.Property(WatchedEpisodes), • , watched]$INFO[ListItem.Property(UnWatchedEpisodes), • , unwatched]</label>  <!-- localize -->
+                <pauseatend>3000</pauseatend>
+                <visible>Container.Content(Seasons)</visible>
             </control>
             <control type="textbox">
                 <description>Movie plot</description>

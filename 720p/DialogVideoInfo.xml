@@ -312,6 +312,22 @@
                     <align>left</align>
                     <aligny>top</aligny>
                 </control>
+                <control type="button" id="100">
+                    <description>Artwork button</description>
+                    <width>200</width>
+                    <texturefocus>-</texturefocus>
+                    <texturenofocus>-</texturenofocus>
+                    <textcolor>White</textcolor>
+                    <focusedcolor>ff1774b5</focusedcolor>
+                    <disabledcolor>ffa1a1a1</disabledcolor>
+                    <font>Light_Uppercase_24</font>
+                    <label>Artwork</label> <!-- localize -->
+                    <align>left</align>
+                    <aligny>top</aligny>
+                    <onclick>Dialog.Close(MovieInformation)</onclick>
+                    <onclick>XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=tvshow, medianame=$INFO[ListItem.TVShowTitle])</onclick>
+                    <visible>Container.Content(tvshows)</visible>
+                </control>
             </control>
         </control>
     </controls>

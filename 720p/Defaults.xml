@@ -95,13 +95,32 @@
         <disabledcolor>Red</disabledcolor>
         <radiowidth>30</radiowidth>
         <radioheight>30</radioheight>
-        <texturenofocus border="2">other_textures/ButtonNF.png</texturenofocus>
+        <textureradiofocus>other_textures/ButtonFO.png</textureradiofocus>
+        <textureradionofocus>other_textures/ButtonNF.png</textureradionofocus>
         <texturefocus border="5">other_textures/ButtonFO.png</texturefocus>
-        <textureradiofocus>other_textures/RadiobuttonFO.png</textureradiofocus>
-        <textureradionofocus>other_textures/RadiobuttonNF.png</textureradionofocus>
+        <texturenofocus border="5">other_textures/ButtonNF.png</texturenofocus>
         <textoffsetx>20</textoffsetx>
         <pulseonselect>false</pulseonselect>
     </default>
+    <!--<default type="radiobutton">
+        <posx>300</posx>
+        <posy>200</posy>
+        <width>300</width>
+        <height>42</height>
+        <radiowidth>24</radiowidth>
+        <radioheight>24</radioheight>
+        <textureradiofocus>other_textures/ButtonFO.png</textureradiofocus>
+        <textureradionofocus>other_textures/ButtonNF.png</textureradionofocus>
+        <texturefocus border="5">button-focus.png</texturefocus>
+        <texturenofocus border="5">button-nofocus.png</texturenofocus>
+        <label>215</label>
+        <font>font13</font>
+        <textcolor>white</textcolor>
+        <disabledcolor>grey3</disabledcolor>
+        <textoffsetx>7</textoffsetx>
+        <aligny>center</aligny>
+    </default>-->
+
 
     <default type="spincontrolex">
         <posx>0</posx>
