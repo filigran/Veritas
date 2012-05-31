@@ -53,7 +53,7 @@
                         <height>250</height>
                         <fadetime>100</fadetime>
                         <aspectratio align="left" aligny="top">stretch</aspectratio>
-                        <texture fallback="DefaultAddonNone.png">$INFO[ListItem.Icon]</texture>
+                        <texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
                         <colordiffuse>ff8f8f8f</colordiffuse>
                     </control>
                     <control type="image">
@@ -64,7 +64,7 @@
                         <height>250</height>
                         <fadetime>100</fadetime>
                         <aspectratio align="left" aligny="top">stretch</aspectratio>
-                        <texture diffuse="veritas/poster_gradient.png" flipy="true" fallback="DefaultAddonNone.png">$INFO[ListItem.Icon]</texture>
+                        <texture background="true" diffuse="veritas/poster_gradient.png" flipy="true" fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
                         <colordiffuse>22ffffff</colordiffuse>
                     </control>
                     <control type="image">
@@ -104,7 +104,7 @@
                         <height>250</height>
                         <fadetime>100</fadetime>
                         <aspectratio align="center" aligny="top">stretch</aspectratio>
-                        <texture fallback="DefaultAddonNone.png">$INFO[ListItem.Icon]</texture>
+                        <texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
                     </control>
                     <control type="image">
                         <posx>0</posx>
@@ -113,7 +113,7 @@
                         <height>263</height>
                         <fadetime>100</fadetime>
                         <aspectratio align="center" aligny="top">stretch</aspectratio>
-                        <texture fallback="DefaultAddonNone.png">veritas/poster_frame.png</texture>
+                        <texture background="true" fallback="DefaultVideo.png">veritas/poster_frame.png</texture>
                     </control>
                     <control type="image">
                         <posx>135</posx>

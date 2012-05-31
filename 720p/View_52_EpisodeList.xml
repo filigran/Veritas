@@ -145,7 +145,7 @@
                         <width>350</width>
                         <height>197</height>
                         <aspectratio scalediffuse="false">scale</aspectratio>
-                        <texture diffuse="special://skin/media/16x9_diffuse_small.png">$INFO[ListItem.Icon]</texture>
+                        <texture background="true" diffuse="special://skin/media/16x9_diffuse_small.png">$INFO[ListItem.Icon]</texture>
                         <animation effect="slide" start="0,-20" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container.OnNext">Focus</animation>
                         <animation effect="slide" start="0,20" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container.OnPrevious">Focus</animation>
                     </control>
@@ -279,7 +279,7 @@
                     <posy>20</posy>
                     <width>350</width>
                     <height>197</height>
-                    <aspectratio scalediffuse="false">scale</aspectratio>
+                    <aspectratio background="true" scalediffuse="false">scale</aspectratio>
                     <texture diffuse="special://skin/media/16x9_diffuse_small.png">$INFO[ListItem.Icon]</texture>
                     <animation effect="slide" start="0,-20" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container.OnNext">Focus</animation>
                     <animation effect="slide" start="0,20" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container.OnPrevious">Focus</animation>
