@@ -4,6 +4,7 @@
     <defaultcontrol always="true">9000</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
     <animation effect="fade" start="0" end="100" time="500">WindowOpen</animation>>
+    <animation effect="slide" start="0,0" end="0,-40" time="0" reversible="false" condition="Container.Content(Episodes)">conditional</animation>
     <controls>
         <control type="group">
             <posx>277</posx>
@@ -244,7 +245,7 @@
                     <texturefocus>-</texturefocus>
                     <texturenofocus>-</texturenofocus>
                     <focusedcolor>ff1774b5</focusedcolor>
-                    <disabledcolor>ffa1a1a1</disabledcolor>
+                    <disabledcolor>ff808080</disabledcolor>
                     <font>Light_Uppercase_24</font>
                     <label>208</label>
                     <align>left</align>
@@ -256,7 +257,7 @@
                     <texturefocus>-</texturefocus>
                     <texturenofocus>-</texturenofocus>
                     <focusedcolor>ff1774b5</focusedcolor>
-                    <disabledcolor>ffa1a1a1</disabledcolor>
+                    <disabledcolor>ff808080</disabledcolor>
                     <font>Light_Uppercase_24</font>
                     <label>13404</label>
                     <visible>Listitem.IsResumable</visible>
@@ -269,7 +270,7 @@
                     <texturefocus>-</texturefocus>
                     <texturenofocus>-</texturenofocus>
                     <focusedcolor>ff1774b5</focusedcolor>
-                    <disabledcolor>ffa1a1a1</disabledcolor>
+                    <disabledcolor>ff808080</disabledcolor>
                     <font>Light_Uppercase_24</font>
                     <label>184</label>
                     <align>left</align>
@@ -281,7 +282,7 @@
                     <texturefocus>-</texturefocus>
                     <texturenofocus>-</texturenofocus>
                     <focusedcolor>ff1774b5</focusedcolor>
-                    <disabledcolor>ffa1a1a1</disabledcolor>
+                    <disabledcolor>ff808080</disabledcolor>
                     <font>Light_Uppercase_24</font>
                     <label>20410</label>
                     <align>left</align>
@@ -293,7 +294,7 @@
                     <texturefocus>-</texturefocus>
                     <texturenofocus>-</texturenofocus>
                     <focusedcolor>ff1774b5</focusedcolor>
-                    <disabledcolor>ffa1a1a1</disabledcolor>
+                    <disabledcolor>ff808080</disabledcolor>
                     <font>Light_Uppercase_24</font>
                     <label>Thumb</label> <!-- localize -->
                     <align>left</align>
@@ -306,7 +307,7 @@
                     <texturenofocus>-</texturenofocus>
                     <textcolor>White</textcolor>
                     <focusedcolor>ff1774b5</focusedcolor>
-                    <disabledcolor>ffa1a1a1</disabledcolor>
+                    <disabledcolor>ff808080</disabledcolor>
                     <font>Light_Uppercase_24</font>
                     <label>Fanart</label> <!-- localize -->
                     <align>left</align>

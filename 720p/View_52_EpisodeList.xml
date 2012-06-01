@@ -10,10 +10,13 @@
     </include>
     <include name="View_52_EpisodeList">
         <control type="group">
-            <visible>Control.IsVisible(52)</visible>
+            <visible>Control.IsVisible(52) + !Window.IsVisible(2003)</visible>
+            <animation effect="fade" start="0" end="100" time="200" reversible="false">VisibleChange</animation>
+            <posx>220r</posx>
+            <posy>120r</posy>
             <control type="image">
                 <description>TV Show logo</description>
-                <posx>220r</posx>
+                <posx>0</posx>
                 <posy>0</posy>
                 <width>200</width>
                 <height>100</height>
@@ -24,7 +27,7 @@
             <control type="label">
                 <description>Season number</description>
                 <posx>240r</posx>
-                <posy>10</posy>
+                <posy>45</posy>
                 <width>300</width>
                 <height>40</height>
                 <align>right</align>
@@ -37,7 +40,7 @@
             <control type="label">
                 <description>Episode count</description>
                 <posx>240r</posx>
-                <posy>45</posy>
+                <posy>80</posy>
                 <width>300</width>
                 <height>50</height>
                 <align>right</align>

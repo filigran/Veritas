@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <window>
-	<onload>ReplaceWindow(Home)</onload>
-	<allowoverlay>yes</allowoverlay>
-
+    <!--<onload>RunScript(script.tv.show.next.aired,silent=True)</onload>-->
+    <onload>ReplaceWindow(Home)</onload>
+    <allowoverlay>yes</allowoverlay>
 </window>

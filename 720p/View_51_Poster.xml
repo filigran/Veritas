@@ -181,6 +181,24 @@
                 <visible>!IsEmpty(ListItem.Plot)</visible>
             </control>
         </control>
+        <!--<control type="fadelabel">
+            <description>TV Show info</description>
+            <posx>20</posx>
+            <posy>30</posy>
+            <width>900</width>
+            <font>Light_Uppercase_19</font>
+            <textcolor>ffa1a1a1</textcolor>
+            <label>$INFO[Container(50).ListItem.Property(NextAired.NextDate)] hejsan</label>
+            <pauseatend>3000</pauseatend>
+            <visible>Container.Content(TVShows)</visible>
+        </control>
+        <control type="label">
+            <description>Next Episode value</description>
+            <width>348</width>
+            <height>20</height>
+            <label>sup?[COLOR grey]$LOCALIZE[209]: BAJS[/COLOR] asdf $INFO[Window(Home).Property(NextAired.NextSeasonNumber),(S]$INFO[Window(Home).Property(NextAired.NextEpisodeNumber),E,)] $INFO[Window(Home).Property(NextAired.NextDate)]</label>
+            <font>font21</font>
+        </control>-->
         <control type="scrollbar" id="61">
             <posx>20</posx>
             <posy>700</posy>
