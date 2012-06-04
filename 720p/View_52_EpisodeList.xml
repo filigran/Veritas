@@ -36,6 +36,7 @@
                 <font>Light_Uppercase_24</font>
                 <textcolor>ffb2b2b2</textcolor>
                 <shadowcolor>black</shadowcolor>
+                <animation effect="slide" start="0,0" end="0,-25" time="0" condition="!IsEmpty(Window(Home).Property(NextAired.NextDate))">conditional</animation>
             </control>
             <control type="label">
                 <description>Episode count</description>
@@ -46,6 +47,20 @@
                 <align>right</align>
                 <aligny>top</aligny>
                 <label>$INFO[Container(52).NumItems,, episodes]</label>
+                <font>Light_Uppercase_19</font>
+                <textcolor>ffb2b2b2</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <animation effect="slide" start="0,0" end="0,-25" time="0" condition="!IsEmpty(Window(Home).Property(NextAired.NextDate))">conditional</animation>
+            </control>
+            <control type="label">
+                <description>Next episode if one exists</description>
+                <posx>240r</posx>
+                <posy>80</posy>
+                <width>500</width>
+                <height>50</height>
+                <align>right</align>
+                <aligny>top</aligny>
+                <label>$INFO[Window(Home).Property(NextAired.NextSeasonNumber),$LOCALIZE[32001]: (S]$INFO[Window(Home).Property(NextAired.NextEpisodeNumber),E,) ]$INFO[Window(Home).Property(NextAired.NextDate)]</label>
                 <font>Light_Uppercase_19</font>
                 <textcolor>ffb2b2b2</textcolor>
                 <shadowcolor>black</shadowcolor>
@@ -227,7 +242,7 @@
                         <height>30</height>
                         <align>left</align>
                         <aligny>center</aligny>
-                        <label>$INFO[ListItem.Premiered,$LOCALIZE[20416]: ]$INFO[ListItem.Duration,   •   $LOCALIZE[2050]: , min]</label> <!-- localize -->
+                        <label>$INFO[ListItem.Premiered,$LOCALIZE[20416]: ]$INFO[ListItem.Duration,   •   $LOCALIZE[2050]: , $LOCALIZE[32000]]</label>
                         <font>Light_Uppercase_19</font>
                         <textcolor>ffb2b2b2</textcolor>
                         <selectedcolor>ffdddddd</selectedcolor>
@@ -362,7 +377,7 @@
                     <height>30</height>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <label>$INFO[ListItem.Premiered,$LOCALIZE[20416]: ]$INFO[ListItem.Duration,   •   $LOCALIZE[2050]: , min]</label> <!-- localize -->
+                    <label>$INFO[ListItem.Premiered,$LOCALIZE[20416]: ]$INFO[ListItem.Duration,   •   $LOCALIZE[2050]: , $LOCALIZE[32000]]</label>
                     <font>Light_Uppercase_19</font>
                     <textcolor>ffb2b2b2</textcolor>
                     <selectedcolor>ffdddddd</selectedcolor>

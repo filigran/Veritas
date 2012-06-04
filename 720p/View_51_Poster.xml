@@ -145,7 +145,7 @@
                 <width>900</width>
                 <font>Light_Uppercase_19</font>
                 <textcolor>ffa1a1a1</textcolor>
-                <label>$INFO[ListItem.Year]$INFO[ListItem.Genre, • ]$INFO[ListItem.Duration, • , min]$INFO[ListItem.Rating, • ]</label>  <!-- localize -->
+                <label>$INFO[ListItem.Year]$INFO[ListItem.Genre, • ]$INFO[ListItem.Duration, • , $LOCALIZE[32000]]$INFO[ListItem.Rating, • ]</label>
                 <visible>Container.Content(Movies)</visible>
             </control>
             <control type="fadelabel">
@@ -155,22 +155,23 @@
                 <font>Light_Uppercase_19</font>
                 <textcolor>ffa1a1a1</textcolor>
                 <label>$INFO[ListItem.Year]$INFO[ListItem.Genre, • ]$INFO[ListItem.Duration, • , min]$INFO[ListItem.Rating, • ]</label>
-                <label>$INFO[ListItem.Property(TotalEpisodes),, episodes]$INFO[ListItem.Property(WatchedEpisodes), • , watched]$INFO[ListItem.Property(UnWatchedEpisodes), • , unwatched]</label>  <!-- localize -->
-                <pauseatend>3000</pauseatend>
+                <label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[32002]]$INFO[ListItem.Property(WatchedEpisodes), • , $LOCALIZE[32003]]$INFO[ListItem.Property(UnWatchedEpisodes), • , $LOCALIZE[32004]]</label>
+                <label>$INFO[Window(Home).Property(NextAired.NextSeasonNumber),$LOCALIZE[32001]: (S]$INFO[Window(Home).Property(NextAired.NextEpisodeNumber),E,) ]$INFO[Window(Home).Property(NextAired.NextDate)]</label>
+                <pauseatend>5000</pauseatend>
                 <visible>Container.Content(TVShows)</visible>
             </control>
             <control type="fadelabel">
-                <description>TV Show info</description>
+                <description>Season info</description>
                 <posy>515</posy>
                 <width>900</width>
                 <font>Light_Uppercase_19</font>
                 <textcolor>ffa1a1a1</textcolor>
-                <label>$INFO[ListItem.Property(TotalEpisodes),, episodes]$INFO[ListItem.Property(WatchedEpisodes), • , watched]$INFO[ListItem.Property(UnWatchedEpisodes), • , unwatched]</label>  <!-- localize -->
+                <label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[32002]]$INFO[ListItem.Property(WatchedEpisodes), • , $LOCALIZE[32003]]$INFO[ListItem.Property(UnWatchedEpisodes), • , $LOCALIZE[32004]]</label>
                 <pauseatend>3000</pauseatend>
                 <visible>Container.Content(Seasons)</visible>
             </control>
             <control type="textbox">
-                <description>Movie plot</description>
+                <description>Item plot</description>
                 <posy>560</posy>
                 <width>800</width>
                 <height>118</height>
@@ -181,24 +182,6 @@
                 <visible>!IsEmpty(ListItem.Plot)</visible>
             </control>
         </control>
-        <!--<control type="fadelabel">
-            <description>TV Show info</description>
-            <posx>20</posx>
-            <posy>30</posy>
-            <width>900</width>
-            <font>Light_Uppercase_19</font>
-            <textcolor>ffa1a1a1</textcolor>
-            <label>$INFO[Container(50).ListItem.Property(NextAired.NextDate)] hejsan</label>
-            <pauseatend>3000</pauseatend>
-            <visible>Container.Content(TVShows)</visible>
-        </control>
-        <control type="label">
-            <description>Next Episode value</description>
-            <width>348</width>
-            <height>20</height>
-            <label>sup?[COLOR grey]$LOCALIZE[209]: BAJS[/COLOR] asdf $INFO[Window(Home).Property(NextAired.NextSeasonNumber),(S]$INFO[Window(Home).Property(NextAired.NextEpisodeNumber),E,)] $INFO[Window(Home).Property(NextAired.NextDate)]</label>
-            <font>font21</font>
-        </control>-->
         <control type="scrollbar" id="61">
             <posx>20</posx>
             <posy>700</posy>

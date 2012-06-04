@@ -207,7 +207,7 @@
                     <width>900</width>
                     <font>Light_Uppercase_19</font>
                     <textcolor>ffa1a1a1</textcolor>
-                    <label>$INFO[VideoPlayer.Year,, • ]$INFO[VideoPlayer.Genre]$INFO[VideoPlayer.Duration, • ]$INFO[VideoPlayer.Rating, • ]</label>  <!-- localize -->
+                    <label>$INFO[VideoPlayer.Year,, • ]$INFO[VideoPlayer.Genre]$INFO[VideoPlayer.Duration, • ]$INFO[VideoPlayer.Rating, • ]</label>
                 </control>
                 <control type="textbox">
                     <description>Movie plot</description>

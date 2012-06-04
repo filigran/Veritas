@@ -42,8 +42,15 @@
                 <control type="button" id="3112">
                     <description>Settings button</description>
                     <width>380</width>
-                    <label>Inställningar</label> <!-- localize -->
+                    <label>5</label>
                     <onclick>ActivateWindow(Settings)</onclick>
+                </control>
+                <control type="button" id="3113">
+                    <description>Update Next Aired button</description>
+                    <width>380</width>
+                    <label>32009</label>
+                    <onclick>RunScript(script.tv.show.next.aired,force=True)</onclick>
+                    <visible>Container.Content(TVShows)</visible>
                 </control>
             </control>
         </control>

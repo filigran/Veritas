@@ -62,7 +62,7 @@
                     <aligny>top</aligny>
                     <font>Light_Uppercase_19</font>
                     <textcolor>ffb2b2b2</textcolor>
-                    <label>Directed by</label>
+                    <label>20339</label>
                 </control>
                 <control type="image">
                     <description>Divider #1</description>
@@ -84,7 +84,7 @@
                     <aligny>top</aligny>
                     <font>Light_Uppercase_19</font>
                     <textcolor>ffb2b2b2</textcolor>
-                    <label>Written by</label>
+                    <label>20417</label>
                 </control>
                 <control type="image">
                     <description>Divider #2</description>
@@ -106,7 +106,7 @@
                     <aligny>top</aligny>
                     <font>Light_Uppercase_19</font>
                     <textcolor>ffb2b2b2</textcolor>
-                    <label>Path</label>
+                    <label>573</label>
                 </control>
                 <control type="image">
                     <description>Divider #3</description>
@@ -122,17 +122,17 @@
                     <description>Cast label</description>
                     <posx>0</posx>
                     <posy>105</posy>
-                    <width>110</width>
+                    <width>145</width>
                     <height>20</height>
                     <align>left</align>
                     <aligny>top</aligny>
                     <font>Light_Uppercase_19</font>
                     <textcolor>ffb2b2b2</textcolor>
-                    <label>Starring</label>
+                    <label>206</label>
                 </control>
             </control>
             <control type="group">
-                <posx>379</posx>
+                <posx>384</posx>
                 <posy>-26</posy>
                 <control type="fadelabel">
                     <description>Director info</description>
@@ -171,7 +171,7 @@
                     <font>Light_Uppercase_19</font>
                     <textcolor>white</textcolor>
                     <pauseatend>5000</pauseatend>
-                    <label fallback="N/A">$INFO[ListItem.Path]</label>
+                    <label fallback="N/A">$INFO[ListItem.FilenameAndPath]</label>
                 </control>
                 <control type="list" id="50">
                     <description>Cast</description>
@@ -296,7 +296,7 @@
                     <focusedcolor>ff1774b5</focusedcolor>
                     <disabledcolor>ff808080</disabledcolor>
                     <font>Light_Uppercase_24</font>
-                    <label>Thumb</label> <!-- localize -->
+                    <label>32006</label>
                     <align>left</align>
                     <aligny>top</aligny>
                 </control>
@@ -309,12 +309,12 @@
                     <focusedcolor>ff1774b5</focusedcolor>
                     <disabledcolor>ff808080</disabledcolor>
                     <font>Light_Uppercase_24</font>
-                    <label>Fanart</label> <!-- localize -->
+                    <label>20445</label>
                     <align>left</align>
                     <aligny>top</aligny>
                 </control>
                 <control type="button" id="100">
-                    <description>Artwork button</description>
+                    <description>Logo button</description>
                     <width>200</width>
                     <texturefocus>-</texturefocus>
                     <texturenofocus>-</texturenofocus>
@@ -322,7 +322,7 @@
                     <focusedcolor>ff1774b5</focusedcolor>
                     <disabledcolor>ffa1a1a1</disabledcolor>
                     <font>Light_Uppercase_24</font>
-                    <label>Artwork</label> <!-- localize -->
+                    <label>32005</label>
                     <align>left</align>
                     <aligny>top</aligny>
                     <onclick>Dialog.Close(MovieInformation)</onclick>

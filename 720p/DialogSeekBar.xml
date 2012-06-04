@@ -3,7 +3,7 @@
 <window id="115">
     <defaultcontrol always="true">901</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
-    <visible>[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsVisible(FullScreenInfo)]</visible>
+    <visible>[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsVisible(FullScreenInfo) | Window.IsVisible(VideoOsd)]</visible>
     <controls>
         <control type="group">
             <posx>0</posx>
@@ -68,74 +68,74 @@
                 <align>left</align>
                 <aligny>center</aligny>
                 <font>Light_Uppercase_19</font>
-                <label>$INFO[Player.TimeRemaining,Remaining: ]</label> <!-- localize -->
+                <label>$INFO[Player.TimeRemaining,$LOCALIZE[32008]: ]</label>
             </control>
             <control type="group">
                 <description>Center labels (ff, rew, paused, buffering)</description>
                 <control type="label">
                     <include>Template_CenteredLabel</include>
-                    <label>Paused</label>  <!-- localize -->
+                    <label>$LOCALIZE[31037]</label>
                     <visible>[Player.Paused + !Player.Caching] + !Player.Seeking + !Player.DisplayAfterSeek</visible>
                 </control>
                 <control type="label">
                     <include>Template_CenteredLabel</include>
-                    <label>Rewind (2x)</label>  <!-- localize -->
+                    <label>$LOCALIZE[31036] (2x)</label>
                     <visible>Player.Rewinding2x</visible>
                 </control>
                 <control type="label">
                     <include>Template_CenteredLabel</include>
-                    <label>Rewind (4x)</label>  <!-- localize -->
+                    <label>$LOCALIZE[31036] (4x)</label>  
                     <visible>Player.Rewinding4x</visible>
                 </control>
                 <control type="label">
                     <include>Template_CenteredLabel</include>
-                    <label>Rewind (8x)</label>  <!-- localize -->
+                    <label>$LOCALIZE[31036] (8x)</label>  
                     <visible>Player.Rewinding8x</visible>
                 </control>
                 <control type="label">
                     <include>Template_CenteredLabel</include>
-                    <label>Rewind (16x)</label>  <!-- localize -->
+                    <label>$LOCALIZE[31036] (16x)</label>  
                     <visible>Player.Rewinding16x</visible>
                 </control>
                 <control type="label">
                     <include>Template_CenteredLabel</include>
-                    <label>Rewind (32x)</label>  <!-- localize -->
+                    <label>$LOCALIZE[31036] (32x)</label>  
                     <visible>Player.Rewinding32x</visible>
                 </control>
                 <control type="label">
                     <include>Template_CenteredLabel</include>
-                    <label>Fast-forwarding (2x)</label>  <!-- localize -->
+                    <label>$LOCALIZE[31039] (2x)</label>  
                     <visible>Player.Forwarding2x</visible>
                 </control>
                 <control type="label">
                     <include>Template_CenteredLabel</include>
-                    <label>Fast-forward (4x)</label>  <!-- localize -->
+                    <label>$LOCALIZE[31039] (4x)</label>  
                     <visible>Player.Forwarding4x</visible>
                 </control>
                 <control type="label">
                     <include>Template_CenteredLabel</include>
-                    <label>Fast-forward (8x)</label>  <!-- localize -->
+                    <label>$LOCALIZE[31039] (8x)</label>  
                     <visible>Player.Forwarding8x</visible>
                 </control>
                 <control type="label">
                     <include>Template_CenteredLabel</include>
-                    <label>Fast-foward (16x)</label>  <!-- localize -->
+                    <label>$LOCALIZE[31039] (16x)</label>  
                     <visible>Player.Forwarding16x</visible>
                 </control>
                 <control type="label">
                     <include>Template_CenteredLabel</include>
-                    <label>Fast-forward (32x)</label>  <!-- localize -->
+                    <label>$LOCALIZE[31039] (32x)</label>  
                     <visible>Player.Forwarding32x</visible>
                 </control>
                 <control type="label">
                     <description>Cache label</description>
                     <include>Template_CenteredLabel</include>
-                    <label>$LOCALIZE[15107] $INFO[Player.CacheLevel]%</label>  <!-- localize -->
+                    <label>$LOCALIZE[15107] $INFO[Player.CacheLevel]%</label>  
                     <visible>[Player.Paused + Player.Caching] + !Player.Seeking</visible>
                 </control>
                 <control type="label">
                     <include>Template_CenteredLabel</include>
-                    <label>Seeking $INFO[Player.SeekOffset]</label>  <!-- localize -->
+                    <label>$LOCALIZE[773] $INFO[Player.SeekOffset]</label>  
                     <visible>Player.DisplayAfterSeek + ![Player.Forwarding | Player.Rewinding]</visible>
                 </control>
             </control>
@@ -148,7 +148,7 @@
                 <align>right</align>
                 <aligny>center</aligny>
                 <font>Light_Uppercase_19</font>
-                <label>$INFO[Player.FinishTime,End time: ]</label>  <!-- localize -->
+                <label>$INFO[Player.FinishTime,$LOCALIZE[32007]: ]</label>  
             </control>
             <control type="label">
                 <description>Running time</description>

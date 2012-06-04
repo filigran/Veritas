@@ -106,7 +106,7 @@
 				</item>
 				<item id="11">
 					<description>Custom Settings</description>
-					<label>636</label>
+					<label>20077</label>
 					<onclick>activatewindow(56)</onclick>
 				</item>
 			</content>

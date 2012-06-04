@@ -2,7 +2,7 @@
 <!-- Foundation -->
 <window type="dialog" id="50">
     <zorder>2</zorder>
-    <visible>!Window.IsVisible(startup)</visible>
+    <visible>!Window.IsVisible(startup) + [!Window.IsVisible(FullscreenVideo) | [Window.IsVisible(FullscreenVideo) + !Player.Playing] | [Player.Playing + Window.IsVisible(Seekbar)]]</visible>
     <controls>
         <control type="group">
             <description>Time and date</description>
