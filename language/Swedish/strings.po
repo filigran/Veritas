@@ -1,0 +1,168 @@
+# XBMC Media Center language file
+msgid ""
+msgstr ""
+"Project-Id-Version: xbmc.skin.confluence-Frodo\n"
+"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
+"POT-Creation-Date: 2012-05-04 12:52+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+msgctxt "#31001"
+msgid "Files Mode"
+msgstr "Fil-läge"
+
+msgctxt "#31015"
+msgid "Player Controls"
+msgstr "Spelarkontroller"
+
+msgctxt "#31016"
+msgid "Background Visuals"
+msgstr "Bakgrundsvisualisering"
+
+msgctxt "#31017"
+msgid "Lyrics/Subtitles"
+msgstr "Låttexter/Undertexter"
+
+# MyMusicPlaylistEditor.xml id 31018 - 31022
+
+msgctxt "#31018"
+msgid "Current Selected"
+msgstr ""
+
+msgctxt "#31019"
+msgid "Open playlist"
+msgstr ""
+
+msgctxt "#31020"
+msgid "Save playlist"
+msgstr ""
+
+msgctxt "#31021"
+msgid "Close playlist"
+msgstr ""
+
+msgctxt "#31022"
+msgid "System music files"
+msgstr ""
+
+msgctxt "#31023"
+msgid "Disable Background Visualiser"
+msgstr "Inaktivera bakgrundsvisualisering"
+
+msgctxt "#31024"
+msgid "Disable Background Video"
+msgstr "Inaktivera bakgrundsvideo"
+
+msgctxt "#31025"
+msgid "Click to change default Lyrics script"
+msgstr "Klicka här för att ändra förinställning för låttext-skript"
+
+msgctxt "#31026"
+msgid "Click to change default subtitles script"
+msgstr "Klicka här för att ändra förinställning för undertext-skript"
+
+msgctxt "#31027"
+msgid "Items"
+msgstr "objekt"
+
+msgctxt "#31028"
+msgid "Page"
+msgstr "Sida"
+
+msgctxt "#31029"
+msgid "Current playlist"
+msgstr "Aktiv playlist"
+
+msgctxt "#31030"
+msgid "Memory used"
+msgstr "Minne använt"
+
+msgctxt "#31031"
+msgid "Karaoke Song Selector"
+msgstr "Karaokelåtväljare"
+
+msgctxt "#31032"
+msgid "Visualization Presets"
+msgstr "Förinställning för visualisering"
+
+msgctxt "#31033"
+msgid "Debug"
+msgstr "Debug"
+
+msgctxt "#31034"
+msgid "Enable Debug Grid"
+msgstr "Aktivera debug-rutnät"
+
+msgctxt "#31035"
+msgid "Disable Debug Info"
+msgstr "Inaktivera debuginformation"
+
+msgctxt "#31036"
+msgid "Rewind"
+msgstr "Spola bakåt"
+
+msgctxt "#31037"
+msgid "Pause"
+msgstr "Paus"
+
+msgctxt "#31038"
+msgid "Stop"
+msgstr "Stopp"
+
+msgctxt "#31039"
+msgid "Fast Forward"
+msgstr "Spola framåt"
+
+msgctxt "#31040"
+msgid "Visualisation Presets"
+mststr "Förinställda visualiseringar"
+
+msgctxt "#31041"
+msgid "DVD Menu
+msgstr "DVD-meny"
+
+msgctxt "#32000"
+msgid "mins"
+msgstr "min"
+
+msgctxt "#32001"
+msgid "Next episode"
+msgstr "Nästa avsnitt"
+
+msgctxt "#32002"
+msgid "episodes"
+msgstr "avsnitt"
+
+msgctxt "#32003"
+msgid "watched"
+msgstr "visade"
+
+msgctxt "#32004"
+msgid "unwatched"
+msgstr "ej visade"
+
+msgctxt "#32005"
+msgid "Logo"
+msgstr "Logo"
+
+msgctxt "#32006"
+msgid "Thumb"
+msgstr "Thumb"
+
+msgctxt "#32007"
+msgid "End time"
+msgstr "Sluttid"
+
+msgctxt "#32008"
+msgid "Remaining"
+msgstr "Återstår"
+
+msgctxt "#32009"
+msgid "Update Next Aired"
+msgstr "Uppdatera Next Aired"
