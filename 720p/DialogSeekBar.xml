@@ -57,7 +57,7 @@
                 <align>left</align>
                 <aligny>center</aligny>
                 <font>Normal_19</font>
-                <label>$INFO[Player.Time]</label>
+                <info>Player.Time</info>
             </control>
             <control type="label">
                 <description>Remaining time label</description>
@@ -74,7 +74,7 @@
                 <description>Center labels (ff, rew, paused, buffering)</description>
                 <control type="label">
                     <include>Template_CenteredLabel</include>
-                    <label>$LOCALIZE[31037]</label>
+                    <label>31037</label>
                     <visible>[Player.Paused + !Player.Caching] + !Player.Seeking + !Player.DisplayAfterSeek</visible>
                 </control>
                 <control type="label">
@@ -159,7 +159,7 @@
                 <align>right</align>
                 <aligny>center</aligny>
                 <font>Normal_19</font>
-                <label>$INFO[Player.Duration]</label>
+                <info>Player.Duration</info>
             </control>
         </control>
     </controls>

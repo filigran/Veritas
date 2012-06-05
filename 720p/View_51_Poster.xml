@@ -137,7 +137,7 @@
                 <width>900</width>
                 <font>Light_Uppercase_36</font>
                 <textcolor>ffd3d3d3</textcolor>
-                <label>$INFO[ListItem.Label,, ]</label>
+                <info>Listitem.Label</info>
             </control>
             <control type="label">
                 <description>Movie info</description>
@@ -154,7 +154,7 @@
                 <width>900</width>
                 <font>Light_Uppercase_19</font>
                 <textcolor>ffa1a1a1</textcolor>
-                <label>$INFO[ListItem.Year]$INFO[ListItem.Genre, • ]$INFO[ListItem.Duration, • , min]$INFO[ListItem.Rating, • ]</label>
+                <label>$INFO[ListItem.Year]$INFO[ListItem.Genre, • ]$INFO[ListItem.Duration, • , $LOCALIZE[32000]]$INFO[ListItem.Rating, • ]</label>
                 <label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[32002]]$INFO[ListItem.Property(WatchedEpisodes), • , $LOCALIZE[32003]]$INFO[ListItem.Property(UnWatchedEpisodes), • , $LOCALIZE[32004]]</label>
                 <label>$INFO[Window(Home).Property(NextAired.NextSeasonNumber),$LOCALIZE[32001]: (S]$INFO[Window(Home).Property(NextAired.NextEpisodeNumber),E,) ]$INFO[Window(Home).Property(NextAired.NextDate)]</label>
                 <pauseatend>5000</pauseatend>
@@ -177,7 +177,7 @@
                 <height>118</height>
                 <font>Normal_24</font>
                 <textcolor>ffd3d3d3</textcolor>
-                <label>$INFO[ListItem.Plot]</label>
+                <info>Listitem.Plot</info>
                 <autoscroll delay="10000" time="4500" repeat="10000">true</autoscroll>
                 <visible>!IsEmpty(ListItem.Plot)</visible>
             </control>

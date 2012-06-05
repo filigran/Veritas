@@ -166,3 +166,7 @@ msgstr "Återstår"
 msgctxt "#32009"
 msgid "Update Next Aired"
 msgstr "Uppdatera Next Aired"
+
+msgctxt "#32010"
+msgid "N/A"
+msgstr "N/A"

@@ -52,7 +52,7 @@
             <control type="group">
                 <posx>229</posx>
                 <posy>-26</posy>
-                <control type="label">
+                <control type="§">
                     <description>Director label</description>
                     <posx>0</posx>
                     <posy>0</posy>
@@ -145,7 +145,7 @@
                     <font>Light_Uppercase_19</font>
                     <textcolor>white</textcolor>
                     <pauseatend>5000</pauseatend>
-                    <label fallback="N/A">$INFO[ListItem.Director]</label>
+                    <label fallback="32010">$INFO[Listitem.Director]</label>
                 </control>
                 <control type="fadelabel">
                     <description>Writer info</description>
@@ -158,7 +158,7 @@
                     <font>Light_Uppercase_19</font>
                     <textcolor>white</textcolor>
                     <pauseatend>5000</pauseatend>
-                    <label fallback="N/A">$INFO[ListItem.Writer]</label>
+                    <label fallback="32010">$INFO[Listitem.Writer]</label>
                 </control>
                 <control type="fadelabel">
                     <description>Path info</description>
@@ -171,7 +171,7 @@
                     <font>Light_Uppercase_19</font>
                     <textcolor>white</textcolor>
                     <pauseatend>5000</pauseatend>
-                    <label fallback="N/A">$INFO[ListItem.FilenameAndPath]</label>
+                    <label fallback="32010">$INFO[Listitem.FilenameAndPath]</label>
                 </control>
                 <control type="list" id="50">
                     <description>Cast</description>
@@ -196,7 +196,7 @@
                             <aligny>top</aligny>
                             <align>left</align>
                             <shadowcolor>black</shadowcolor>
-                            <label fallback="N/A">$INFO[ListItem.Label]</label>
+                            <label fallback="32010">$INFO[Listitem.Label]</label>
                         </control>
                     </itemlayout>
                     <focusedlayout height="23">
@@ -209,7 +209,7 @@
                             <align>left</align>
                             <shadowcolor>black</shadowcolor>
                             <font>Light_Uppercase_19</font>
-                            <label fallback="N/A">$INFO[ListItem.Label]</label>
+                            <label fallback="32010">$INFO[Listitem.Label]</label>
                             <visible>!Control.HasFocus(50)</visible>
                         </control>
                         <control type="label">
@@ -222,7 +222,7 @@
                             <textcolor>ff1774b5</textcolor>
                             <shadowcolor>black</shadowcolor>
                             <font>Light_Uppercase_19</font>
-                            <label fallback="N/A">$INFO[ListItem.Label]</label>
+                            <label fallback="32010">$INFO[Listitem.Label]</label>
                             <visible>Control.HasFocus(50)</visible>
                         </control>
                     </focusedlayout>

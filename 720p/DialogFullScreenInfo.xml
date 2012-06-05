@@ -78,7 +78,7 @@
                         <aligny>top</aligny>
                         <font>Light_Uppercase_19</font>
                         <textcolor>ffb2b2b2</textcolor>
-                        <label>Directed by</label>
+                        <label>20339</label>
                     </control>
                     <control type="image">
                         <description>Divider #1</description>
@@ -98,7 +98,7 @@
                         <aligny>top</aligny>
                         <font>Light_Uppercase_19</font>
                         <textcolor>ffb2b2b2</textcolor>
-                        <label>Written by</label>
+                        <label>20417</label>
                     </control>
                     <control type="image">
                         <description>Divider #2</description>
@@ -118,7 +118,7 @@
                         <aligny>top</aligny>
                         <font>Light_Uppercase_19</font>
                         <textcolor>ffb2b2b2</textcolor>
-                        <label>Path</label>
+                        <label>573</label>
                     </control>
                     <control type="image">
                         <description>Divider #3</description>
@@ -138,7 +138,7 @@
                         <aligny>top</aligny>
                         <font>Light_Uppercase_19</font>
                         <textcolor>ffb2b2b2</textcolor>
-                        <label>Starring</label>
+                        <label>206</label>
                     </control>
                 </control>
                 <control type="group">
@@ -152,7 +152,7 @@
                         <font>Light_Uppercase_19</font>
                         <textcolor>white</textcolor>
                         <pauseatend>5000</pauseatend>
-                        <label fallback="N/A">$INFO[VideoPlayer.Director]</label>
+                        <label fallback="32010">$INFO[Listitem.Director]</label>
                     </control>
                     <control type="fadelabel">
                         <description>Writer info</description>
@@ -164,7 +164,7 @@
                         <font>Light_Uppercase_19</font>
                         <textcolor>white</textcolor>
                         <pauseatend>5000</pauseatend>
-                        <label fallback="N/A">$INFO[VideoPlayer.Writer]</label>
+                        <label fallback="32010">$INFO[Listitem.Writer]</label>
                     </control>
                     <control type="fadelabel">
                         <description>Path info</description>
@@ -176,7 +176,7 @@
                         <font>Light_Uppercase_19</font>
                         <textcolor>white</textcolor>
                         <pauseatend>5000</pauseatend>
-                        <label fallback="N/A">$INFO[Player.FilenameAndPath]</label>
+                        <label fallback="32010">$INFO[Listitem.FilenameAndPath]</label>
                     </control>
                     <control type="label">
                         <description>Cast</description>
@@ -187,7 +187,7 @@
                         <aligny>top</aligny>
                         <align>left</align>
                         <shadowcolor>black</shadowcolor>
-                        <label fallback="N/A">$INFO[VideoPlayer.CastAndRole]</label>
+                        <label fallback="32010">$INFO[Videoplayer.CastAndRole]</label>
                     </control>
                 </control>
             </control>
@@ -199,7 +199,7 @@
                     <width>900</width>
                     <font>Light_Uppercase_36</font>
                     <textcolor>ffd3d3d3</textcolor>
-                    <label>$INFO[VideoPlayer.Title]</label>
+                    <info>VideoPlayer.Title</info>
                 </control>
                 <control type="label">
                     <description>Movie info</description>
@@ -216,7 +216,7 @@
                     <height>118</height>
                     <font>Normal_24</font>
                     <textcolor>ffd3d3d3</textcolor>
-                    <label>$INFO[VideoPlayer.Plot]</label>
+                    <info>VideoPlayer.Plot</info>
                     <autoscroll delay="10000" time="4500" repeat="10000">true</autoscroll>
                     <visible>!IsEmpty(VideoPlayer.Plot)</visible>
                 </control>
