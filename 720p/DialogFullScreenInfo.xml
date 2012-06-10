@@ -132,7 +132,7 @@
                     <control type="label">
                         <description>Cast label</description>
                         <posy>105</posy>
-                        <width>110</width>
+                        <width>145</width>
                         <height>20</height>
                         <align>left</align>
                         <aligny>top</aligny>
@@ -142,7 +142,7 @@
                     </control>
                 </control>
                 <control type="group">
-                    <posx>135</posx>
+                    <posx>155</posx>
                     <control type="fadelabel">
                         <description>Director info</description>
                         <width>550</width>

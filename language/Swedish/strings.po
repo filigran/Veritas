@@ -121,7 +121,7 @@ msgstr "Spola framåt"
 
 msgctxt "#31040"
 msgid "Visualisation Presets"
-mststr "Förinställda visualiseringar"
+msgstr "Förinställda visualiseringar"
 
 msgctxt "#31041"
 msgid "DVD Menu
