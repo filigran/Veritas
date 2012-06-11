@@ -8,7 +8,28 @@
         <animation effect="slide" end="0,350" time="0" condition="Container(52).Row(5)">Conditional</animation>
         <animation effect="slide" end="0,410" time="0" condition="Container(52).Row(6)">Conditional</animation>
     </include>
+    <include name="Animation_EpisodeGlow52">
+        <!-- Credits to Hitcher -->
+        <animation effect="slide" end="0,70" time="0" condition="Container(52).Row(1)">Conditional</animation>
+        <animation effect="slide" end="0,140" time="0" condition="Container(52).Row(2)">Conditional</animation>
+        <animation effect="slide" end="0,210" time="0" condition="Container(52).Row(3)">Conditional</animation>
+        <animation effect="slide" end="0,280" time="0" condition="Container(52).Row(4)">Conditional</animation>
+        <animation effect="slide" end="0,350" time="0" condition="Container(52).Row(5)">Conditional</animation>
+        <animation effect="slide" end="0,410" time="0" condition="Container(52).Row(6)">Conditional</animation>
+    </include>
     <include name="View_52_EpisodeList">
+        <control type="image">
+            <posx>130</posx>
+            <posy>220</posy>
+            <width>550</width>
+            <height>252</height>
+            <fadetime>100</fadetime>
+            <aspectratio align="left" aligny="top">stretch</aspectratio>
+            <texture fallback="DefaultAddonNone.png">veritas/poster_glow.png</texture>
+            <colordiffuse>ff1774b5</colordiffuse>
+            <include>Animation_EpisodeGlow52</include>
+            <visible>Control.IsVisible(52) + !Window.IsVisible(2003)</visible>
+        </control>
         <control type="group">
             <visible>Control.IsVisible(52) + !Window.IsVisible(2003)</visible>
             <animation effect="fade" start="0" end="100" time="200" reversible="false">VisibleChange</animation>
@@ -157,13 +178,25 @@
                 <control type="group">
                     <visible>!Window.IsVisible(2003)</visible>
                     <control type="image">
+                        <posx>-11</posx>
+                        <posy>216</posy>
+                        <width>428</width>
+                        <height>15</height>
+                        <fadetime>100</fadetime>
+                        <aspectratio align="left" aligny="top">stretch</aspectratio>
+                        <texture fallback="DefaultAddonNone.png">veritas/poster_shadow.png</texture>
+                        <colordiffuse>ff000000</colordiffuse>
+                        <animation effect="slide" start="0,-20" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container.OnNext">Focus</animation>
+                        <animation effect="slide" start="0,20" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container.OnPrevious">Focus</animation>
+                    </control>
+                    <control type="image">
                         <description>Thumb</description>
                         <posx>30</posx>
                         <posy>20</posy>
                         <width>350</width>
                         <height>197</height>
-                        <aspectratio scalediffuse="false">scale</aspectratio>
-                        <texture background="true" diffuse="special://skin/media/16x9_diffuse_small.png">$INFO[ListItem.Icon]</texture>
+                        <aspectratio>scale</aspectratio>
+                        <texture background="true">$INFO[ListItem.Icon]</texture>
                         <animation effect="slide" start="0,-20" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container.OnNext">Focus</animation>
                         <animation effect="slide" start="0,20" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container.OnPrevious">Focus</animation>
                     </control>
@@ -292,13 +325,23 @@
                 <posy>270</posy>
                 <animation effect="slide" start="0,0" end="0,180" time="400" reversible="false" tween="back" easing="out">Visible</animation>
                 <control type="image">
+                    <posx>-68</posx>
+                    <posy>100</posy>
+                    <width>550</width>
+                    <height>252</height>
+                    <fadetime>100</fadetime>
+                    <aspectratio align="left" aligny="top">stretch</aspectratio>
+                    <texture fallback="DefaultAddonNone.png">veritas/poster_glow.png</texture>
+                    <colordiffuse>ff1774b5</colordiffuse>
+                </control>
+                <control type="image">
                     <description>Thumb</description>
                     <posx>30</posx>
                     <posy>20</posy>
                     <width>350</width>
                     <height>197</height>
-                    <aspectratio background="true" scalediffuse="false">scale</aspectratio>
-                    <texture diffuse="special://skin/media/16x9_diffuse_small.png">$INFO[ListItem.Icon]</texture>
+                    <aspectratio background="true">scale</aspectratio>
+                    <texture>$INFO[ListItem.Icon]</texture>
                     <animation effect="slide" start="0,-20" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container.OnNext">Focus</animation>
                     <animation effect="slide" start="0,20" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container.OnPrevious">Focus</animation>
                 </control>

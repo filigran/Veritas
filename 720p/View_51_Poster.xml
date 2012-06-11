@@ -4,13 +4,13 @@
     <include name="View_51_Poster">
         <description>Poster View (id=51)</description>
         <control type="image">
-            <posx>175</posx>
+            <posx>164</posx>
             <posy>324</posy>
-            <width>403</width>
+            <width>412</width>
             <height>252</height>
             <fadetime>100</fadetime>
             <aspectratio align="left" aligny="top">stretch</aspectratio>
-            <texture fallback="DefaultAddonNone.png">veritas/poster_glow.png</texture>
+            <texture>veritas/poster_glow.png</texture>
             <colordiffuse>ff1774b5</colordiffuse>
             <visible>Control.IsVisible(51)</visible>
         </control>
@@ -88,9 +88,9 @@
                     </animation>
                     <visible>!Control.HasFocus(50)</visible>
                     <control type="image">
-                        <posx>-33</posx>
+                        <posx>-15</posx>
                         <posy>254</posy>
-                        <width>235</width>
+                        <width>211</width>
                         <height>15</height>
                         <fadetime>100</fadetime>
                         <aspectratio align="left" aligny="top">stretch</aspectratio>
