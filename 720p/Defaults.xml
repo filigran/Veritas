@@ -227,7 +227,6 @@
         <font>Small</font>
         <textcolor>white</textcolor>
         <shadowcolor>black</shadowcolor>
-        <pagecontrol>61</pagecontrol>
         <autoscroll delay="6000" time="2000" repeat="10000"/>
     </default>
 

@@ -86,7 +86,6 @@
                     <animation type="Conditional" condition="true">
                         <effect tween="back" easing="out" type="zoom" center="130,200" start="100" end="128" time="400" />
                     </animation>
-                    <visible>!Control.HasFocus(50)</visible>
                     <control type="image">
                         <posx>-15</posx>
                         <posy>254</posy>
@@ -94,7 +93,7 @@
                         <height>15</height>
                         <fadetime>100</fadetime>
                         <aspectratio align="left" aligny="top">stretch</aspectratio>
-                        <texture fallback="DefaultAddonNone.png">veritas/poster_shadow.png</texture>
+                        <texture>veritas/poster_shadow.png</texture>
                         <colordiffuse>ff000000</colordiffuse>
                     </control>
                     <control type="image">
@@ -105,6 +104,7 @@
                         <fadetime>100</fadetime>
                         <aspectratio align="center" aligny="top">stretch</aspectratio>
                         <texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
+                        <visible>!Window.IsVisible(2003) | [Window.IsVisible(2003) + !Control.HasFocus(50)]</visible>
                     </control>
                     <control type="image">
                         <posx>0</posx>
@@ -113,7 +113,8 @@
                         <height>263</height>
                         <fadetime>100</fadetime>
                         <aspectratio align="center" aligny="top">stretch</aspectratio>
-                        <texture background="true" fallback="DefaultVideo.png">veritas/poster_frame.png</texture>
+                        <texture background="true">veritas/poster_frame.png</texture>
+                        <visible>!Window.IsVisible(2003) | [Window.IsVisible(2003) + !Control.HasFocus(50)]</visible>
                     </control>
                     <control type="image">
                         <posx>135</posx>
@@ -123,7 +124,9 @@
                         <aspectratio>keep</aspectratio>
                         <texture background="true">special://skin/media/veritas/$INFO[ListItem.Overlay]</texture>
                         <colordiffuse>ff00ff00</colordiffuse>
+                        <animation effect="zoom" center="auto" start="0" end="100" time="200" reversible="false">VisibleChange</animation>
                         <visible>StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+                        <visible>!Window.IsVisible(2003) | [Window.IsVisible(2003) + !Control.HasFocus(50)]</visible>
                     </control>
                 </control>
             </focusedlayout>
@@ -184,7 +187,7 @@
         </control>
         <control type="scrollbar" id="61">
             <posx>20</posx>
-            <posy>700</posy>
+            <posy>20r</posy>
             <width>1240</width>
             <height>5</height>
             <onup>51</onup>

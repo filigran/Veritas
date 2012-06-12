@@ -15,16 +15,6 @@
                 <posy>0</posy>
                 <visible>Control.HasFocus(50)</visible>
                 <control type="image">
-                    <posx>-62</posx>
-                    <posy>294</posy>
-                    <width>298</width>
-                    <height>22</height>
-                    <fadetime>100</fadetime>
-                    <aspectratio align="left" aligny="top">stretch</aspectratio>
-                    <texture>veritas/poster_shadow.png</texture>
-                    <colordiffuse>ff000000</colordiffuse>
-                </control>
-                <control type="image">
                     <posx>0</posx>
                     <posy>8</posy>
                     <width>187</width>
@@ -52,7 +42,7 @@
             <control type="group">
                 <posx>229</posx>
                 <posy>-26</posy>
-                <control type="§">
+                <control type="label">
                     <description>Director label</description>
                     <posx>0</posx>
                     <posy>0</posy>
@@ -72,7 +62,7 @@
                     <height>1</height>
                     <aspectratio align="center" aligny="center">keep</aspectratio>
                     <texture>veritas/horiz_divider.png</texture>
-                    <colordiffuse>22ffffff</colordiffuse>
+                    <colordiffuse>red</colordiffuse>
                 </control>
                 <control type="label">
                     <description>Writer label</description>
