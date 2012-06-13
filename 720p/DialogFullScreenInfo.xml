@@ -2,8 +2,6 @@
 <!-- Veritas -->
 <window type="dialog" id="142">
     <defaultcontrol always="true">603</defaultcontrol>
-    <animation effect="fade" start="0" end="100" time="500">WindowOpen</animation>>
-    <animation effect="fade" start="100" end="0" time="500">WindowClose</animation>>
     <controls>
         <control type="image">
             <description>Info background</description>
@@ -82,11 +80,11 @@
                     </control>
                     <control type="image">
                         <description>Divider #1</description>
-                        <posy>28</posy>
-                        <width>644</width>
+                        <posy>29</posy>
+                        <width>639</width>
                         <height>1</height>
                         <aspectratio align="center" aligny="center">keep</aspectratio>
-                        <texture>veritas/horiz_divider.png</texture>
+                        <texture>veritas/divider.png</texture>
                         <colordiffuse>22ffffff</colordiffuse>
                     </control>
                     <control type="label">
@@ -102,11 +100,11 @@
                     </control>
                     <control type="image">
                         <description>Divider #2</description>
-                        <posy>63</posy>
-                        <width>644</width>
+                        <posy>64</posy>
+                        <width>639</width>
                         <height>1</height>
                         <aspectratio align="center" aligny="center">keep</aspectratio>
-                        <texture>veritas/horiz_divider.png</texture>
+                        <texture>veritas/divider.png</texture>
                         <colordiffuse>22ffffff</colordiffuse>
                     </control>
                     <control type="label">
@@ -122,11 +120,11 @@
                     </control>
                     <control type="image">
                         <description>Divider #3</description>
-                        <posy>98</posy>
-                        <width>644</width>
-                        <height>1</height>
+                        <posy>99</posy>
+                        <width>639</width>
+                        <height>2</height>
                         <aspectratio align="center" aligny="center">keep</aspectratio>
-                        <texture>veritas/horiz_divider.png</texture>
+                        <texture>veritas/divider.png</texture>
                         <colordiffuse>22ffffff</colordiffuse>
                     </control>
                     <control type="label">
@@ -152,7 +150,7 @@
                         <font>Light_Uppercase_19</font>
                         <textcolor>white</textcolor>
                         <pauseatend>5000</pauseatend>
-                        <label fallback="32010">$INFO[Listitem.Director]</label>
+                        <label fallback="32010">$INFO[VideoPlayer.Director]</label>
                     </control>
                     <control type="fadelabel">
                         <description>Writer info</description>
@@ -164,7 +162,7 @@
                         <font>Light_Uppercase_19</font>
                         <textcolor>white</textcolor>
                         <pauseatend>5000</pauseatend>
-                        <label fallback="32010">$INFO[Listitem.Writer]</label>
+                        <label fallback="32010">$INFO[VideoPlayer.Writer]</label>
                     </control>
                     <control type="fadelabel">
                         <description>Path info</description>
@@ -176,7 +174,7 @@
                         <font>Light_Uppercase_19</font>
                         <textcolor>white</textcolor>
                         <pauseatend>5000</pauseatend>
-                        <label fallback="32010">$INFO[Listitem.FilenameAndPath]</label>
+                        <label fallback="32010">$INFO[Player.FilenameAndPath]</label>
                     </control>
                     <control type="label">
                         <description>Cast</description>

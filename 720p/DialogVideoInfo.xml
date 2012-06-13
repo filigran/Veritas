@@ -57,12 +57,12 @@
                 <control type="image">
                     <description>Divider #1</description>
                     <posx>0</posx>
-                    <posy>28</posy>
-                    <width>644</width>
+                    <posy>29</posy>
+                    <width>639</width>
                     <height>1</height>
                     <aspectratio align="center" aligny="center">keep</aspectratio>
-                    <texture>veritas/horiz_divider.png</texture>
-                    <colordiffuse>red</colordiffuse>
+                    <texture>veritas/divider.png</texture>
+                    <colordiffuse>33ffffff</colordiffuse>
                 </control>
                 <control type="label">
                     <description>Writer label</description>
@@ -79,12 +79,12 @@
                 <control type="image">
                     <description>Divider #2</description>
                     <posx>0</posx>
-                    <posy>63</posy>
-                    <width>644</width>
+                    <posy>64</posy>
+                    <width>639</width>
                     <height>1</height>
                     <aspectratio align="center" aligny="center">keep</aspectratio>
-                    <texture>veritas/horiz_divider.png</texture>
-                    <colordiffuse>22ffffff</colordiffuse>
+                    <texture>veritas/divider.png</texture>
+                    <colordiffuse>33ffffff</colordiffuse>
                 </control>
                 <control type="label">
                     <description>Path label</description>
@@ -101,12 +101,12 @@
                 <control type="image">
                     <description>Divider #3</description>
                     <posx>0</posx>
-                    <posy>98</posy>
-                    <width>644</width>
-                    <height>1</height>
+                    <posy>99</posy>
+                    <width>639</width>
+                    <height>2</height>
                     <aspectratio align="center" aligny="center">keep</aspectratio>
-                    <texture>veritas/horiz_divider.png</texture>
-                    <colordiffuse>22ffffff</colordiffuse>
+                    <texture>veritas/divider.png</texture>
+                    <colordiffuse>33ffffff</colordiffuse>
                 </control>
                 <control type="label">
                     <description>Cast label</description>
