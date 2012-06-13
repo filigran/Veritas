@@ -19,16 +19,15 @@
             <control type="progress">
                 <description>Progress Bar</description>
                 <posx>0</posx>
-                <posy>-4</posy>
+                <posy>-24</posy>
                 <width>1300</width>
-                <height>30</height>
                 <info>Player.Progress</info>
                 <reveal>false</reveal>
-                <texturebg>-</texturebg>
+                <texturebg></texturebg>
                 <lefttexture>-</lefttexture>
-                <midtexture border="15">veritas/white.png</midtexture>
+                <midtexture border="7">veritas/progress_bar_filled.png</midtexture>
                 <righttexture>-</righttexture>
-                <overlaytexture></overlaytexture>
+                <overlaytexture>-</overlaytexture>
                 <colordiffuse>ff1774b5</colordiffuse>
                 <visible>true</visible>
             </control>
