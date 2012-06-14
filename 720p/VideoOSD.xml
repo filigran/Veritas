@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Veritas -->
 <window id="2901">
-    <defaultcontrol always="true">14</defaultcontrol>
+    <defaultcontrol always="true">9</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
-    <animation effect="slide" start="-1300,0" time="400">WindowOpen</animation>
-    <animation effect="slide" end="1300,0" time="400">WindowClose</animation>
+    <animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+    <animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
     <zorder>1</zorder>
     <controls>
         <control type="image">
@@ -20,7 +20,7 @@
         </control>
         <control type="group">
             <posx>0</posx>
-            <posy>80r</posy>
+            <posy>86r</posy>
             <control type="group">
                 <visible>!Window.IsVisible(sliderdialog)</visible>
                 <control type="image">
@@ -28,24 +28,37 @@
                     <posx>0</posx>
                     <posy>0</posy>
                     <width>1300</width>
-                    <height>50</height>
+                    <height>56</height>
                     <texture border="7">veritas/white.png</texture>
                     <colordiffuse>aa000000</colordiffuse>
                     <visible>!Window.IsVisible(FullscreenInfo)</visible>
                 </control>
+                <control type="label">
+                    <description>Button label</description>
+                    <posx>800</posx>
+                    <posy>0</posy>
+                    <width>440</width>
+                    <height>56</height>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <font>Light_Uppercase_19</font>
+                    <textcolor>ffffffff</textcolor>
+                    <info>System.CurrentControl</info>
+                    <visible>!Window.IsVisible(osdvideosettings) + !Window.IsVisible(osdaudiosettings)</visible>
+                </control>
                 <control type="grouplist" id="100">
                     <posx>20</posx>
-                    <posy>12</posy>
+                    <posy>15</posy>
                     <width>500</width>
-                    <height>50</height>
-                    <itemgap>20</itemgap>
+                    <height>56</height>
+                    <itemgap>30</itemgap>
                     <orientation>horizontal</orientation>
                     <align>left</align>
                     <onleft>-</onleft>
-                    <onright>12</onright>
+                    <onright>7</onright>
                     <onup>-</onup>
                     <ondown>-</ondown>
-                    <control type="button" id="2">
+                    <control type="button" id="1">
                         <description>Audio Settings</description>
                         <width>26</width>
                         <height>26</height>
@@ -56,7 +69,7 @@
                         <onclick>Dialog.Close(FullscreenInfo)</onclick>
                         <onclick>ActivateWindow(124)</onclick>
                     </control>
-                    <control type="button" id="3">
+                    <control type="button" id="2">
                         <description>Video Settings</description>
                         <width>26</width>
                         <height>26</height>
@@ -68,22 +81,75 @@
                         <onclick>Dialog.Close(FullscreenInfo)</onclick>
                         <onclick>ActivateWindow(123)</onclick>
                     </control>
+                    <control type="button" id="3">
+                        <description>Subtitles if no subpath set</description>
+                        <width>32</width>
+                        <height>26</height>
+                        <label>293</label>
+                        <font>-</font>
+                        <texturefocus>veritas/osd_subs_fo.png</texturefocus>
+                        <texturenofocus>veritas/osd_subs_nf.png</texturenofocus>
+                        <onclick>Close</onclick>
+                        <onclick>Dialog.Close(FullscreenInfo)</onclick>
+                        <onclick>XBMC.RunScript(script.xbmc.subtitles)</onclick>
+                        <visible>IsEmpty(Skin.String(SubtitlesPath))</visible>
+                        <animation effect="slide" end="0,3" time="0" condition="true">conditional</animation>
+                    </control>
+                    <control type="button" id="4">
+                        <description>Subtitles if subpath set</description>
+                        <width>32</width>
+                        <height>26</height>
+                        <label>293</label>
+                        <font>-</font>
+                        <texturefocus>veritas/osd_subs_fo.png</texturefocus>
+                        <texturenofocus>veritas/osd_subs_nf.png</texturenofocus>
+                        <onclick>Close</onclick>
+                        <onclick>Dialog.Close(FullscreenInfo)</onclick>
+                        <onclick>XBMC.RunScript($INFO[Skin.String(SubtitlesPath)])</onclick>
+                        <visible>!IsEmpty(Skin.String(SubtitlesPath))</visible>
+                        <animation effect="slide" end="0,3" time="0" condition="true">conditional</animation>
+                    </control>
+                    <control type="button" id="5">
+                        <description>DVD menu active</description>
+                        <width>26</width>
+                        <height>26</height>
+                        <label>31041</label>
+                        <font>-</font>
+                        <texturefocus>veritas/osd_dvdmenu_fo.png</texturefocus>
+                        <texturenofocus>veritas/osd_dvdmenu_nf.png</texturenofocus>
+                        <onclick>PlayerControl(ShowVideoMenu)</onclick>
+                        <visible>VideoPlayer.HasMenu</visible>
+                        <animation effect="slide" end="0,2" time="0" condition="true">conditional</animation>
+                    </control>
+                    <control type="button" id="6">
+                        <description>DVD menu inactive</description>
+                        <width>26</width>
+                        <height>26</height>
+                        <label>31041</label>
+                        <font>-</font>
+                        <texturefocus>veritas/osd_dvdmenu_fo.png</texturefocus>
+                        <texturenofocus>veritas/osd_dvdmenu_nf.png</texturenofocus>
+                        <colordiffuse>88ffffff</colordiffuse>
+                        <enable>no</enable>
+                        <visible>!VideoPlayer.HasMenu</visible>
+                        <animation effect="slide" end="0,2" time="0" condition="true">conditional</animation>
+                    </control>
                 </control>
                 <control type="grouplist" id="101">
                     <posx>390</posx>
                     <posy>15</posy>
                     <width>500</width>
-                    <height>50</height>
+                    <height>56</height>
                     <itemgap>10</itemgap>
                     <orientation>horizontal</orientation>
                     <align>center</align>
                     <aligny>center</aligny>
-                    <onleft>3</onleft>
-                    <onright>4</onright>
+                    <onleft>5</onleft>
+                    <onright>-</onright>
                     <onup>-</onup>
                     <ondown>-</ondown>
-                    <control type="button" id="12">
-                        <description>Skip Back</description>
+                    <control type="button" id="7">
+                        <description>Previous</description>
                         <width>35</width>
                         <height>25</height>
                         <label>210</label>
@@ -92,7 +158,7 @@
                         <texturenofocus>veritas/osd_prev_nf.png</texturenofocus>
                         <onclick>PlayerControl(Previous)</onclick>
                     </control>
-                    <control type="button" id="13">
+                    <control type="button" id="8">
                         <description>Rewind</description>
                         <width>33</width>
                         <height>24</height>
@@ -102,7 +168,7 @@
                         <texturenofocus>veritas/osd_rew_nf.png</texturenofocus>
                         <onclick>PlayerControl(Rewind)</onclick>
                     </control>
-                    <control type="togglebutton" id="14">
+                    <control type="togglebutton" id="9">
                         <description>Play/Pause</description>
                         <animation effect="slide" end="0,-5" time="0" condition="true">conditional</animation>
                         <width>36</width>
@@ -117,7 +183,7 @@
                         <usealttexture>Player.Paused</usealttexture>
                         <onclick>PlayerControl(Play)</onclick>
                     </control>
-                    <control type="button" id="15">
+                    <control type="button" id="10">
                         <description>Fast Forward</description>
                         <width>33</width>
                         <height>24</height>
@@ -127,7 +193,7 @@
                         <texturenofocus>veritas/osd_ff_nf.png</texturenofocus>
                         <onclick>PlayerControl(Forward)</onclick>
                     </control>
-                    <control type="button" id="16">
+                    <control type="button" id="11">
                         <description>Next</description>
                         <width>35</width>
                         <height>25</height>
@@ -136,68 +202,6 @@
                         <texturefocus>veritas/osd_next_fo.png</texturefocus>
                         <texturenofocus>veritas/osd_next_nf.png</texturenofocus>
                         <onclick>PlayerControl(Next)</onclick>
-                    </control>
-                </control>
-                <control type="grouplist" id="102">
-                    <posx>89r</posx>
-                    <posy>13</posy>
-                    <width>200</width>
-                    <height>50</height>
-                    <itemgap>15</itemgap>
-                    <orientation>horizontal</orientation>
-                    <align>left</align>
-                    <onleft>16</onleft>
-                    <onright>-</onright>
-                    <onup>-</onup>
-                    <ondown>-</ondown>
-                    <control type="button" id="4">
-                        <description>Subtitles if no subpath set</description>
-                        <width>32</width>
-                        <height>26</height>
-                        <label>287</label>
-                        <font>-</font>
-                        <texturefocus>veritas/osd_subs_fo.png</texturefocus>
-                        <texturenofocus>veritas/osd_subs_nf.png</texturenofocus>
-                        <onclick>Close</onclick>
-                        <onclick>Dialog.Close(FullscreenInfo)</onclick>
-                        <onclick>XBMC.RunScript(script.xbmc.subtitles)</onclick>
-                        <visible>IsEmpty(Skin.String(SubtitlesPath))</visible>
-                    </control>
-                    <control type="button" id="5">
-                        <description>Subtitles if subpath set</description>
-                        <width>32</width>
-                        <height>26</height>
-                        <label>287</label>
-                        <font>-</font>
-                        <texturefocus>veritas/osd_subs_fo.png</texturefocus>
-                        <texturenofocus>veritas/osd_subs_nf.png</texturenofocus>
-                        <onclick>Close</onclick>
-                        <onclick>Dialog.Close(FullscreenInfo)</onclick>
-                        <onclick>XBMC.RunScript($INFO[Skin.String(SubtitlesPath)])</onclick>
-                        <visible>!IsEmpty(Skin.String(SubtitlesPath))</visible>
-                    </control>
-                    <control type="button" id="6">
-                        <description>DVD menu active</description>
-                        <width>26</width>
-                        <height>26</height>
-                        <label>31041</label>
-                        <font>-</font>
-                        <texturefocus>veritas/osd_dvdmenu_fo.png</texturefocus>
-                        <texturenofocus>veritas/osd_dvdmenu_nf.png</texturenofocus>
-                        <onclick>PlayerControl(ShowVideoMenu)</onclick>
-                        <visible>VideoPlayer.HasMenu</visible>
-                    </control>
-                    <control type="button" id="7">
-                        <description>DVD menu inactive</description>
-                        <width>26</width>
-                        <height>26</height>
-                        <label>31041</label>
-                        <font>-</font>
-                        <texturefocus>veritas/osd_dvdmenu_fo.png</texturefocus>
-                        <texturenofocus>veritas/osd_dvdmenu_nf.png</texturenofocus>
-                        <colordiffuse>88ffffff</colordiffuse>
-                        <enable>no</enable>
-                        <visible>!VideoPlayer.HasMenu</visible>
                     </control>
                 </control>
             </control>
