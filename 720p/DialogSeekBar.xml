@@ -4,11 +4,11 @@
     <defaultcontrol always="true">901</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
     <visible>[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsVisible(FullScreenInfo) | Window.IsVisible(VideoOsd)]</visible>
+    <zorder>2</zorder>
     <controls>
         <control type="group">
             <posx>0</posx>
             <posy>690</posy>
-            <animation effect="slide" end="0,-47" time="200" condition="Window.IsVisible(VideoOSD)">Conditional</animation>
             <control type="image">
                 <posx>0</posx>
                 <posy>0</posy>
