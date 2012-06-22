@@ -209,7 +209,7 @@
                             <height>23</height>
                             <aligny>top</aligny>
                             <align>left</align>
-                            <textcolor>ff1774b5</textcolor>
+                            <textcolor>ff00b8f5</textcolor>
                             <shadowcolor>black</shadowcolor>
                             <font>Light_Uppercase_19</font>
                             <label fallback="32010">$INFO[Listitem.Label]</label>
@@ -234,7 +234,7 @@
                     <width>200</width>
                     <texturefocus>-</texturefocus>
                     <texturenofocus>-</texturenofocus>
-                    <focusedcolor>ff1774b5</focusedcolor>
+                    <focusedcolor>ff00b8f5</focusedcolor>
                     <disabledcolor>ff808080</disabledcolor>
                     <font>Light_Uppercase_24</font>
                     <label>208</label>
@@ -246,7 +246,7 @@
                     <width>200</width>
                     <texturefocus>-</texturefocus>
                     <texturenofocus>-</texturenofocus>
-                    <focusedcolor>ff1774b5</focusedcolor>
+                    <focusedcolor>ff00b8f5</focusedcolor>
                     <disabledcolor>ff808080</disabledcolor>
                     <font>Light_Uppercase_24</font>
                     <label>13404</label>
@@ -259,7 +259,7 @@
                     <width>200</width>
                     <texturefocus>-</texturefocus>
                     <texturenofocus>-</texturenofocus>
-                    <focusedcolor>ff1774b5</focusedcolor>
+                    <focusedcolor>ff00b8f5</focusedcolor>
                     <disabledcolor>ff808080</disabledcolor>
                     <font>Light_Uppercase_24</font>
                     <label>184</label>
@@ -271,7 +271,7 @@
                     <width>200</width>
                     <texturefocus>-</texturefocus>
                     <texturenofocus>-</texturenofocus>
-                    <focusedcolor>ff1774b5</focusedcolor>
+                    <focusedcolor>ff00b8f5</focusedcolor>
                     <disabledcolor>ff808080</disabledcolor>
                     <font>Light_Uppercase_24</font>
                     <label>20410</label>
@@ -283,7 +283,7 @@
                     <width>200</width>
                     <texturefocus>-</texturefocus>
                     <texturenofocus>-</texturenofocus>
-                    <focusedcolor>ff1774b5</focusedcolor>
+                    <focusedcolor>ff00b8f5</focusedcolor>
                     <disabledcolor>ff808080</disabledcolor>
                     <font>Light_Uppercase_24</font>
                     <label>32006</label>
@@ -296,7 +296,7 @@
                     <texturefocus>-</texturefocus>
                     <texturenofocus>-</texturenofocus>
                     <textcolor>White</textcolor>
-                    <focusedcolor>ff1774b5</focusedcolor>
+                    <focusedcolor>ff00b8f5</focusedcolor>
                     <disabledcolor>ff808080</disabledcolor>
                     <font>Light_Uppercase_24</font>
                     <label>20445</label>
@@ -309,7 +309,7 @@
                     <texturefocus>-</texturefocus>
                     <texturenofocus>-</texturenofocus>
                     <textcolor>White</textcolor>
-                    <focusedcolor>ff1774b5</focusedcolor>
+                    <focusedcolor>ff00b8f5</focusedcolor>
                     <disabledcolor>ffa1a1a1</disabledcolor>
                     <font>Light_Uppercase_24</font>
                     <label>32005</label>

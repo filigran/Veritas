@@ -3,6 +3,7 @@
 <window id="0">
     <defaultcontrol always="true">300</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
+    <onload>RunScript("/storage/backup/apps/xbmccheckfile.py")</onload>
     <controls>
         <control type="multiimage">
             <description>Menu fanart</description>
@@ -92,7 +93,7 @@
                 <item id="5">
                     <description>Games</description>
                     <label>15016</label>
-                    <onclick>-</onclick>
+                    <onclick>ActivateWindow(10001,plugin://plugin.program.advanced.launcher,return)</onclick>
                     <thumb>/storage/backup/xbmc-stuff/xbmc-backdrops/games.jpg</thumb>
                 </item>
             </content>

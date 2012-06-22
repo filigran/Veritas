@@ -52,6 +52,19 @@
                     <onclick>RunScript(script.tv.show.next.aired,force=True)</onclick>
                     <visible>Container.Content(TVShows)</visible>
                 </control>
+                <control type="button" id="3114">
+                    <description>File manager</description>
+                    <width>380</width>
+                    <label>7</label>
+                    <onclick>ActivateWindow(FileManager)</onclick>
+                </control>
+                <control type="button" id="3115">
+                    <description>Addons browser</description>
+                    <width>380</width>
+                    <label>10040</label>
+                    <onclick>ActivateWindow(Programs)</onclick>
+                    <visible>Window.IsVisible(Settings)</visible>   
+                </control>
             </control>
         </control>
     </controls>

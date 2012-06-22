@@ -6,7 +6,10 @@
     <include file="View_50_List.xml" />
     <include file="View_51_Poster.xml" />
     <include file="View_52_EpisodeList.xml" />
+    <include file="View_518_LauncherTall.xml" />
+    <include file="View_501_LauncherWide.xml" />
     <include file="Includes_OSD.xml" />
+    <include file="Includes_Launcher.xml" />
 
     <include name="HiddenButton">
         <posx>-20</posx>
@@ -94,6 +97,13 @@
                 <texture background="true">$INFO[Fanart.Image]</texture>
                 <visible>!IsEmpty(ListItem.foldername) + [Container.Content(Seasons) | [Container.Content(Episodes) + !stringcompare(Container.FolderPath,videodb://5/)]]</visible>
             </control>
+            <control type="image">
+                <include>Dimensions_Fullscreen</include>
+                <fadetime>800</fadetime>
+                <texture background="true">backgrounds/games.jpg</texture>
+                <visible>Window.IsVisible(MyPrograms)</visible>
+            </control>
+        
             <control type="image">
                 <description>Fanart overlay</description>
                 <include>Dimensions_Fullscreen</include>
