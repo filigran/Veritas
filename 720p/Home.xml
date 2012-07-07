@@ -50,7 +50,7 @@
                     <info>ListItem.Label</info>
                 </control>
             </itemlayout>
-            <focusedlayout width="270" height="50">
+            <focusedlayout width="270" height="200">
                 <control type="label">
                     <posx>135</posx>
                     <posy>0</posy>
@@ -59,7 +59,8 @@
                     <align>center</align>
                     <info>ListItem.Label</info>
                     <font>Light_Uppercase_36</font>
-                    <textcolor>ff1774b5</textcolor>
+                    <textcolor>ff00b8f5</textcolor>
+                    <shadowcolor>black</shadowcolor>
                 </control>
             </focusedlayout>
             <content>

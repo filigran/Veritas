@@ -160,13 +160,13 @@
                         <selectedcolor>ff498999</selectedcolor>
                     </control>
                     <control type="label">
-                        <description>Premiered and runtime label</description>
+                        <description>Premiered, runtime and rating label</description>
                         <posx>80</posx>
                         <posy>30</posy>
                         <width>500</width>
                         <height>30</height>
                         <align>left</align>
-                        <label>$INFO[ListItem.Premiered,$LOCALIZE[20416]: ]$INFO[ListItem.Duration,   •   $LOCALIZE[2050]: , $LOCALIZE[32000]]</label>
+                        <label>$INFO[ListItem.Premiered,$LOCALIZE[20416]: ]$INFO[ListItem.Duration,   •   $LOCALIZE[2050]: , $LOCALIZE[32000]</label>
                         <font>Light_Uppercase_19</font>
                         <textcolor>ffb2b2b2</textcolor>
                         <shadowcolor>black</shadowcolor>
@@ -224,63 +224,55 @@
                         <animation effect="slide" start="0,-20" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container.OnNext">Focus</animation>
                         <animation effect="slide" start="0,20" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container.OnPrevious">Focus</animation>
                     </control>
-                    <control type="label">
-                        <description>Episode number without padding</description>
+                    <control type="group">
                         <posx>409</posx>
                         <posy>7</posy>
-                        <width>50</width>
-                        <height>50</height>
-                        <info>ListItem.Episode</info>
-                        <font>Light_Uppercase_36</font>
-                        <textcolor>white</textcolor>
-                        <selectedcolor>ff498999</selectedcolor>
-                        <animation effect="slide" start="0,-20" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container.OnNext">Focus</animation>
-                        <animation effect="slide" start="0,20" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container.OnPrevious">Focus</animation>
-                        <visible>IntegerGreaterThan(ListItem.Episode,9)</visible>
-                    </control>
-                    <control type="label">
-                        <description>Episode number with padding</description>
-                        <posx>409</posx>
-                        <posy>7</posy>
-                        <width>50</width>
-                        <height>50</height>
-                        <label>$INFO[Listitem.Episode,0]</label>
-                        <font>Light_Uppercase_36</font>
-                        <textcolor>white</textcolor>
-                        <selectedcolor>ff498999</selectedcolor>
-                        <animation effect="slide" start="0,-20" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container.OnNext">Focus</animation>
-                        <animation effect="slide" start="0,20" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container.OnPrevious">Focus</animation>
-                        <visible>!IntegerGreaterThan(ListItem.Episode,9)</visible>
-                    </control>
-                    <control type="fadelabel">
-                        <description>Episode title</description>
-                        <posx>469</posx>
-                        <posy>7</posy>
-                        <width>550</width>
-                        <height>50</height>
-                        <info>Listitem.Title</info>
-                        <font>Light_Uppercase_36</font>
-                        <textcolor>white</textcolor>
-                        <selectedcolor>ff498999</selectedcolor>
-                        <pauseatend>2000</pauseatend>
-                        <scrollout>false</scrollout>
-                        <animation effect="slide" start="0,-20" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container.OnNext">Focus</animation>
-                        <animation effect="slide" start="0,20" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container.OnPrevious">Focus</animation>
-                    </control>
-                    <control type="label">
-                        <description>Duration + air date</description>
-                        <posx>30</posx>
-                        <posy>228</posy>
-                        <width>500</width>
-                        <height>30</height>
-                        <align>left</align>
-                        <aligny>center</aligny>
-                        <label>$INFO[ListItem.Premiered,$LOCALIZE[20416]: ]$INFO[ListItem.Duration,   •   $LOCALIZE[2050]: , $LOCALIZE[32000]]</label>
-                        <font>Light_Uppercase_19</font>
-                        <textcolor>ffb2b2b2</textcolor>
-                        <selectedcolor>ffdddddd</selectedcolor>
-                        <animation effect="slide" start="0,-20" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container.OnNext">Focus</animation>
-                        <animation effect="slide" start="0,20" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container.OnPrevious">Focus</animation>
+                        <control type="label">
+                            <description>Episode number without padding</description>
+                            <width>50</width>
+                            <aligny>top</aligny>
+                            <info>ListItem.Episode</info>
+                            <font>Light_Uppercase_36</font>
+                            <textcolor>white</textcolor>
+                            <selectedcolor>ff498999</selectedcolor>
+                            <animation effect="slide" start="0,-20" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container.OnNext">Focus</animation>
+                            <animation effect="slide" start="0,20" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container.OnPrevious">Focus</animation>
+                            <visible>IntegerGreaterThan(ListItem.Episode,9)</visible>
+                        </control>
+                        <control type="label">
+                            <description>Episode number with padding</description>
+                            <width>50</width>
+                            <aligny>top</aligny>
+                            <label>$INFO[Listitem.Episode,0]</label>
+                            <font>Light_Uppercase_36</font>
+                            <textcolor>white</textcolor>
+                            <selectedcolor>ff498999</selectedcolor>
+                            <animation effect="slide" start="0,-20" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container.OnNext">Focus</animation>
+                            <animation effect="slide" start="0,20" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container.OnPrevious">Focus</animation>
+                            <visible>!IntegerGreaterThan(ListItem.Episode,9)</visible>
+                        </control>
+                        <control type="fadelabel">
+                            <description>Episode title</description>
+                            <posx>69</posx>
+                            <width>550</width>
+                            <info>Listitem.Title</info>
+                            <font>Light_Uppercase_36</font>
+                            <textcolor>ffd3d3d3</textcolor>
+                            <pauseatend>2000</pauseatend>
+                            <scrollout>false</scrollout>
+                            <animation effect="slide" start="0,-20" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container.OnNext">Focus</animation>
+                            <animation effect="slide" start="0,20" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container.OnPrevious">Focus</animation>
+                        </control>
+                        <control type="label">
+                            <description>Duration + air date + rating</description>
+                            <posy>35</posy>
+                            <width>500</width>
+                            <font>Light_Uppercase_19</font>
+                            <label>$INFO[ListItem.Premiered,$LOCALIZE[20416]: ]$INFO[ListItem.Duration,   •   $LOCALIZE[2050]: , $LOCALIZE[32000]]$INFO[ListItem.Rating,   •   ]</label>
+                            <textcolor>ffa1a1a1</textcolor>
+                            <animation effect="slide" start="0,-20" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container.OnNext">Focus</animation>
+                            <animation effect="slide" start="0,20" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container.OnPrevious">Focus</animation>
+                        </control>
                     </control>
                 </control>
             </focusedlayout>
@@ -306,13 +298,13 @@
             <control type="textbox">
                 <description>Focused item plot</description>
                 <posx>610</posx>
-                <posy>190</posy>
+                <posy>215</posy>
                 <width>640</width>
                 <height>147</height>
                 <align>left</align>
                 <label fallback="32010">$INFO[Listitem.Plot]</label>
                 <font>Normal_24</font>
-                <textcolor>white</textcolor>
+                <textcolor>ffd3d3d3</textcolor>
                 <selectedcolor>white</selectedcolor>
                 <include>Animation_EpisodePlot52</include>
                 <animation effect="fade" reversible="false" start="50" end="100" time="200" condition="Control.HasFocus(52) + [!Container(52).OnNext + !Container(52).OnPrevious]">conditional</animation>
