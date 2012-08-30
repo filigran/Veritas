@@ -22,7 +22,7 @@
             <posx>130</posx>
             <posy>220</posy>
             <width>550</width>
-            <height>252</height>
+            <height>222</height>
             <fadetime>100</fadetime>
             <aspectratio align="left" aligny="top">stretch</aspectratio>
             <texture fallback="DefaultAddonNone.png">veritas/poster_glow.png</texture>
@@ -95,8 +95,8 @@
             <height>500</height>
             <onleft>9000</onleft>
             <onright>62</onright>
-            <onup>-</onup>
-            <ondown>-</ondown>
+            <onup>52</onup>
+            <ondown>52</ondown>
             <viewtype label="EpisodeList">list</viewtype>
             <itemgap>0</itemgap>
             <pagecontrol>62</pagecontrol>
@@ -166,7 +166,7 @@
                         <width>500</width>
                         <height>30</height>
                         <align>left</align>
-                        <label>$INFO[ListItem.Premiered,$LOCALIZE[20416]: ]$INFO[ListItem.Duration,   •   $LOCALIZE[2050]: , $LOCALIZE[32000]</label>
+                        <label>$INFO[ListItem.Premiered,$LOCALIZE[20416]: ]$INFO[ListItem.Duration,   •   $LOCALIZE[2050]: , $LOCALIZE[32000]]</label>
                         <font>Light_Uppercase_19</font>
                         <textcolor>ffb2b2b2</textcolor>
                         <shadowcolor>black</shadowcolor>

@@ -3,13 +3,13 @@
 <includes>
 
     <include file="Defaults.xml" />
+    <include file="Includes_Animations.xml" />
     <include file="View_50_List.xml" />
     <include file="View_51_Poster.xml" />
+    <include file="View_511_LauncherPosterTall.xml" />
+    <include file="View_512_LauncherPosterWide.xml" />
     <include file="View_52_EpisodeList.xml" />
-    <include file="View_518_LauncherTall.xml" />
-    <include file="View_501_LauncherWide.xml" />
     <include file="Includes_OSD.xml" />
-    <include file="Includes_Launcher.xml" />
 
     <include name="HiddenButton">
         <posx>-20</posx>

@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!-- Veritas -->
 <includes>
-    <include name="View_51_Poster">
-        <description>Poster View (id=51)</description>
+    <include name="View_511_LauncherPosterTall">
+        <description>Launcher Poster Tall View (id=511)</description>
         <control type="image">
             <posx>164</posx>
             <posy>324</posy>
@@ -12,19 +12,31 @@
             <aspectratio align="left" aligny="top">stretch</aspectratio>
             <texture>veritas/poster_glow.png</texture>
             <colordiffuse>ff1774b5</colordiffuse>
-            <visible>Control.IsVisible(51)</visible>
+            <visible>Control.IsVisible(511) + [!System.IdleTime(3) | !SubString(Container.FolderPath,?)]</visible>
         </control>
-        <control type="fixedlist" id="51">
+        <control type="image">
+            <posx>164</posx>
+            <posy>324</posy>
+            <width>630</width>
+            <height>252</height>
+            <fadetime>100</fadetime>
+            <aspectratio align="left" aligny="top">stretch</aspectratio>
+            <texture>veritas/poster_glow.png</texture>
+            <colordiffuse>ff1774b5</colordiffuse>
+            <animation effect="fade" time="500" start="0" end="100" reversible="false">Visible</animation>
+            <visible>Control.IsVisible(511) + System.IdleTime(3) + SubString(Container.FolderPath,?)</visible>
+        </control>
+        <control type="fixedlist" id="511">
             <posx>-77</posx>
             <posy>141</posy>
             <width>1377</width>
             <height>644</height>
-            <onleft>51</onleft>
-            <onright>51</onright>
+            <onleft>511</onleft>
+            <onright>511</onright>
             <onup>9000</onup>
             <ondown>61</ondown>
             <pagecontrol>61</pagecontrol>
-            <viewtype label="Poster">list</viewtype>
+            <viewtype label="LauncherPosterTall">list</viewtype>
             <scrolltime>200</scrolltime>
             <animation type="Conditional" condition="ControlGroup(9000).HasFocus()">
                 <effect type="fade" start="100" end="50" time="200" />
@@ -34,7 +46,7 @@
             <focusposition>2</focusposition>
             <itemlayout width="177" height="280">
                 <control type="group">
-                    <animation effect="fade" start="100" end="0" time="500" condition="[System.IdleTime(3) + Control.HasFocus(51)] | Window.IsVisible(2003)">conditional</animation>
+                    <animation effect="fade" start="100" end="0" time="500" condition="System.IdleTime(3) + Control.HasFocus(511) + SubString(Container.FolderPath,?)">conditional</animation>
                     <control type="image">
                         <description>Poster glow</description>
                         <posx>-5</posx>
@@ -67,16 +79,6 @@
                         <texture background="true" diffuse="veritas/poster_gradient.png" flipy="true" fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
                         <colordiffuse>22ffffff</colordiffuse>
                     </control>
-                    <control type="image">
-                        <posx>123</posx>
-                        <posy>270</posy>
-                        <width>40</width>
-                        <height>40</height>
-                        <aspectratio>keep</aspectratio>
-                        <texture background="true">special://skin/media/veritas/$INFO[ListItem.Overlay]</texture>
-                        <colordiffuse>8800ff00</colordiffuse>
-                        <visible>StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
-                    </control>
                 </control>
             </itemlayout>
             <focusedlayout width="202" height="316">
@@ -86,6 +88,8 @@
                     <animation type="Conditional" condition="true">
                         <effect tween="back" easing="out" type="zoom" center="130,200" start="100" end="128" time="400" />
                     </animation>
+                    <include condition="SubString(Container.FolderPath,?)">Animation_LauncherThumbFlipTall</include>
+                    <visible>!SubString(Container.FolderPath,?) | [!System.IdleTime(3) + SubString(Container.FolderPath,?)]</visible>
                     <control type="image">
                         <posx>-15</posx>
                         <posy>254</posy>
@@ -116,23 +120,51 @@
                         <texture background="true">veritas/poster_frame.png</texture>
                         <visible>!Window.IsVisible(2003) | [Window.IsVisible(2003) + !Control.HasFocus(50)]</visible>
                     </control>
+                </control>
+                <control type="group">
+                    <description>Rom fanart</description>
+                    <posx>7</posx>
+                    <posy>35</posy>
+                    <animation type="Conditional" condition="true">
+                        <effect tween="back" easing="out" type="zoom" center="130,200" start="100" end="128" time="400" />
+                    </animation>
+                    <include condition="SubString(Container.FolderPath,?)">Animation_LauncherFanartFlip</include>
+                    <visible>System.IdleTime(3) + SubString(Container.FolderPath,?)</visible>
                     <control type="image">
-                        <posx>135</posx>
-                        <posy>237</posy>
-                        <width>35</width>
-                        <height>35</height>
-                        <aspectratio>keep</aspectratio>
-                        <texture background="true">special://skin/media/veritas/$INFO[ListItem.Overlay]</texture>
-                        <colordiffuse>ff00ff00</colordiffuse>
-                        <animation effect="zoom" center="auto" start="0" end="100" time="200" reversible="false">Visible</animation>
-                        <visible>StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
+                        <posx>-15</posx>
+                        <posy>254</posy>
+                        <width>411</width>
+                        <height>15</height>
+                        <fadetime>100</fadetime>
+                        <aspectratio align="left" aligny="top">stretch</aspectratio>
+                        <texture>veritas/poster_shadow.png</texture>
+                        <colordiffuse>ff000000</colordiffuse>
+                    </control>
+                    <control type="image">
+                        <posx>6</posx>
+                        <posy>6</posy>
+                        <width>369</width>
+                        <height>250</height>
+                        <fadetime>100</fadetime>
+                        <aspectratio align="center" aligny="top">stretch</aspectratio>
+                        <texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
+                        <visible>!Window.IsVisible(2003) | [Window.IsVisible(2003) + !Control.HasFocus(50)]</visible>
+                    </control>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>381</width>
+                        <height>263</height>
+                        <fadetime>100</fadetime>
+                        <aspectratio align="center" aligny="top">stretch</aspectratio>
+                        <texture background="true">veritas/poster_frame_wide.png</texture>
                         <visible>!Window.IsVisible(2003) | [Window.IsVisible(2003) + !Control.HasFocus(50)]</visible>
                     </control>
                 </control>
             </focusedlayout>
         </control>
         <control type="group">
-            <visible>Control.IsVisible(51)</visible>
+            <visible>Control.IsVisible(511)</visible>
             <posx>260</posx>
             <control type="label">
                 <description>Movie title</description>
@@ -142,36 +174,14 @@
                 <textcolor>ffd3d3d3</textcolor>
                 <info>Listitem.Label</info>
             </control>
-            <control type="label">
-                <description>Movie info</description>
-                <posy>515</posy>
-                <width>900</width>
-                <font>Light_Uppercase_19</font>
-                <textcolor>ffa1a1a1</textcolor>
-                <label>$INFO[ListItem.Year]$INFO[ListItem.Genre, • ]$INFO[ListItem.Duration, • , $LOCALIZE[32000]]$INFO[ListItem.Rating, • ]</label>
-                <visible>Container.Content(Movies)</visible>
-            </control>
             <control type="fadelabel">
-                <description>TV Show info</description>
+                <description>Item info</description>
                 <posy>515</posy>
                 <width>900</width>
                 <font>Light_Uppercase_19</font>
                 <textcolor>ffa1a1a1</textcolor>
-                <label>$INFO[ListItem.Year]$INFO[ListItem.Genre, • ]$INFO[ListItem.Duration, • , $LOCALIZE[32000]]$INFO[ListItem.Rating, • ]</label>
-                <label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[32002]]$INFO[ListItem.Property(WatchedEpisodes), • , $LOCALIZE[32003]]$INFO[ListItem.Property(UnWatchedEpisodes), • , $LOCALIZE[32004]]</label>
-                <label>$INFO[Window(Home).Property(NextAired.NextSeasonNumber),$LOCALIZE[32001]: (S]$INFO[Window(Home).Property(NextAired.NextEpisodeNumber),E,) ]$INFO[Window(Home).Property(NextAired.NextDate)]</label>
-                <pauseatend>5000</pauseatend>
-                <visible>Container.Content(TVShows)</visible>
-            </control>
-            <control type="fadelabel">
-                <description>Season info</description>
-                <posy>515</posy>
-                <width>900</width>
-                <font>Light_Uppercase_19</font>
-                <textcolor>ffa1a1a1</textcolor>
-                <label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[32002]]$INFO[ListItem.Property(WatchedEpisodes), • , $LOCALIZE[32003]]$INFO[ListItem.Property(UnWatchedEpisodes), • , $LOCALIZE[32004]]</label>
+                <label>$INFO[ListItem.Studio]$INFO[ListItem.Genre, • ]$INFO[ListItem.Premiered, • ]</label>
                 <pauseatend>3000</pauseatend>
-                <visible>Container.Content(Seasons)</visible>
             </control>
             <control type="textbox">
                 <description>Item plot</description>
@@ -190,9 +200,9 @@
             <posy>20r</posy>
             <width>1240</width>
             <height>5</height>
-            <onup>51</onup>
+            <onup>511</onup>
             <ondown>9000</ondown>
-            <visible allowhiddenfocus="true">Control.IsVisible(51) + [Control.HasFocus(61) | Container.Scrolling]</visible>
+            <visible allowhiddenfocus="true">Control.IsVisible(511) + [Control.HasFocus(61) | Container.Scrolling]</visible>
             <animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(61) | Container.Scrolling">Conditional</animation>
             <texturesliderbackground>veritas/scrollbar_h.png</texturesliderbackground>
             <texturesliderbar>veritas/scrollbar_h_focus.png</texturesliderbar>

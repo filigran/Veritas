@@ -67,7 +67,7 @@
                         <texturefocus>veritas/osd_audiosettings_fo.png</texturefocus>
                         <texturenofocus>veritas/osd_audiosettings_nf.png</texturenofocus>
                         <onclick>Dialog.Close(FullscreenInfo)</onclick>
-                        <onclick>ActivateWindow(124)</onclick>
+                        <onclick>ActivateWindow(osdaudiosettings)</onclick>
                     </control>
                     <control type="button" id="2">
                         <description>Video Settings</description>
@@ -79,7 +79,7 @@
                         <texturefocus>veritas/osd_vidsettings_fo.png</texturefocus>
                         <texturenofocus>veritas/osd_vidsettings_nf.png</texturenofocus>
                         <onclick>Dialog.Close(FullscreenInfo)</onclick>
-                        <onclick>ActivateWindow(123)</onclick>
+                        <onclick>ActivateWindow(osdvideosettings)</onclick>
                     </control>
                     <control type="button" id="3">
                         <description>Subtitles if no subpath set</description>

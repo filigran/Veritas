@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!-- Veritas -->
 <includes>
-    <include name="View_51_Poster">
-        <description>Poster View (id=51)</description>
+    <include name="View_512_Poster">
+        <description>Poster View (id=512)</description>
         <control type="image">
             <posx>164</posx>
             <posy>324</posy>
@@ -12,15 +12,15 @@
             <aspectratio align="left" aligny="top">stretch</aspectratio>
             <texture>veritas/poster_glow.png</texture>
             <colordiffuse>ff1774b5</colordiffuse>
-            <visible>Control.IsVisible(51)</visible>
+            <visible>Control.IsVisible(512)</visible>
         </control>
-        <control type="fixedlist" id="51">
+        <control type="fixedlist" id="512">
             <posx>-77</posx>
             <posy>141</posy>
             <width>1377</width>
             <height>644</height>
-            <onleft>51</onleft>
-            <onright>51</onright>
+            <onleft>512</onleft>
+            <onright>512</onright>
             <onup>9000</onup>
             <ondown>61</ondown>
             <pagecontrol>61</pagecontrol>
@@ -34,7 +34,7 @@
             <focusposition>2</focusposition>
             <itemlayout width="177" height="280">
                 <control type="group">
-                    <animation effect="fade" start="100" end="0" time="500" condition="[System.IdleTime(3) + Control.HasFocus(51)] | Window.IsVisible(2003)">conditional</animation>
+                    <animation effect="fade" start="100" end="0" time="500" condition="[System.IdleTime(3) + Control.HasFocus(512)] | Window.IsVisible(2003)">conditional</animation>
                     <control type="image">
                         <description>Poster glow</description>
                         <posx>-5</posx>
@@ -124,7 +124,7 @@
                         <aspectratio>keep</aspectratio>
                         <texture background="true">special://skin/media/veritas/$INFO[ListItem.Overlay]</texture>
                         <colordiffuse>ff00ff00</colordiffuse>
-                        <animation effect="zoom" center="auto" start="0" end="100" time="200" reversible="false">Visible</animation>
+                        <animation effect="zoom" center="auto" start="0" end="100" time="200" reversible="false">VisibleChange</animation>
                         <visible>StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
                         <visible>!Window.IsVisible(2003) | [Window.IsVisible(2003) + !Control.HasFocus(50)]</visible>
                     </control>
@@ -132,7 +132,7 @@
             </focusedlayout>
         </control>
         <control type="group">
-            <visible>Control.IsVisible(51)</visible>
+            <visible>Control.IsVisible(512)</visible>
             <posx>260</posx>
             <control type="label">
                 <description>Movie title</description>
@@ -144,7 +144,7 @@
             </control>
             <control type="label">
                 <description>Movie info</description>
-                <posy>515</posy>
+                <posy>5125</posy>
                 <width>900</width>
                 <font>Light_Uppercase_19</font>
                 <textcolor>ffa1a1a1</textcolor>
@@ -153,7 +153,7 @@
             </control>
             <control type="fadelabel">
                 <description>TV Show info</description>
-                <posy>515</posy>
+                <posy>5125</posy>
                 <width>900</width>
                 <font>Light_Uppercase_19</font>
                 <textcolor>ffa1a1a1</textcolor>
@@ -165,7 +165,7 @@
             </control>
             <control type="fadelabel">
                 <description>Season info</description>
-                <posy>515</posy>
+                <posy>5125</posy>
                 <width>900</width>
                 <font>Light_Uppercase_19</font>
                 <textcolor>ffa1a1a1</textcolor>
@@ -190,9 +190,9 @@
             <posy>20r</posy>
             <width>1240</width>
             <height>5</height>
-            <onup>51</onup>
+            <onup>512</onup>
             <ondown>9000</ondown>
-            <visible allowhiddenfocus="true">Control.IsVisible(51) + [Control.HasFocus(61) | Container.Scrolling]</visible>
+            <visible allowhiddenfocus="true">Control.IsVisible(512) + [Control.HasFocus(61) | Container.Scrolling]</visible>
             <animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(61) | Container.Scrolling">Conditional</animation>
             <texturesliderbackground>veritas/scrollbar_h.png</texturesliderbackground>
             <texturesliderbar>veritas/scrollbar_h_focus.png</texturesliderbar>

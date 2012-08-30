@@ -33,23 +33,23 @@ msgstr "Låttexter/Undertexter"
 
 msgctxt "#31018"
 msgid "Current Selected"
-msgstr ""
+msgstr "Aktivt val"
 
 msgctxt "#31019"
 msgid "Open playlist"
-msgstr ""
+msgstr "Öppna playlist"
 
 msgctxt "#31020"
 msgid "Save playlist"
-msgstr ""
+msgstr "Spara playlist"
 
 msgctxt "#31021"
 msgid "Close playlist"
-msgstr ""
+msgstr "Stäng playlist"
 
 msgctxt "#31022"
 msgid "System music files"
-msgstr ""
+msgstr "Systemets musikfiler"
 
 msgctxt "#31023"
 msgid "Disable Background Visualiser"

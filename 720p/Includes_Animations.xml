@@ -1,0 +1,20 @@
+<includes>
+    <include name="Animation_LauncherThumbFlipTall">
+        <animation type="Hidden" reversible="false">
+            <effect type="rotatey" start="0" end="-180" center="109,0" time="550" />
+            <effect type="fade" start="100" end="0" time="10" delay="265" />
+        </animation>
+    </include>
+    <include name="Animation_LauncherThumbFlipWide">
+        <animation type="Hidden" reversible="false">
+            <effect type="rotatey" start="0" end="-180" center="209,0" time="550" />
+            <effect type="fade" start="100" end="0" time="10" delay="265" />
+        </animation>
+    </include>
+    <include name="Animation_LauncherFanartFlip">
+        <animation type="Visible" reversible="false">
+            <effect type="rotatey" start="180" end="0" center="159,0" time="540" />
+            <effect type="fade" start="0" end="100" time="10" delay="285" />
+        </animation>                                
+    </include>
+</includes>
