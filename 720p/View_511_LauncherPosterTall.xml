@@ -125,9 +125,6 @@
                     <description>Rom fanart</description>
                     <posx>7</posx>
                     <posy>35</posy>
-                    <animation type="Conditional" condition="true">
-                        <effect tween="back" easing="out" type="zoom" center="130,200" start="100" end="128" time="400" />
-                    </animation>
                     <include condition="SubString(Container.FolderPath,?)">Animation_LauncherFanartFlip</include>
                     <visible>System.IdleTime(3) + SubString(Container.FolderPath,?)</visible>
                     <control type="image">
