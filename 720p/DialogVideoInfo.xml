@@ -30,7 +30,7 @@
                     <posx>-8</posx>
                     <posy>0</posy>
                     <width>203</width>
-                    <height>296</height>
+                    <height>295</height>
                     <fadetime>100</fadetime>
                     <aspectratio align="center" aligny="top">stretch</aspectratio>
                     <texture>veritas/poster_frame.png</texture>
