@@ -35,8 +35,9 @@
                     <aspectratio align="center" aligny="top">stretch</aspectratio>
                     <texture>veritas/poster_frame.png</texture>
                     <animation type="Conditional" condition="true">
-                        <effect type="zoom" center="130,210" start="100" end="114" time="200" />
+                        <effect type="zoom" center="130,210" start="100" end="115" time="200" />
                     </animation>
+                    <visible>Control.IsVisible(52)</visible>
                 </control>
             </control>
             <control type="group">
