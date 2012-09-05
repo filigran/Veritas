@@ -13,11 +13,29 @@
             <visible>Skin.HasSetting(DebugGrid)</visible>
         </control>
 
+        <control type="group">
+            <visible>!Skin.HasSetting(HideDebugInfo)</visible>
+            <posx>0</posx>
+            <posy>25</posy>
+            <control type="image">
+                <width>520</width>
+                <height>60</height>
+                <texture>veritas/white.png</texture>
+                <colordiffuse>aa000000</colordiffuse>
+            </control>
+            <control type="image">
+                <posx>520r</posx>
+                <width>520</width>
+                <height>60</height>
+                <texture>veritas/white.png</texture>
+                <colordiffuse>aa000000</colordiffuse>
+            </control>
+        </control>
         <!-- Window/Dialog debug -->
 
         <control type="grouplist">
             <posx>10</posx>
-            <posy>10</posy>
+            <posy>30</posy>
             <width>520</width>
             <height>300</height>
             <itemgap>8</itemgap>
@@ -447,7 +465,7 @@
 
         <control type="label">
             <include>PathID</include>
-            <label>$INFO[System.CurrentControl]</label>
+            <label>$INFO[System.CurrentWindow]: $INFO[System.CurrentControl]</label>
             <visible>!Skin.HasSetting(HideDebugInfo)</visible>
         </control>
 

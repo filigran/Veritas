@@ -3,10 +3,6 @@
 <includes>
     <include name="View_511_LauncherPosterTall">
         <control type="group">
-            <animation type="Conditional" condition="ControlGroup(9000).HasFocus()">
-                <effect type="fade" start="100" end="50" time="200" />
-                <effect type="zoom" center="860,360" start="100" end="90" time="200" />
-            </animation>
             <description>Launcher Poster Tall View (id=511)</description>
             <control type="image">
                 <posx>164</posx>
@@ -43,10 +39,6 @@
                 <pagecontrol>61</pagecontrol>
                 <viewtype label="LauncherPosterTall">list</viewtype>
                 <scrolltime>200</scrolltime>
-                <animation type="Conditional" condition="ControlGroup(9000).HasFocus()">
-                    <effect type="fade" start="100" end="50" time="200" />
-                    <effect type="zoom" center="860,360" start="100" end="90" time="200" />
-                </animation>
                 <orientation>horizontal</orientation>
                 <focusposition>2</focusposition>
                 <itemlayout width="177" height="280">
@@ -60,7 +52,7 @@
                             <height>262</height>
                             <fadetime>100</fadetime>
                             <aspectratio align="left" aligny="top">stretch</aspectratio>
-                            <texture fallback="DefaultAddonNone.png">veritas/poster_outer_glow.png</texture>
+                            <texture>veritas/poster_outer_glow.png</texture>
                         </control>
                         <control type="image">
                             <description>Poster</description>
@@ -113,7 +105,6 @@
                             <fadetime>100</fadetime>
                             <aspectratio align="center" aligny="top">stretch</aspectratio>
                             <texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
-                            <visible>!Window.IsVisible(2003) | [Window.IsVisible(2003) + !Control.HasFocus(50)]</visible>
                         </control>
                         <control type="image">
                             <posx>0</posx>
@@ -122,47 +113,47 @@
                             <height>263</height>
                             <fadetime>100</fadetime>
                             <aspectratio align="center" aligny="top">stretch</aspectratio>
-                            <texture background="true">veritas/poster_frame.png</texture>
-                            <visible>!Window.IsVisible(2003) | [Window.IsVisible(2003) + !Control.HasFocus(50)]</visible>
+                            <texture>veritas/poster_frame.png</texture>
                         </control>
                     </control>
                     <control type="group">
-                        <description>Rom fanart</description>
-                        <posx>7</posx>
-                        <posy>35</posy>
-                        <include condition="SubString(Container.FolderPath,?)">Animation_LauncherFanartFlip</include>
-                        <visible>System.IdleTime(3) + SubString(Container.FolderPath,?)</visible>
-                        <control type="image">
-                            <posx>-15</posx>
-                            <posy>254</posy>
-                            <width>411</width>
-                            <height>15</height>
-                            <fadetime>100</fadetime>
-                            <aspectratio align="left" aligny="top">stretch</aspectratio>
-                            <texture>veritas/poster_shadow.png</texture>
-                            <colordiffuse>ff000000</colordiffuse>
-                        </control>
-                        <control type="image">
-                            <posx>6</posx>
-                            <posy>6</posy>
-                            <width>369</width>
-                            <height>250</height>
-                            <fadetime>100</fadetime>
-                            <aspectratio align="center" aligny="top">stretch</aspectratio>
-                            <texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
-                            <visible>!Window.IsVisible(2003) | [Window.IsVisible(2003) + !Control.HasFocus(50)]</visible>
-                        </control>
-                        <control type="image">
-                            <posx>0</posx>
-                            <posy>0</posy>
-                            <width>381</width>
-                            <height>263</height>
-                            <fadetime>100</fadetime>
-                            <aspectratio align="center" aligny="top">stretch</aspectratio>
-                            <texture background="true">veritas/poster_frame_wide.png</texture>
-                            <visible>!Window.IsVisible(2003) | [Window.IsVisible(2003) + !Control.HasFocus(50)]</visible>
-                        </control>
+                    <description>Rom fanart</description>
+                    <posx>7</posx>
+                    <posy>35</posy>
+                    <animation type="Conditional" condition="true">
+                        <effect tween="back" easing="out" type="zoom" center="130,200" start="100" end="128" time="400" />
+                    </animation>
+                    <include>Animation_LauncherFanartFlip</include>
+                    <visible>System.IdleTime(3) + SubString(Container.FolderPath,?)</visible>
+                    <control type="image">
+                        <posx>-15</posx>
+                        <posy>254</posy>
+                        <width>400</width>
+                        <height>15</height>
+                        <fadetime>100</fadetime>
+                        <aspectratio align="left" aligny="top">stretch</aspectratio>
+                        <texture>veritas/poster_shadow.png</texture>
+                        <colordiffuse>ff000000</colordiffuse>
                     </control>
+                    <control type="image">
+                        <posx>6</posx>
+                        <posy>6</posy>
+                        <width>364</width>
+                        <height>250</height>
+                        <fadetime>100</fadetime>
+                        <aspectratio align="center" aligny="top">stretch</aspectratio>
+                        <texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
+                    </control>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>374</width>
+                        <height>263</height>
+                        <fadetime>100</fadetime>
+                        <aspectratio align="center" aligny="top">stretch</aspectratio>
+                        <texture>veritas/poster_frame_wide.png</texture>
+                    </control>
+                </control>
                 </focusedlayout>
             </control>
             <control type="group">
@@ -209,8 +200,6 @@
                 <texturesliderbackground>veritas/scrollbar_h.png</texturesliderbackground>
                 <texturesliderbar>veritas/scrollbar_h_focus.png</texturesliderbar>
                 <texturesliderbarfocus>veritas/scrollbar_h_focus.png</texturesliderbarfocus>
-                <textureslidernib>other_textures/ScrollBarNib.png</textureslidernib>
-                <textureslidernibfocus>other_textures/ScrollBarNib.png</textureslidernibfocus>
                 <showonepage>true</showonepage>
                 <orientation>horizontal</orientation>
             </control>

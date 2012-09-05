@@ -1,4 +1,16 @@
 <includes>
+    <include name="Animation_LeftMenu">
+        <animation type="conditional" condition="ControlGroup(9000).HasFocus()">
+            <effect type="fade" start="100" end="50" time="200" />
+            <effect type="zoom" center="860,360" start="100" end="90" time="200" />
+        </animation>
+    </include>
+    <include name="Animation_WindowOpen">
+        <animation type="WindowOpen" reversible="false">
+            <effect type="zoom" start="50" end="100" center="auto" easing="out" tween="back" time="300" delay="200" />
+            <effect type="fade" start="0" end="100" time="300" delay="200" />
+        </animation>
+    </include>    
     <include name="Animation_LauncherThumbFlipTall">
         <animation type="Hidden" reversible="false">
             <effect type="rotatey" start="0" end="-180" center="109,0" time="550" />

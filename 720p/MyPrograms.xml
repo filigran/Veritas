@@ -4,21 +4,20 @@
     <defaultcontrol always="true">50</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
     <views>50,511,512</views>
-
     <controls>
-
         <include>GlobalBackground</include>
-
-        <include>View_50_List</include>
-        <include>View_511_LauncherPosterTall</include>
-        <include>View_512_LauncherPosterWide</include>
-        
+        <control type="group">
+            <include>Animation_WindowOpen</include>
+            <include>Animation_LeftMenu</include>
+            <include>View_50_List</include>
+            <include>View_511_LauncherPosterTall</include>
+            <include>View_512_LauncherPosterWide</include>
+        </control>
         <control type="grouplist" id="9000">
             <posx>10</posx>
             <posy>140</posy>
             <width>220</width>
             <height>600</height>
-            <itemgap>2</itemgap>
             <onleft>50</onleft>
             <onright>50</onright>
             <onup>9000</onup>
@@ -29,38 +28,11 @@
                 <effect type="zoom" center="0,300" start="100" end="80" time="200" />
             </animation>
             <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus</visible>
-
             <control type="button" id="2">
                 <description>View</description>
                 <width>220</width>
                 <align>left</align>
             </control>
-
-            <control type="button" id="3">
-                <description>Sort</description>
-                <width>220</width>
-                <align>left</align>
-            </control>
-
-            <control type="togglebutton" id="4">
-                <description>Ascending</description>
-                <width>220</width>
-                <align>left</align>
-                <label>584</label>
-                <altlabel>585</altlabel>
-            </control>
-
-            <control type="button" id="98">
-                <description>Open Player Controls</description>
-                <width>220</width>
-                <align>left</align>
-                <label>31015</label>
-                <onclick>ActivateWindow(playercontrols)</onclick>
-                <visible>Player.HasMedia</visible>
-            </control>
-
         </control>
-
     </controls>
-
 </window>

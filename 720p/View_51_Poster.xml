@@ -3,11 +3,11 @@
 <includes>
     <include name="View_51_Poster">
         <control type="group">
+            <description>Poster View (id=51)</description>
             <animation type="Conditional" condition="ControlGroup(9000).HasFocus()">
                 <effect type="fade" start="100" end="50" time="200" />
                 <effect type="zoom" center="860,360" start="100" end="90" time="200" />
             </animation>
-            <description>Poster View (id=51)</description>
             <control type="image">
                 <posx>164</posx>
                 <posy>324</posy>

@@ -26,99 +26,102 @@
             <texture background="true">veritas/white.png</texture>
             <colordiffuse>aa000000</colordiffuse>
         </control>
-        <control type="list" id="300">
-            <description>Home menu</description>
-            <posx>100</posx>
-            <posy>400</posy>
-            <width>1280</width>
-            <height>300</height>
-            <onup>300</onup>
-            <ondown>300</ondown>
-            <onleft>300</onleft>
-            <onright>300</onright>
-            <focusposition>0</focusposition>
-            <scrolltime>200</scrolltime>
-            <orientation>horizontal</orientation>
-            <itemlayout width="270" height="300">
-                <control type="image">
-                    <posx>71</posx>
-                    <posy>64</posy>
-                    <height>128</height>
-                    <width>128</width>
-                    <aspectratio>stretch</aspectratio>
-                    <texture>$INFO[ListItem.ActualIcon]</texture>
-                    <colordiffuse>aada3a3a3</colordiffuse>
-                </control>
-            </itemlayout>
-            <focusedlayout width="270" height="300">
-                <control type="image">
-                    <posx>7</posx>
-                    <posy>0</posy>
-                    <height>256</height>
-                    <width>256</width>
-                    <aspectratio>stretch</aspectratio>
-                    <texture>veritas/poster_glow.png</texture>
-                    <animation effect="zoom" start="100" end="128" tween="back" easing="out" time="400" center="auto" reversible="false">Focus</animation>
-                    <colordiffuse>ff0078b5</colordiffuse>
-                </control>
-                <control type="label">
-                    <posx>135</posx>
-                    <posy>192</posy>
-                    <width>270</width>
-                    <height>100</height>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <info>ListItem.Label</info>
-                    <font>Light_Uppercase_36</font>
-                    <textcolor>white</textcolor>
-                    <animation type="Focus" reversible="false">
-                        <effect type="slide" start="0,-20" end="0,0" time="400" />
-                        <effect type="fade" start="0" end="100" time="600" />
-                    </animation>
-                </control>
-                <control type="image">
-                    <posx>71</posx>
-                    <posy>64</posy>
-                    <height>128</height>
-                    <width>128</width>
-                    <aspectratio>stretch</aspectratio>
-                    <texture>$INFO[ListItem.ActualIcon]</texture>
-                    <animation effect="zoom" start="100" end="128" tween="back" easing="out" time="400" center="auto" condition="true">conditional</animation>
-                </control>
-            </focusedlayout>
-            <content>
-                <item id="1">
-                    <description>Play Disc</description>
-                    <label>341</label>
-                    <onclick>PlayDVD</onclick>
-                    <thumb>/storage/backup/xbmc-stuff/xbmc-backdrops/playdisc.jpg</thumb>
-                    <icon>veritas/home/playdisc.png</icon>
-                    <visible>System.HasMediadvd</visible>
-                </item>
-                <item id="2">
-                    <description>Movies</description>
-                    <label>342</label>
-                    <onclick>ActivateWindow(Video,movietitles,return)</onclick>
-                    <thumb>/storage/backup/xbmc-stuff/xbmc-backdrops/movies</thumb>
-                    <icon>veritas/home/movies.png</icon>
-                    <visible>Library.HasContent(Movies)</visible>
-                </item>
-                <item id="3">
-                    <description>TV Shows</description>
-                    <label>20343</label>
-                    <onclick>ActivateWindow(Video,tvshowtitles,return)</onclick>
-                    <thumb>/storage/backup/xbmc-stuff/xbmc-backdrops/tvshows</thumb>
-                    <icon>veritas/home/tvshows.png</icon>
-                    <visible>Library.HasContent(TVShows)</visible>
-                </item>
-                <item id="4">
-                    <description>Games</description>
-                    <label>15016</label>
-                    <onclick>ActivateWindow(10001,plugin://plugin.program.advanced.launcher,return)</onclick>
-                    <thumb>/storage/backup/xbmc-stuff/xbmc-backdrops/games.jpg</thumb>
-                    <icon>veritas/home/games.png</icon>
-                </item>
-            </content>
+        <control type="group">
+            <include>Animation_WindowOpen</include>
+            <control type="list" id="300">
+                <description>Home menu</description>
+                <posx>100</posx>
+                <posy>400</posy>
+                <width>1280</width>
+                <height>300</height>
+                <onup>300</onup>
+                <ondown>300</ondown>
+                <onleft>300</onleft>
+                <onright>300</onright>
+                <focusposition>0</focusposition>
+                <scrolltime>200</scrolltime>
+                <orientation>horizontal</orientation>
+                <itemlayout width="270" height="300">
+                    <control type="image">
+                        <posx>71</posx>
+                        <posy>64</posy>
+                        <height>128</height>
+                        <width>128</width>
+                        <aspectratio>stretch</aspectratio>
+                        <texture>$INFO[ListItem.ActualIcon]</texture>
+                        <colordiffuse>aada3a3a3</colordiffuse>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="270" height="300">
+                    <control type="image">
+                        <posx>7</posx>
+                        <posy>0</posy>
+                        <height>256</height>
+                        <width>256</width>
+                        <aspectratio>stretch</aspectratio>
+                        <texture>veritas/poster_glow.png</texture>
+                        <animation effect="zoom" start="100" end="128" tween="back" easing="out" time="400" center="auto" reversible="false">Focus</animation>
+                        <colordiffuse>ff0078b5</colordiffuse>
+                    </control>
+                    <control type="label">
+                        <posx>135</posx>
+                        <posy>192</posy>
+                        <width>270</width>
+                        <height>100</height>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <info>ListItem.Label</info>
+                        <font>Light_Uppercase_36</font>
+                        <textcolor>white</textcolor>
+                        <animation type="Focus" reversible="false">
+                            <effect type="slide" start="0,-20" end="0,0" time="400" />
+                            <effect type="fade" start="0" end="100" time="600" />
+                        </animation>
+                    </control>
+                    <control type="image">
+                        <posx>71</posx>
+                        <posy>64</posy>
+                        <height>128</height>
+                        <width>128</width>
+                        <aspectratio>stretch</aspectratio>
+                        <texture>$INFO[ListItem.ActualIcon]</texture>
+                        <animation effect="zoom" start="100" end="128" tween="back" easing="out" time="400" center="auto" condition="true">conditional</animation>
+                    </control>
+                </focusedlayout>
+                <content>
+                    <item id="1">
+                        <description>Play Disc</description>
+                        <label>341</label>
+                        <onclick>PlayDVD</onclick>
+                        <thumb>/storage/backup/xbmc-stuff/xbmc-backdrops/playdisc.jpg</thumb>
+                        <icon>veritas/home/playdisc.png</icon>
+                        <visible>System.HasMediadvd</visible>
+                    </item>
+                    <item id="2">
+                        <description>Movies</description>
+                        <label>342</label>
+                        <onclick>ActivateWindow(Video,movietitles,return)</onclick>
+                        <thumb>/storage/backup/xbmc-stuff/xbmc-backdrops/movies</thumb>
+                        <icon>veritas/home/movies.png</icon>
+                        <visible>Library.HasContent(Movies)</visible>
+                    </item>
+                    <item id="3">
+                        <description>TV Shows</description>
+                        <label>20343</label>
+                        <onclick>ActivateWindow(Video,tvshowtitles,return)</onclick>
+                        <thumb>/storage/backup/xbmc-stuff/xbmc-backdrops/tvshows</thumb>
+                        <icon>veritas/home/tvshows.png</icon>
+                        <visible>Library.HasContent(TVShows)</visible>
+                    </item>
+                    <item id="4">
+                        <description>Games</description>
+                        <label>15016</label>
+                        <onclick>ActivateWindow(10001,plugin://plugin.program.advanced.launcher,return)</onclick>
+                        <thumb>/storage/backup/xbmc-stuff/xbmc-backdrops/games.jpg</thumb>
+                        <icon>veritas/home/games.png</icon>
+                    </item>
+                </content>
+            </control>
         </control>
     </controls>
 </window>
