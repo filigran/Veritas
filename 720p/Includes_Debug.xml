@@ -1,0 +1,34 @@
+<includes>
+    <include name="WindowID">
+        <width>520</width>
+        <height>14</height>
+        <textcolor>BabyBlue</textcolor>
+        <shadowcolor>Black</shadowcolor>
+        <align>left</align>
+    </include>
+    <include name="DialogID">
+        <width>520</width>
+        <height>14</height>
+        <textcolor>Green</textcolor>
+        <shadowcolor>Black</shadowcolor>
+        <align>left</align>
+    </include>
+    <include name="PathID">
+        <posx>10r</posx>
+        <posy>30</posy>
+        <width>520</width>
+        <height>14</height>
+        <textcolor>BabyBlue</textcolor>
+        <shadowcolor>Black</shadowcolor>
+        <align>right</align>
+    </include>
+    <include name="ControlID">
+        <posx>10r</posx>
+        <posy>62</posy>
+        <width>520</width>
+        <height>14</height>
+        <textcolor>Red</textcolor>
+        <shadowcolor>Black</shadowcolor>
+        <align>right</align>
+    </include>
+</includes>
