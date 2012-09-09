@@ -29,4 +29,8 @@
             <effect type="fade" start="0" end="100" time="10" delay="285" />
         </animation>                                
     </include>
+    <include name="Animation_EpisodeFocusedSlide">
+        <animation effect="slide" start="0,-20" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container.OnNext">Focus</animation>
+        <animation effect="slide" start="0,20" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container.OnPrevious">Focus</animation>
+    </include>
 </includes>

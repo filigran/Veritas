@@ -142,14 +142,29 @@
                     <textcolor>ffd3d3d3</textcolor>
                     <info>Listitem.Label</info>
                 </control>
-                <control type="label">
-                    <description>Movie info</description>
+                <control type="grouplist">
+                    <posx>0</posx>
                     <posy>515</posy>
-                    <width>900</width>
-                    <font>Light_Uppercase_19</font>
-                    <textcolor>ffa1a1a1</textcolor>
-                    <label>$INFO[ListItem.Year]$INFO[ListItem.Genre, • ]$INFO[ListItem.Duration, • , $LOCALIZE[32000]]$INFO[ListItem.Rating, • ]</label>
+                    <orientation>horizontal</orientation>
+                    <itemgap>0</itemgap>
                     <visible>Container.Content(Movies)</visible>
+                    <control type="label">
+                        <description>Movie info</description>
+                        <width min="200" max="900">auto</width>
+                        <height>40</height>
+                        <font>Light_Uppercase_19</font>
+                        <textcolor>ffa1a1a1</textcolor>
+                        <label>$INFO[ListItem.Year,,  •  ]$INFO[ListItem.Genre]$INFO[ListItem.Duration,  •  , $LOCALIZE[32000]]  •  </label>
+                        <visible>Container.Content(Movies)</visible>
+                    </control>
+                    <control type="image">
+                        <description>Rating</description>
+                        <width>100</width>
+                        <height>40</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>other_textures/LeftRating/$INFO[ListItem.StarRating]</texture>
+                        <colordiffuse>ffffff80</colordiffuse>
+                    </control>
                 </control>
                 <control type="fadelabel">
                     <description>TV Show info</description>
