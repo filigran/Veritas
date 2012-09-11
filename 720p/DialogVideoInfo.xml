@@ -37,7 +37,7 @@
                     <animation type="Conditional" condition="true">
                         <effect type="zoom" center="130,210" start="100" end="115" time="200" />
                     </animation>
-                    <visible>Control.IsVisible(52)</visible>
+                    <visible>Container.Content(Episodes)</visible>
                 </control>
             </control>
             <control type="group">
