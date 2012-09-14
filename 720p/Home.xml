@@ -23,14 +23,68 @@
             <description>Fanart overlay</description>
             <include>Dimensions_Fullscreen</include>
             <fadetime>0</fadetime>
-            <texture background="true">veritas/white.png</texture>
-            <colordiffuse>aa000000</colordiffuse>
+            <texture background="true">veritas/White.png</texture>
+            <colordiffuse>FanartDiffuse</colordiffuse>
+        </control>
+        <control type="group">
+            <description>Totals count movies</description>
+            <animation effect="fade" start="0" end="100" time="600" reversible="false">Visible</animation>
+            <posx>120</posx>
+            <visible>System.IdleTime(3) + Container(300).HasFocus(2)</visible>
+            <control type="label">
+                <description>Total</description>
+                <posy>620</posy>
+                <include>Template_TotalsLabel</include>
+                <font>Light_Uppercase_36</font>
+                <label>$INFO[Window.Property(Movies.Count)] $LOCALIZE[20161]</label>
+            </control>
+            <control type="label">
+                <description>Watched</description>
+                <posy>660</posy>
+                <include>Template_TotalsLabel</include>
+                <font>Light_Uppercase_19</font>
+                <label>$INFO[Window.Property(Movies.Watched)] $LOCALIZE[32003]</label>
+            </control>
+            <control type="label">
+                <description>Unwatched</description>
+                <posy>685</posy>
+                <include>Template_TotalsLabel</include>
+                <font>Light_Uppercase_19</font>
+                <label>$INFO[Window.Property(Movies.UnWatched)] $LOCALIZE[32004]</label>
+            </control>
+        </control>
+        <control type="group">
+            <description>Totals count episodes</description>
+            <animation effect="fade" start="0" end="100" time="600" reversible="false">Visible</animation>
+            <posx>390</posx>
+            <visible>System.IdleTime(3) + Container(300).HasFocus(3)</visible>
+            <control type="label">
+                <description>Total</description>
+                <posy>620</posy>
+                <include>Template_TotalsLabel</include>
+                <font>Light_Uppercase_36</font>
+                <label>$INFO[Window.Property(Episodes.Count)] $LOCALIZE[20453] $LOCALIZE[20161]</label>
+            </control>
+            <control type="label">
+                <description>Watched</description>
+                <posy>660</posy>
+                <include>Template_TotalsLabel</include>
+                <font>Light_Uppercase_19</font>
+                <label>$INFO[Window.Property(Episodes.Watched)] $LOCALIZE[32003]</label>
+            </control>
+            <control type="label">
+                <description>Unwatched</description>
+                <posy>685</posy>
+                <include>Template_TotalsLabel</include>
+                <font>Light_Uppercase_19</font>
+                <label>$INFO[Window.Property(Episodes.UnWatched)] $LOCALIZE[32004]</label>
+            </control>
         </control>
         <control type="group">
             <include>Animation_WindowOpen</include>
             <control type="list" id="300">
                 <description>Home menu</description>
-                <posx>100</posx>
+                <posx>100</posx>    
                 <posy>400</posy>
                 <width>1280</width>
                 <height>300</height>
@@ -41,6 +95,7 @@
                 <focusposition>0</focusposition>
                 <scrolltime>200</scrolltime>
                 <orientation>horizontal</orientation>
+                <animation effect="slide" start="0,0" end="135,0" time="0" condition="!System.HasMedia">conditional</animation>
                 <itemlayout width="270" height="300">
                     <control type="image">
                         <posx>71</posx>
@@ -49,7 +104,7 @@
                         <width>128</width>
                         <aspectratio>stretch</aspectratio>
                         <texture>$INFO[ListItem.ActualIcon]</texture>
-                        <colordiffuse>aada3a3a3</colordiffuse>
+                        <colordiffuse>LightGrey</colordiffuse>
                     </control>
                 </itemlayout>
                 <focusedlayout width="270" height="300">
@@ -61,7 +116,7 @@
                         <aspectratio>stretch</aspectratio>
                         <texture>veritas/poster_glow.png</texture>
                         <animation effect="zoom" start="100" end="128" tween="back" easing="out" time="400" center="auto" reversible="false">Focus</animation>
-                        <colordiffuse>ff0078b5</colordiffuse>
+                        <colordiffuse>Glow</colordiffuse>
                     </control>
                     <control type="label">
                         <posx>135</posx>
@@ -72,11 +127,12 @@
                         <aligny>center</aligny>
                         <info>ListItem.Label</info>
                         <font>Light_Uppercase_36</font>
-                        <textcolor>white</textcolor>
+                        <textcolor>White</textcolor>
                         <animation type="Focus" reversible="false">
-                            <effect type="slide" start="0,-20" end="0,0" time="400" />
-                            <effect type="fade" start="0" end="100" time="600" />
+                            <effect type="slide" start="0,-20" end="0,0" time="200" />
+                            <effect type="fade" start="0" end="100" time="400" />
                         </animation>
+                        <animation effect="fade" start="100" end="0" time="200" reversible="false" condition="System.IdleTime(3) + [Container(300).HasFocus(2) | Container(300).HasFocus(3)]">conditional</animation>
                     </control>
                     <control type="image">
                         <posx>71</posx>

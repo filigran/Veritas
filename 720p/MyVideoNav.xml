@@ -28,7 +28,6 @@
                     <width>79</width>
                     <height>80</height>
                     <texture border="5">veritas/scrolling_letter.png</texture>
-                    <colordiffuse>ffffffff</colordiffuse>
                 </control>
                 <control type="label">
                     <posx>0</posx>
@@ -38,7 +37,7 @@
                     <align>center</align>
                     <aligny>center</aligny>
                     <label>[B]$INFO[ListItem.SortLetter][/B]</label>
-                    <textcolor>black</textcolor>
+                    <textcolor>Black</textcolor>
                     <font>Normal_40</font>
                 </control>
             </control>

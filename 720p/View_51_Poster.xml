@@ -4,10 +4,7 @@
     <include name="View_51_Poster">
         <control type="group">
             <description>Poster View (id=51)</description>
-            <animation type="Conditional" condition="ControlGroup(9000).HasFocus()">
-                <effect type="fade" start="100" end="50" time="200" />
-                <effect type="zoom" center="860,360" start="100" end="90" time="200" />
-            </animation>
+            <include>Animation_LeftMenu</include>
             <control type="image">
                 <posx>164</posx>
                 <posy>324</posy>
@@ -16,7 +13,7 @@
                 <fadetime>100</fadetime>
                 <aspectratio align="left" aligny="top">stretch</aspectratio>
                 <texture>veritas/poster_glow.png</texture>
-                <colordiffuse>ff1774b5</colordiffuse>
+                <colordiffuse>Glow</colordiffuse>
                 <visible>Control.IsVisible(51)</visible>
             </control>
             <control type="fixedlist" id="51">
@@ -37,7 +34,7 @@
                     <control type="group">
                         <animation effect="fade" start="100" end="0" time="500" condition="[System.IdleTime(3) + Control.HasFocus(51)] | Window.IsVisible(2003)">conditional</animation>
                         <control type="image">
-                            <description>Poster glow</description>
+                            <description>Poster shadow</description>
                             <posx>-5</posx>
                             <posy>38</posy>
                             <width>179</width>
@@ -55,7 +52,7 @@
                             <fadetime>100</fadetime>
                             <aspectratio align="left" aligny="top">stretch</aspectratio>
                             <texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
-                            <colordiffuse>ff8f8f8f</colordiffuse>
+                            <colordiffuse>UnfocusedPoster</colordiffuse>
                         </control>
                         <control type="image">
                             <description>Poster reflection</description>
@@ -66,7 +63,7 @@
                             <fadetime>100</fadetime>
                             <aspectratio align="left" aligny="top">stretch</aspectratio>
                             <texture background="true" diffuse="veritas/poster_gradient.png" flipy="true" fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
-                            <colordiffuse>22ffffff</colordiffuse>
+                            <colordiffuse>Divider</colordiffuse>
                         </control>
                         <control type="image">
                             <posx>123</posx>
@@ -75,7 +72,7 @@
                             <height>40</height>
                             <aspectratio>keep</aspectratio>
                             <texture background="true">veritas/$INFO[ListItem.Overlay]</texture>
-                            <colordiffuse>8800ff00</colordiffuse>
+                            <colordiffuse>WatchedFaded</colordiffuse>
                             <visible>StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
                         </control>
                     </control>
@@ -95,7 +92,7 @@
                             <fadetime>100</fadetime>
                             <aspectratio align="left" aligny="top">stretch</aspectratio>
                             <texture>veritas/poster_shadow.png</texture>
-                            <colordiffuse>ff000000</colordiffuse>
+                            <colordiffuse>Black</colordiffuse>
                         </control>
                         <control type="image">
                             <posx>6</posx>
@@ -123,7 +120,7 @@
                             <height>35</height>
                             <aspectratio>keep</aspectratio>
                             <texture>veritas/$INFO[ListItem.Overlay]</texture>
-                            <colordiffuse>ff00ff00</colordiffuse>
+                            <colordiffuse>Green</colordiffuse>
                             <animation effect="zoom" center="auto" start="0" end="100" time="200" reversible="false">Visible</animation>
                             <visible>StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
                             <visible>!Window.IsVisible(2003) | [Window.IsVisible(2003) + !Control.HasFocus(50)]</visible>
@@ -139,7 +136,7 @@
                     <posy>480</posy>
                     <width>900</width>
                     <font>Light_Uppercase_36</font>
-                    <textcolor>ffd3d3d3</textcolor>
+                    <textcolor>LightGrey</textcolor>
                     <info>Listitem.Label</info>
                 </control>
                 <control type="grouplist">
@@ -153,7 +150,7 @@
                         <width min="200" max="900">auto</width>
                         <height>40</height>
                         <font>Light_Uppercase_19</font>
-                        <textcolor>ffa1a1a1</textcolor>
+                        <textcolor>EpisodeInfo</textcolor>
                         <label>$INFO[ListItem.Year,,  •  ]$INFO[ListItem.Genre]$INFO[ListItem.Duration,  •  , $LOCALIZE[32000]]  •  </label>
                         <visible>Container.Content(Movies)</visible>
                     </control>
@@ -163,7 +160,7 @@
                         <height>40</height>
                         <aspectratio>keep</aspectratio>
                         <texture>other_textures/LeftRating/$INFO[ListItem.StarRating]</texture>
-                        <colordiffuse>ffffff80</colordiffuse>
+                        <colordiffuse>Rating</colordiffuse>
                     </control>
                 </control>
                 <control type="fadelabel">
@@ -171,7 +168,7 @@
                     <posy>515</posy>
                     <width>900</width>
                     <font>Light_Uppercase_19</font>
-                    <textcolor>ffa1a1a1</textcolor>
+                    <textcolor>EpisodeInfo</textcolor>
                     <label>$INFO[ListItem.Year]$INFO[ListItem.Genre, • ]$INFO[ListItem.Duration, • , $LOCALIZE[32000]]$INFO[ListItem.Rating, • ]</label>
                     <label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[32002]]$INFO[ListItem.Property(WatchedEpisodes), • , $LOCALIZE[32003]]$INFO[ListItem.Property(UnWatchedEpisodes), • , $LOCALIZE[32004]]</label>
                     <label>$INFO[Window(Home).Property(NextAired.NextSeasonNumber),$LOCALIZE[32001]: (S]$INFO[Window(Home).Property(NextAired.NextEpisodeNumber),E,) ]$INFO[Window(Home).Property(NextAired.NextDate)]</label>
@@ -183,7 +180,7 @@
                     <posy>515</posy>
                     <width>900</width>
                     <font>Light_Uppercase_19</font>
-                    <textcolor>ffa1a1a1</textcolor>
+                    <textcolor>EpisodeInfo</textcolor>
                     <label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[32002]]$INFO[ListItem.Property(WatchedEpisodes), • , $LOCALIZE[32003]]$INFO[ListItem.Property(UnWatchedEpisodes), • , $LOCALIZE[32004]]</label>
                     <pauseatend>3000</pauseatend>
                     <visible>Container.Content(Seasons)</visible>
@@ -194,7 +191,7 @@
                     <width>800</width>  
                     <height>118</height>
                     <font>Normal_24</font>
-                    <textcolor>ffd3d3d3</textcolor>
+                    <textcolor>LightGrey</textcolor>
                     <info>Listitem.Plot</info>
                     <autoscroll delay="10000" time="4500" repeat="10000">true</autoscroll>
                     <visible>!IsEmpty(ListItem.Plot)</visible>

@@ -16,7 +16,7 @@
                 <align>right</align>
                 <aligny>top</aligny>
                 <info>System.Time</info>
-                <textcolor>white</textcolor>
+                <textcolor>White</textcolor>
                 <font>Light_Uppercase_36</font>
             </control>
             <control type="label">
@@ -27,7 +27,7 @@
                 <align>right</align>
                 <aligny>top</aligny>
                 <info>System.Date(DDD d MMM)</info>
-                <textcolor>ffb2b2b2</textcolor>
+                <textcolor>EpisodeInfo</textcolor>
                 <font>Light_Uppercase_19</font>
             </control>
         </control>

@@ -11,7 +11,7 @@
             <fadetime>100</fadetime>
             <aspectratio align="left" aligny="top">stretch</aspectratio>
             <texture>veritas/poster_glow.png</texture>
-            <colordiffuse>ff1774b5</colordiffuse>
+            <colordiffuse>Glow</colordiffuse>
             <visible>Control.IsVisible(512)</visible>
         </control>
         <control type="fixedlist" id="512">
@@ -50,7 +50,7 @@
                         <fadetime>100</fadetime>
                         <aspectratio align="left" aligny="top">stretch</aspectratio>
                         <texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
-                        <colordiffuse>ff8f8f8f</colordiffuse>
+                        <colordiffuse>UnfocusedPoster</colordiffuse>
                     </control>
                     <control type="image">
                         <description>Poster reflection</description>
@@ -61,7 +61,7 @@
                         <fadetime>100</fadetime>
                         <aspectratio align="left" aligny="top">stretch</aspectratio>
                         <texture background="true" diffuse="veritas/poster_gradient.png" flipy="true" fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
-                        <colordiffuse>22ffffff</colordiffuse>
+                        <colordiffuse>Divider</colordiffuse>
                     </control>
                 </control>
             </itemlayout>
@@ -82,7 +82,7 @@
                         <fadetime>100</fadetime>
                         <aspectratio align="left" aligny="top">stretch</aspectratio>
                         <texture>veritas/poster_shadow.png</texture>
-                        <colordiffuse>ff000000</colordiffuse>
+                        <colordiffuse>Black</colordiffuse>
                     </control>
                     <control type="image">
                         <posx>6</posx>
@@ -120,7 +120,7 @@
                         <fadetime>100</fadetime>
                         <aspectratio align="left" aligny="top">stretch</aspectratio>
                         <texture>veritas/poster_shadow.png</texture>
-                        <colordiffuse>ff000000</colordiffuse>
+                        <colordiffuse>Black</colordiffuse>
                     </control>
                     <control type="image">
                         <posx>6</posx>
@@ -151,7 +151,7 @@
                 <posy>480</posy>
                 <width>900</width>
                 <font>Light_Uppercase_36</font>
-                <textcolor>ffd3d3d3</textcolor>
+                <textcolor>LightGrey</textcolor>
                 <info>Listitem.Label</info>
             </control>
             <control type="fadelabel">
@@ -159,7 +159,7 @@
                 <posy>515</posy>
                 <width>900</width>
                 <font>Light_Uppercase_19</font>
-                <textcolor>ffa1a1a1</textcolor>
+                <textcolor>EpisodeInfo</textcolor>
                 <label>$INFO[ListItem.Studio]$INFO[ListItem.Genre, • ]$INFO[ListItem.Premiered, • ]</label>
                 <pauseatend>3000</pauseatend>
             </control>
@@ -169,7 +169,7 @@
                 <width>800</width>
                 <height>118</height>
                 <font>Normal_24</font>
-                <textcolor>ffd3d3d3</textcolor>
+                <textcolor>LightGrey</textcolor>
                 <info>Listitem.Plot</info>
                 <autoscroll delay="10000" time="4500" repeat="10000">true</autoscroll>
                 <visible>!IsEmpty(ListItem.Plot)</visible>

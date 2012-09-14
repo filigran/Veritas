@@ -52,7 +52,7 @@
                     <align>left</align>
                     <aligny>top</aligny>
                     <font>Light_Uppercase_19</font>
-                    <textcolor>ffb2b2b2</textcolor>
+                    <textcolor>EpisodeInfo</textcolor>
                     <label>20339</label>
                 </control>
                 <control type="image">
@@ -63,7 +63,7 @@
                     <height>1</height>
                     <aspectratio align="center" aligny="center">keep</aspectratio>
                     <texture>veritas/divider.png</texture>
-                    <colordiffuse>33ffffff</colordiffuse>
+                    <colordiffuse>Divider</colordiffuse>
                 </control>
                 <control type="label">
                     <description>Writer label</description>
@@ -74,7 +74,7 @@
                     <align>left</align>
                     <aligny>top</aligny>
                     <font>Light_Uppercase_19</font>
-                    <textcolor>ffb2b2b2</textcolor>
+                    <textcolor>EpisodeInfo</textcolor>
                     <label>20417</label>
                 </control>
                 <control type="image">
@@ -85,7 +85,7 @@
                     <height>1</height>
                     <aspectratio align="center" aligny="center">keep</aspectratio>
                     <texture>veritas/divider.png</texture>
-                    <colordiffuse>33ffffff</colordiffuse>
+                    <colordiffuse>Divider</colordiffuse>
                 </control>
                 <control type="label">
                     <description>Path label</description>
@@ -96,7 +96,7 @@
                     <align>left</align>
                     <aligny>top</aligny>
                     <font>Light_Uppercase_19</font>
-                    <textcolor>ffb2b2b2</textcolor>
+                    <textcolor>EpisodeInfo</textcolor>
                     <label>573</label>
                 </control>
                 <control type="image">
@@ -107,7 +107,7 @@
                     <height>2</height>
                     <aspectratio align="center" aligny="center">keep</aspectratio>
                     <texture>veritas/divider.png</texture>
-                    <colordiffuse>33ffffff</colordiffuse>
+                    <colordiffuse>Divider</colordiffuse>
                 </control>
                 <control type="label">
                     <description>Cast label</description>
@@ -118,7 +118,7 @@
                     <align>left</align>
                     <aligny>top</aligny>
                     <font>Light_Uppercase_19</font>
-                    <textcolor>ffb2b2b2</textcolor>
+                    <textcolor>EpisodeInfo</textcolor>
                     <label>206</label>
                 </control>
             </control>
@@ -134,7 +134,7 @@
                     <align>left</align>
                     <aligny>top</aligny>
                     <font>Light_Uppercase_19</font>
-                    <textcolor>white</textcolor>
+                    <textcolor>White</textcolor>
                     <pauseatend>5000</pauseatend>
                     <label fallback="32010">$INFO[Listitem.Director]</label>
                 </control>
@@ -147,7 +147,7 @@
                     <align>left</align>
                     <aligny>top</aligny>
                     <font>Light_Uppercase_19</font>
-                    <textcolor>white</textcolor>
+                    <textcolor>White</textcolor>
                     <pauseatend>5000</pauseatend>
                     <label fallback="32010">$INFO[Listitem.Writer]</label>
                 </control>
@@ -160,7 +160,7 @@
                     <align>left</align>
                     <aligny>top</aligny>
                     <font>Light_Uppercase_19</font>
-                    <textcolor>white</textcolor>
+                    <textcolor>White</textcolor>
                     <pauseatend>5000</pauseatend>
                     <label fallback="32010">$INFO[Listitem.FilenameAndPath]</label>
                 </control>
@@ -186,7 +186,7 @@
                             <font>Light_Uppercase_19</font>
                             <aligny>top</aligny>
                             <align>left</align>
-                            <shadowcolor>black</shadowcolor>
+                            <shadowcolor>Black</shadowcolor>
                             <label fallback="32010">$INFO[Listitem.Label]</label>
                         </control>
                     </itemlayout>
@@ -198,7 +198,7 @@
                             <height>23</height>
                             <aligny>top</aligny>
                             <align>left</align>
-                            <shadowcolor>black</shadowcolor>
+                            <shadowcolor>Black</shadowcolor>
                             <font>Light_Uppercase_19</font>
                             <label fallback="32010">$INFO[Listitem.Label]</label>
                             <visible>!Control.HasFocus(50)</visible>
@@ -210,8 +210,8 @@
                             <height>23</height>
                             <aligny>top</aligny>
                             <align>left</align>
-                            <textcolor>ff00b8f5</textcolor>
-                            <shadowcolor>black</shadowcolor>
+                            <textcolor>Selected</textcolor>
+                            <shadowcolor>Black</shadowcolor>
                             <font>Light_Uppercase_19</font>
                             <label fallback="32010">$INFO[Listitem.Label]</label>
                             <visible>Control.HasFocus(50)</visible>
@@ -235,8 +235,8 @@
                     <width>200</width>
                     <texturefocus>-</texturefocus>
                     <texturenofocus>-</texturenofocus>
-                    <focusedcolor>ff00b8f5</focusedcolor>
-                    <disabledcolor>ff808080</disabledcolor>
+                    <focusedcolor>Selected</focusedcolor>
+                    <disabledcolor>Disabled</disabledcolor>
                     <font>Light_Uppercase_24</font>
                     <label>208</label>
                     <align>left</align>
@@ -247,8 +247,8 @@
                     <width>200</width>
                     <texturefocus>-</texturefocus>
                     <texturenofocus>-</texturenofocus>
-                    <focusedcolor>ff00b8f5</focusedcolor>
-                    <disabledcolor>ff808080</disabledcolor>
+                    <focusedcolor>Selected</focusedcolor>
+                    <disabledcolor>Disabled</disabledcolor>
                     <font>Light_Uppercase_24</font>
                     <label>13404</label>
                     <visible>Listitem.IsResumable</visible>
@@ -260,8 +260,8 @@
                     <width>200</width>
                     <texturefocus>-</texturefocus>
                     <texturenofocus>-</texturenofocus>
-                    <focusedcolor>ff00b8f5</focusedcolor>
-                    <disabledcolor>ff808080</disabledcolor>
+                    <focusedcolor>Selected</focusedcolor>
+                    <disabledcolor>Disabled</disabledcolor>
                     <font>Light_Uppercase_24</font>
                     <label>184</label>
                     <align>left</align>
@@ -272,8 +272,8 @@
                     <width>200</width>
                     <texturefocus>-</texturefocus>
                     <texturenofocus>-</texturenofocus>
-                    <focusedcolor>ff00b8f5</focusedcolor>
-                    <disabledcolor>ff808080</disabledcolor>
+                    <focusedcolor>Selected</focusedcolor>
+                    <disabledcolor>Disabled</disabledcolor>
                     <font>Light_Uppercase_24</font>
                     <label>20410</label>
                     <align>left</align>
@@ -284,8 +284,8 @@
                     <width>200</width>
                     <texturefocus>-</texturefocus>
                     <texturenofocus>-</texturenofocus>
-                    <focusedcolor>ff00b8f5</focusedcolor>
-                    <disabledcolor>ff808080</disabledcolor>
+                    <focusedcolor>Selected</focusedcolor>
+                    <disabledcolor>Disabled</disabledcolor>
                     <font>Light_Uppercase_24</font>
                     <label>32006</label>
                     <align>left</align>
@@ -297,8 +297,8 @@
                     <texturefocus>-</texturefocus>
                     <texturenofocus>-</texturenofocus>
                     <textcolor>White</textcolor>
-                    <focusedcolor>ff00b8f5</focusedcolor>
-                    <disabledcolor>ff808080</disabledcolor>
+                    <focusedcolor>Selected</focusedcolor>
+                    <disabledcolor>Disabled</disabledcolor>
                     <font>Light_Uppercase_24</font>
                     <label>20445</label>
                     <align>left</align>
@@ -310,8 +310,8 @@
                     <texturefocus>-</texturefocus>
                     <texturenofocus>-</texturenofocus>
                     <textcolor>White</textcolor>
-                    <focusedcolor>ff00b8f5</focusedcolor>
-                    <disabledcolor>ffa1a1a1</disabledcolor>
+                    <focusedcolor>Selected</focusedcolor>
+                    <disabledcolor>Disabled</disabledcolor>
                     <font>Light_Uppercase_24</font>
                     <label>32005</label>
                     <align>left</align>

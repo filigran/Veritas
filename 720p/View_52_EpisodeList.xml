@@ -1,40 +1,7 @@
 ﻿<includes>
-    <include name="Animation_EpisodePlot52">
-        <!-- Credits to Hitcher -->
-        <animation effect="slide" end="0,70" time="0" condition="Container(52).Row(1)">Conditional</animation>
-        <animation effect="slide" end="0,140" time="0" condition="Container(52).Row(2)">Conditional</animation>
-        <animation effect="slide" end="0,210" time="0" condition="Container(52).Row(3)">Conditional</animation>
-        <animation effect="slide" end="0,280" time="0" condition="Container(52).Row(4)">Conditional</animation>
-        <animation effect="slide" end="0,350" time="0" condition="Container(52).Row(5)">Conditional</animation>
-        <animation effect="slide" end="0,410" time="0" condition="Container(52).Row(6)">Conditional</animation>
-    </include>
-    <include name="Animation_EpisodeGlow52">
-        <!-- Credits to Hitcher -->
-        <animation effect="slide" end="0,70" time="0" condition="Container(52).Row(1)">Conditional</animation>
-        <animation effect="slide" end="0,140" time="0" condition="Container(52).Row(2)">Conditional</animation>
-        <animation effect="slide" end="0,210" time="0" condition="Container(52).Row(3)">Conditional</animation>
-        <animation effect="slide" end="0,280" time="0" condition="Container(52).Row(4)">Conditional</animation>
-        <animation effect="slide" end="0,350" time="0" condition="Container(52).Row(5)">Conditional</animation>
-        <animation effect="slide" end="0,410" time="0" condition="Container(52).Row(6)">Conditional</animation>
-    </include>
     <include name="View_52_EpisodeList">
         <control type="group">
-            <animation type="Conditional" condition="ControlGroup(9000).HasFocus()">
-                <effect type="fade" start="100" end="50" time="200" />
-                <effect type="zoom" center="860,360" start="100" end="90" time="200" />
-            </animation>
-            <control type="image">
-                <posx>130</posx>
-                <posy>220</posy>
-                <width>550</width>
-                <height>222</height>
-                <fadetime>100</fadetime>
-                <aspectratio align="left" aligny="top">stretch</aspectratio>
-                <texture>veritas/poster_glow.png</texture>
-                <colordiffuse>ff1774b5</colordiffuse>
-                <include>Animation_EpisodeGlow52</include>
-                <visible>Control.IsVisible(52) + !Window.IsVisible(2003)</visible>
-            </control>
+            <include>Animation_LeftMenu</include>
             <control type="group">
                 <visible>Control.IsVisible(52) + !Window.IsVisible(2003)</visible>
                 <animation effect="fade" start="0" end="100" time="200" reversible="false">VisibleChange</animation>
@@ -60,8 +27,8 @@
                     <aligny>top</aligny>
                     <label>$INFO[Listitem.Season,$LOCALIZE[20373] ]</label>
                     <font>Light_Uppercase_24</font>
-                    <textcolor>ffb2b2b2</textcolor>
-                    <shadowcolor>black</shadowcolor>
+                    <textcolor>EpisodeInfo</textcolor>
+                    <shadowcolor>Black</shadowcolor>
                     <animation effect="slide" start="0,0" end="0,-25" time="0" condition="!IsEmpty(Window(Home).Property(NextAired.NextDate))">conditional</animation>
                 </control>
                 <control type="label">
@@ -74,8 +41,8 @@
                     <aligny>top</aligny>
                     <label>$INFO[Container(52).NumItems,, $LOCALIZE[20453]]</label>
                     <font>Light_Uppercase_19</font>
-                    <textcolor>ffb2b2b2</textcolor>
-                    <shadowcolor>black</shadowcolor>
+                    <textcolor>EpisodeInfo</textcolor>
+                    <shadowcolor>Black</shadowcolor>
                     <animation effect="slide" start="0,0" end="0,-25" time="0" condition="!IsEmpty(Window(Home).Property(NextAired.NextDate))">conditional</animation>
                 </control>
                 <control type="label">
@@ -88,15 +55,15 @@
                     <aligny>top</aligny>
                     <label>$INFO[Window(Home).Property(NextAired.NextSeasonNumber),$LOCALIZE[32001]: (S]$INFO[Window(Home).Property(NextAired.NextEpisodeNumber),E,) ]$INFO[Window(Home).Property(NextAired.NextDate)]</label>
                     <font>Light_Uppercase_19</font>
-                    <textcolor>ffb2b2b2</textcolor>
-                    <shadowcolor>black</shadowcolor>
+                    <textcolor>EpisodeInfo</textcolor>
+                    <shadowcolor>Black</shadowcolor>
                 </control>
             </control>
             <control type="fixedlist" id="52">
                 <visible>Container.Content(Episodes)</visible>
-                <posx>200</posx>
+                <posx>130</posx>
                 <posy>130</posy>
-                <width>1080</width>
+                <width>1180</width>
                 <height>500</height>
                 <onleft>9000</onleft>
                 <onright>62</onright>
@@ -110,6 +77,7 @@
                 <focusposition>2</focusposition>
                 <itemlayout height="70">
                     <control type="group">
+                        <posx>70</posx>
                         <animation effect="fade" start="100" end="0" time="500" condition="[System.IdleTime(3) + Control.HasFocus(52)] | Window.IsVisible(2003)">conditional</animation>
                         <control type="image">
                             <description>Watched overlay</description>
@@ -120,7 +88,7 @@
                             <aspectratio>keep</aspectratio>
                             <aligny>center</aligny>
                             <texture>veritas/$INFO[ListItem.Overlay]</texture>
-                            <colordiffuse>8800ff00</colordiffuse>
+                            <colordiffuse>WatchedFaded</colordiffuse>
                             <visible>StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
                         </control>
                         <control type="label">
@@ -132,9 +100,8 @@
                             <aligny>center</aligny>
                             <info>Listitem.Episode</info>
                             <font>Light_Uppercase_24</font>
-                            <textcolor>white</textcolor>
-                            <shadowcolor>black</shadowcolor>
-                            <selectedcolor>ff498999</selectedcolor>
+                            <textcolor>White</textcolor>
+                            <shadowcolor>Black</shadowcolor>
                             <visible>IntegerGreaterThan(ListItem.Episode,9)</visible>
                         </control>
                         <control type="label">
@@ -146,9 +113,8 @@
                             <aligny>center</aligny>
                             <label>$INFO[Listitem.Episode,0]</label>
                             <font>Light_Uppercase_24</font>
-                            <textcolor>white</textcolor>
-                            <shadowcolor>black</shadowcolor>
-                            <selectedcolor>ff498999</selectedcolor>
+                            <textcolor>White</textcolor>
+                            <shadowcolor>Black</shadowcolor>
                             <visible>!IntegerGreaterThan(ListItem.Episode,9)</visible>
                         </control>
                         <control type="label">
@@ -160,9 +126,8 @@
                             <aligny>center</aligny>
                             <info>Listitem.Title</info>
                             <font>Light_Uppercase_19</font>
-                            <textcolor>white</textcolor>
-                            <shadowcolor>black</shadowcolor>
-                            <selectedcolor>ff498999</selectedcolor>
+                            <textcolor>White</textcolor>
+                            <shadowcolor>Black</shadowcolor>
                         </control>
                         <control type="label">
                             <description>Premiered and runtime label</description>
@@ -173,17 +138,28 @@
                             <align>left</align>
                             <label>$INFO[ListItem.Premiered,$LOCALIZE[20416]: ]$INFO[ListItem.Duration,   •   $LOCALIZE[2050]: , $LOCALIZE[32000]]</label>
                             <font>Light_Uppercase_19</font>
-                            <textcolor>ffb2b2b2</textcolor>
-                            <shadowcolor>black</shadowcolor>
-                            <selectedcolor>ff498999</selectedcolor>
+                            <textcolor>EpisodeInfo</textcolor>
+                            <shadowcolor>Black</shadowcolor>
                         </control>
                     </control>
                 </itemlayout>
                 <focusedlayout height="300">
                     <control type="group">
+                        <posx>70</posx>
                         <include>Animation_EpisodeFocusedSlide</include>
                         <control type="group">
                             <visible>!Window.IsVisible(2003)</visible>
+                            <control type="image">
+                                <posx>-70</posx>
+                                <posy>100</posy>
+                                <width>550</width>
+                                <height>222</height>
+                                <fadetime>100</fadetime>
+                                <aspectratio align="left" aligny="top">stretch</aspectratio>
+                                <texture>veritas/poster_glow.png</texture>
+                                <colordiffuse>Glow</colordiffuse>
+                                <visible>Control.IsVisible(52) + !Window.IsVisible(2003)</visible>
+                            </control>
                             <control type="image">
                                 <posx>-11</posx>
                                 <posy>216</posy>
@@ -192,7 +168,7 @@
                                 <fadetime>100</fadetime>
                                 <aspectratio align="left" aligny="top">stretch</aspectratio>
                                 <texture>veritas/poster_shadow.png</texture>
-                                <colordiffuse>ff000000</colordiffuse>
+                                <colordiffuse>Black</colordiffuse>
                             </control>
                             <control type="image">
                                 <description>Thumb</description>
@@ -220,7 +196,7 @@
                                 <height>40</height>
                                 <aspectratio>keep</aspectratio>
                                 <texture>veritas/$INFO[ListItem.Overlay]</texture>
-                                <colordiffuse>ff00ff00</colordiffuse>
+                                <colordiffuse>Green</colordiffuse>
                                 <visible>StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
                             </control>
                             <control type="group">
@@ -232,8 +208,7 @@
                                     <aligny>top</aligny>
                                     <info>ListItem.Episode</info>
                                     <font>Light_Uppercase_36</font>
-                                    <textcolor>white</textcolor>
-                                    <selectedcolor>ff498999</selectedcolor>
+                                    <textcolor>LightGrey</textcolor>
                                     <visible>IntegerGreaterThan(ListItem.Episode,9)</visible>
                                 </control>
                                 <control type="label">
@@ -242,8 +217,7 @@
                                     <aligny>top</aligny>
                                     <label>$INFO[Listitem.Episode,0]</label>
                                     <font>Light_Uppercase_36</font>
-                                    <textcolor>white</textcolor>
-                                    <selectedcolor>ff498999</selectedcolor>
+                                    <textcolor>LightGrey</textcolor>
                                     <visible>!IntegerGreaterThan(ListItem.Episode,9)</visible>
                                 </control>
                                 <control type="fadelabel">
@@ -252,7 +226,7 @@
                                     <width>550</width>
                                     <info>Listitem.Title</info>
                                     <font>Light_Uppercase_36</font>
-                                    <textcolor>ffd3d3d3</textcolor>
+                                    <textcolor>LightGrey</textcolor>
                                     <pauseatend>2000</pauseatend>
                                     <scrollout>false</scrollout>
                                 </control>
@@ -265,8 +239,7 @@
                                     <align>left</align>
                                     <label fallback="32010">$INFO[Listitem.Plot]</label>
                                     <font>Normal_24</font>
-                                    <textcolor>ffd3d3d3</textcolor>
-                                    <selectedcolor>white</selectedcolor>
+                                    <textcolor>LightGrey</textcolor>
                                     <autoscroll delay="10000" time="4500" repeat="10000">true</autoscroll>
                                 </control>
                             </control>
@@ -291,12 +264,13 @@
                     <animation effect="fade" start="0" end="100" time="400">visible</animation>
                 </control>
                 <control type="grouplist">
+                    <description>Focused episode info</description>
                     <posx>610</posx>
                     <posy>173</posy>
                     <visible>Control.IsVisible(52) + !Window.IsVisible(2003)</visible>
                     <orientation>horizontal</orientation>
                     <itemgap>0</itemgap>
-                    <include>Animation_EpisodePlot52</include>
+                    <include>Animation_EpisodeInfoSlide</include>
                     <animation effect="fade" reversible="false" start="50" end="100" time="400" condition="Control.HasFocus(52) + [!Container(52).OnNext + !Container(52).OnPrevious]">conditional</animation>
                     <control type="label">
                         <description>Duration + air date + rating dot</description>
@@ -304,22 +278,23 @@
                         <width min="100" max="500">auto</width>
                         <font>Light_Uppercase_19</font>
                         <label>$INFO[ListItem.Premiered,$LOCALIZE[20416]: ]$INFO[ListItem.Duration,   •   $LOCALIZE[2050]: , $LOCALIZE[32000]]   •   </label>
-                        <textcolor>ffa1a1a1</textcolor>
+                        <textcolor>EpisodeInfo</textcolor>
                     </control>
                     <control type="image">
-                        <description>Rating</description>
+                        <description>Rating stars</description>
                         <width>100</width>
                         <height>40</height>
                         <aspectratio>keep</aspectratio>
                         <texture>other_textures/LeftRating/$INFO[ListItem.StarRating]</texture>
-                        <colordiffuse>ffffff80</colordiffuse>
+                        <colordiffuse>Rating</colordiffuse>
                     </control>
                 </control>
                 <control type="group">
+                    <description>Visible when dialogvideoinfo is visible</description>
                     <visible>Window.IsVisible(2003)</visible>
                     <posx>200</posx>
                     <posy>270</posy>
-                    <animation effect="slide" start="0,0" end="0,180" time="400" reversible="false" tween="back" easing="out">Visible</animation>
+                    <animation effect="slide" end="0,180" time="400" reversible="false" tween="back" easing="out">visible</animation>
                     <control type="image">
                         <posx>-68</posx>
                         <posy>100</posy>
@@ -328,7 +303,7 @@
                         <fadetime>100</fadetime>
                         <aspectratio align="left" aligny="top">stretch</aspectratio>
                         <texture>veritas/poster_glow.png</texture>
-                        <colordiffuse>ff1774b5</colordiffuse>
+                        <colordiffuse>Glow</colordiffuse>
                     </control>
                     <control type="image">
                         <posx>-11</posx>
@@ -338,7 +313,7 @@
                         <fadetime>100</fadetime>
                         <aspectratio align="left" aligny="top">stretch</aspectratio>
                         <texture>veritas/poster_shadow.png</texture>
-                        <colordiffuse>ff000000</colordiffuse>
+                        <colordiffuse>Black</colordiffuse>
                     </control>
                     <control type="image">
                         <description>Thumb</description>
@@ -356,7 +331,7 @@
                         <width>368</width>
                         <height>213</height>
                         <aspectratio>stretch</aspectratio>
-                        <texture border="8">veritas/poster_frame.png</texture>
+                        <texture border="13">veritas/poster_frame.png</texture>
                     </control>
                     <control type="image">
                         <description>Watched overlay</description>
@@ -366,7 +341,7 @@
                         <height>40</height>
                         <aspectratio>keep</aspectratio>
                         <texture>veritas/$INFO[ListItem.Overlay]</texture>
-                        <colordiffuse>ff00ff00</colordiffuse>
+                        <colordiffuse>Green</colordiffuse>
                         <visible>StringCompare(ListItem.Overlay,OverlayWatched.png)</visible>
                     </control>
                     <control type="label">
@@ -377,8 +352,7 @@
                         <height>50</height>
                         <info>Listitem.Episode</info>
                         <font>Light_Uppercase_36</font>
-                        <textcolor>white</textcolor>
-                        <selectedcolor>ff498999</selectedcolor>
+                        <textcolor>LightGrey</textcolor>
                         <visible>IntegerGreaterThan(ListItem.Episode,9)</visible>
                     </control>
                     <control type="label">
@@ -389,20 +363,18 @@
                         <height>50</height>
                         <label>$INFO[Listitem.Episode,0]</label>
                         <font>Light_Uppercase_36</font>
-                        <textcolor>white</textcolor>
-                        <selectedcolor>ff498999</selectedcolor>
+                        <textcolor>LightGrey</textcolor>
                         <visible>!IntegerGreaterThan(ListItem.Episode,9)</visible>
                     </control>
                     <control type="fadelabel">
                         <description>Episode title</description>
-                        <posx>469</posx>
+                        <posx>478</posx>
                         <posy>7</posy>
                         <width>550</width>
                         <height>50</height>
                         <info>Listitem.Title</info>
                         <font>Light_Uppercase_36</font>
-                        <textcolor>white</textcolor>
-                        <selectedcolor>ff498999</selectedcolor>
+                        <textcolor>LightGrey</textcolor>
                         <pauseatend>2000</pauseatend>
                         <scrollout>false</scrollout>
                     </control>
@@ -416,8 +388,7 @@
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Premiered,$LOCALIZE[20416]: ]$INFO[ListItem.Duration,   •   $LOCALIZE[2050]: , $LOCALIZE[32000]]</label>
                         <font>Light_Uppercase_19</font>
-                        <textcolor>ffb2b2b2</textcolor>
-                        <selectedcolor>ffdddddd</selectedcolor>
+                        <textcolor>EpisodeInfo</textcolor>
                     </control>
                     <control type="textbox">
                         <description>Focused item plot</description>
@@ -428,8 +399,7 @@
                         <align>left</align>
                         <label fallback="32010">$INFO[Listitem.Plot]</label>
                         <font>Normal_24</font>
-                        <textcolor>white</textcolor>
-                        <selectedcolor>white</selectedcolor>
+                        <textcolor>LightGrey</textcolor>
                         <autoscroll delay="10000" time="4500" repeat="10000">true</autoscroll>
                     </control>
                </control>

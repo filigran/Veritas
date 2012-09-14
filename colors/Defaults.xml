@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <colors>
-    <color name="Black">FF000000</color>
-    <color name="White">FFFFFFFF</color>
+    <color name="Black">ff000000</color>
+    <color name="White">ffffffff</color>
+    <color name="Green">ff00ff00</color>
+    
+    <!-- Used in debug view -->
     <color name="Red">FFFF0000</color>
     <color name="Blue">FF0000FF</color>
-    <color name="Green">FF00FF00</color>
     <color name="BabyBlue">FF0080FF</color>
+    <!-- end debug -->
     
     <color name="FanartDiffuse">aa000000</color>
+    <color name="Glow">ff1774b5</color>
+    <color name="GlowFaded">221774b5</color>
+    <color name="WatchedFaded">8800ff00</color>
+    <color name="Rating">ffffff80</color>
+    <color name="LightGrey">ffd3d3d3</color>
+    <color name="EpisodeInfo">ffb2b2b2</color>
+    <color name="Divider">22ffffff</color>
+    <color name="Disabled">ff808080</color>
+    <color name="Selected">ff00b8f5</color>
+    <color name="UnfocusedPoster">ff8f8f8f</color>
 </colors>

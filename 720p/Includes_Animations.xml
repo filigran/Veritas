@@ -10,7 +10,7 @@
             <effect type="zoom" start="50" end="100" center="auto" easing="out" tween="back" time="300" delay="200" />
             <effect type="fade" start="0" end="100" time="300" delay="200" />
         </animation>
-    </include>    
+    </include>
     <include name="Animation_LauncherThumbFlipTall">
         <animation type="Hidden" reversible="false">
             <effect type="rotatey" start="0" end="-180" center="109,0" time="550" />
@@ -28,6 +28,16 @@
             <effect type="rotatey" start="180" end="0" center="159,0" time="540" />
             <effect type="fade" start="0" end="100" time="10" delay="285" />
         </animation>                                
+    </include>
+    <include name="Animation_EpisodeInfoSlide">
+        <!-- Moves the episode info with the image and plot.
+        If only grouplists would work in focusedlayout. Credits to Hitcher -->
+        <animation effect="slide" end="0,70" time="0" condition="Container(52).Row(1)">Conditional</animation>
+        <animation effect="slide" end="0,140" time="0" condition="Container(52).Row(2)">Conditional</animation>
+        <animation effect="slide" end="0,210" time="0" condition="Container(52).Row(3)">Conditional</animation>
+        <animation effect="slide" end="0,280" time="0" condition="Container(52).Row(4)">Conditional</animation>
+        <animation effect="slide" end="0,350" time="0" condition="Container(52).Row(5)">Conditional</animation>
+        <animation effect="slide" end="0,410" time="0" condition="Container(52).Row(6)">Conditional</animation>
     </include>
     <include name="Animation_EpisodeFocusedSlide">
         <animation effect="slide" start="0,-20" end="0,0" time="400" reversible="false" tween="back" easing="out" condition="Container.OnNext">Focus</animation>

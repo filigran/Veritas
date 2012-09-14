@@ -1,0 +1,9 @@
+<includes>
+    <include name="Template_TotalsLabel">
+        <width>500</width>
+        <height>100</height>
+        <align>center</align>
+        <aligny>top</aligny>
+        <textcolor>white</textcolor>
+    </include>
+</includes>

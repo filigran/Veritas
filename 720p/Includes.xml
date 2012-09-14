@@ -11,6 +11,7 @@
     <include file="View_52_EpisodeList.xml" />
     <include file="Includes_OSD.xml" />
     <include file="Includes_Debug.xml" />
+    <include file="Includes_Home.xml" />
     <include name="HiddenButton">
         <posx>-20</posx>
         <posy>-20</posy>
