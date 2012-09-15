@@ -23,7 +23,7 @@
             <description>Fanart overlay</description>
             <include>Dimensions_Fullscreen</include>
             <fadetime>0</fadetime>
-            <texture background="true">veritas/White.png</texture>
+            <texture background="true">veritas/white.png</texture>
             <colordiffuse>FanartDiffuse</colordiffuse>
         </control>
         <control type="group">
