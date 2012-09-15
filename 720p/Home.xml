@@ -28,6 +28,7 @@
         </control>
         <control type="group">
             <description>Totals count movies</description>
+            <animation effect="slide" start="0,0" end="135,0" time="0" condition="System.HasMediaDVD">conditional</animation>
             <animation effect="fade" start="0" end="100" time="600" reversible="false">Visible</animation>
             <posx>120</posx>
             <visible>System.IdleTime(3) + Container(300).HasFocus(2)</visible>
@@ -55,6 +56,7 @@
         </control>
         <control type="group">
             <description>Totals count episodes</description>
+            <animation effect="slide" start="0,0" end="135,0" time="0" condition="System.HasMediaDVD">conditional</animation>
             <animation effect="fade" start="0" end="100" time="600" reversible="false">Visible</animation>
             <posx>390</posx>
             <visible>System.IdleTime(3) + Container(300).HasFocus(3)</visible>
