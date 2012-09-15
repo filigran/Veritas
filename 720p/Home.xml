@@ -95,7 +95,7 @@
                 <focusposition>0</focusposition>
                 <scrolltime>200</scrolltime>
                 <orientation>horizontal</orientation>
-                <animation effect="slide" start="0,0" end="135,0" time="0" condition="!System.HasMedia">conditional</animation>
+                <animation effect="slide" start="0,0" end="135,0" time="0" condition="!System.HasMediaDVD">conditional</animation>
                 <itemlayout width="270" height="300">
                     <control type="image">
                         <posx>71</posx>
