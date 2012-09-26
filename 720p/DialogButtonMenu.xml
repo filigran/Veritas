@@ -14,19 +14,16 @@
         <control type="group">
             <posx>440</posx>
             <posy>260</posy>
-            <control type="image">
-                <posx>-20</posx>
-                <posy>-20</posy>
-                <width>440</width>
-                <height>220</height>
-                <texture border="22">other_textures/ContentPanel.png</texture>
-            </control>
+            <animation type="WindowOpen" reversible="false">
+                <effect type="zoom" start="50" end="100" center="640,360" easing="out" tween="back" time="300" />
+                <effect type="fade" start="0" end="100" time="300" />
+            </animation>
             <control type="grouplist" id="3110">
                 <posx>10</posx>
                 <posy>40</posy>
                 <width>380</width>
                 <height>382</height>
-                <itemgap>2</itemgap>
+                <itemgap>0</itemgap>
                 <onleft>-</onleft>
                 <onright>-</onright>
                 <onup>1</onup>
@@ -36,19 +33,33 @@
                     <description>Exit XBMC button</description>
                     <width>380</width>
                     <label>13012</label>
+                    <font>Light_Uppercase_36</font>
+                    <textcolor>White</textcolor>
+                    <focusedcolor>ff00b8f5</focusedcolor>
+                    <texturefocus>-</texturefocus>
+                    <texturenofocus>-</texturenofocus>
                     <onclick>Quit()</onclick>
-                    <visible>System.ShowExitButton</visible>
                 </control>
                 <control type="button" id="3112">
                     <description>Settings button</description>
                     <width>380</width>
                     <label>5</label>
+                    <font>Light_Uppercase_36</font>
+                    <textcolor>White</textcolor>
+                    <focusedcolor>ff00b8f5</focusedcolor>
+                    <texturefocus>-</texturefocus>
+                    <texturenofocus>-</texturenofocus>
                     <onclick>ActivateWindow(Settings)</onclick>
                 </control>
                 <control type="button" id="3113">
                     <description>Update Next Aired button</description>
                     <width>380</width>
                     <label>32009</label>
+                    <font>Light_Uppercase_36</font>
+                    <textcolor>White</textcolor>
+                    <focusedcolor>ff00b8f5</focusedcolor>
+                    <texturefocus>-</texturefocus>
+                    <texturenofocus>-</texturenofocus>
                     <onclick>RunScript(script.tv.show.next.aired,force=True)</onclick>
                     <visible>Container.Content(TVShows)</visible>
                 </control>
@@ -56,12 +67,22 @@
                     <description>File manager</description>
                     <width>380</width>
                     <label>7</label>
+                    <font>Light_Uppercase_36</font>
+                    <textcolor>White</textcolor>
+                    <focusedcolor>ff00b8f5</focusedcolor>
+                    <texturefocus>-</texturefocus>
+                    <texturenofocus>-</texturenofocus>
                     <onclick>ActivateWindow(FileManager)</onclick>
                 </control>
                 <control type="button" id="3115">
                     <description>Addons browser</description>
                     <width>380</width>
                     <label>10040</label>
+                    <font>Light_Uppercase_36</font>
+                    <textcolor>White</textcolor>
+                    <focusedcolor>ff00b8f5</focusedcolor>
+                    <texturefocus>-</texturefocus>
+                    <texturenofocus>-</texturenofocus>
                     <onclick>ActivateWindow(Programs)</onclick>
                     <visible>Window.IsVisible(Settings)</visible>   
                 </control>

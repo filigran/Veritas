@@ -5,10 +5,10 @@
 	<allowoverlay>yes</allowoverlay>
 
 	<controls>
-
+        <control type="group">
 		<include>GlobalBackground</include>
-
-		<control type="grouplist" id="3">
+        <include>Animation_LeftMenu</include>
+        <control type="grouplist" id="3">
 			<description>Button Area</description>
 			<posx>10</posx>
 			<posy>140</posy>
@@ -56,7 +56,7 @@
 			<description>Default Category Button</description>
 			<align>left</align>
 		</control>
-
+</control>
 	</controls>
 
 </window>

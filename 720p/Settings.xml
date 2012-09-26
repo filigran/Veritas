@@ -5,9 +5,10 @@
 	<allowoverlay>yes</allowoverlay>
 
 	<controls>
-
+        <control type="group">
 		<include>GlobalBackground</include>
-
+        <include>Animation_LeftMenu</include>
+            
 		<control type="list" id="9000">
 			<posx>520</posx>
 			<posy>108</posy>
@@ -111,7 +112,7 @@
 				</item>
 			</content>
 		</control>
-
+</control>
 	</controls>
 
 </window>

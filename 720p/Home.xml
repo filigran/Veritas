@@ -5,6 +5,9 @@
     <allowoverlay>yes</allowoverlay>
     <onload>RunScript("/storage/backup/apps/xbmccheckfile.py")</onload>
     <controls>
+        <control type="group">
+        <include>Animation_LeftMenu</include>
+        
         <control type="multiimage">
             <description>Menu fanart</description>
             <posx>0</posx>
@@ -31,7 +34,7 @@
             <animation effect="slide" start="0,0" end="135,0" time="0" condition="System.HasMediaDVD">conditional</animation>
             <animation effect="fade" start="0" end="100" time="600" reversible="false">Visible</animation>
             <posx>120</posx>
-            <visible>System.IdleTime(3) + Container(300).HasFocus(2)</visible>
+            <visible>System.IdleTime(3) + Container(300).HasFocus(2) + !Window.IsVisible(ShutdownMenu)</visible>
             <control type="label">
                 <description>Total</description>
                 <posy>620</posy>
@@ -59,7 +62,7 @@
             <animation effect="slide" start="0,0" end="135,0" time="0" condition="System.HasMediaDVD">conditional</animation>
             <animation effect="fade" start="0" end="100" time="600" reversible="false">Visible</animation>
             <posx>390</posx>
-            <visible>System.IdleTime(3) + Container(300).HasFocus(3)</visible>
+            <visible>System.IdleTime(3) + Container(300).HasFocus(3) + !Window.IsVisible(ShutdownMenu)</visible>
             <control type="label">
                 <description>Total</description>
                 <posy>620</posy>
@@ -180,6 +183,7 @@
                     </item>
                 </content>
             </control>
+        </control>
         </control>
     </controls>
 </window>

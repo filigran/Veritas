@@ -30,7 +30,8 @@
     <include name="GlobalOverlay">
         <control type="image">
             <include>Dimensions_Fullscreen</include>
-            <texture border="2">other_textures/black-back.png</texture>
+            <texture border="2">veritas/white.png</texture>
+            <colordiffuse>cc000000</colordiffuse>
         </control>
     </include>
     <include name="GlobalBackground">

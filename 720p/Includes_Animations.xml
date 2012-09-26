@@ -1,8 +1,8 @@
 <includes>
     <include name="Animation_LeftMenu">
-        <animation type="conditional" condition="ControlGroup(9000).HasFocus()">
+        <animation type="conditional" condition="ControlGroup(9000).HasFocus() | Window.IsVisible(ShutdownMenu)">
             <effect type="fade" start="100" end="50" time="200" />
-            <effect type="zoom" center="860,360" start="100" end="90" time="200" />
+            <effect type="zoom" center="auto" start="100" end="90" time="200" />
         </animation>
     </include>
     <include name="Animation_WindowOpen">
