@@ -5,9 +5,6 @@
     <allowoverlay>yes</allowoverlay>
     <onload>RunScript("/storage/backup/apps/xbmccheckfile.py")</onload>
     <controls>
-        <control type="group">
-        <include>Animation_LeftMenu</include>
-        
         <control type="multiimage">
             <description>Menu fanart</description>
             <posx>0</posx>
@@ -87,6 +84,7 @@
         </control>
         <control type="group">
             <include>Animation_WindowOpen</include>
+            <include>Animation_LeftMenu</include>
             <control type="list" id="300">
                 <description>Home menu</description>
                 <posx>100</posx>    
@@ -183,7 +181,6 @@
                     </item>
                 </content>
             </control>
-        </control>
         </control>
     </controls>
 </window>

@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
+<!-- Veritas -->
 <window type="buttonMenu" id="110">
     <defaultcontrol always="true">410</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
-
     <controls>
         <control type="button" id="410">
             <onfocus>Dialog.Close(movieinformation)</onfocus>
             <onfocus>Dialog.Close(contextmenu)</onfocus>
             <onfocus>SetFocus(3111)</onfocus>
+            <include>HiddenButton</include>
         </control>
-        <include>GlobalOverlay</include>
+        <control type="group">
+            <include>GlobalOverlay</include>
+            <animation effect="fade" start="0" end="100" time="200" reversible="false">WindowOpen</animation>
+        </control>
         <control type="group">
             <posx>440</posx>
             <posy>260</posy>
@@ -23,7 +26,7 @@
                 <posy>40</posy>
                 <width>380</width>
                 <height>382</height>
-                <itemgap>0</itemgap>
+                <itemgap>5</itemgap>
                 <onleft>-</onleft>
                 <onright>-</onright>
                 <onup>1</onup>
@@ -33,7 +36,7 @@
                     <description>Exit XBMC button</description>
                     <width>380</width>
                     <label>13012</label>
-                    <font>Light_Uppercase_36</font>
+                    <font>Light_Uppercase_24</font>
                     <textcolor>White</textcolor>
                     <focusedcolor>ff00b8f5</focusedcolor>
                     <texturefocus>-</texturefocus>
@@ -44,7 +47,7 @@
                     <description>Settings button</description>
                     <width>380</width>
                     <label>5</label>
-                    <font>Light_Uppercase_36</font>
+                    <font>Light_Uppercase_24</font>
                     <textcolor>White</textcolor>
                     <focusedcolor>ff00b8f5</focusedcolor>
                     <texturefocus>-</texturefocus>
@@ -55,7 +58,7 @@
                     <description>Update Next Aired button</description>
                     <width>380</width>
                     <label>32009</label>
-                    <font>Light_Uppercase_36</font>
+                    <font>Light_Uppercase_24</font>
                     <textcolor>White</textcolor>
                     <focusedcolor>ff00b8f5</focusedcolor>
                     <texturefocus>-</texturefocus>
@@ -67,7 +70,7 @@
                     <description>File manager</description>
                     <width>380</width>
                     <label>7</label>
-                    <font>Light_Uppercase_36</font>
+                    <font>Light_Uppercase_24</font>
                     <textcolor>White</textcolor>
                     <focusedcolor>ff00b8f5</focusedcolor>
                     <texturefocus>-</texturefocus>
@@ -78,7 +81,7 @@
                     <description>Addons browser</description>
                     <width>380</width>
                     <label>10040</label>
-                    <font>Light_Uppercase_36</font>
+                    <font>Light_Uppercase_24</font>
                     <textcolor>White</textcolor>
                     <focusedcolor>ff00b8f5</focusedcolor>
                     <texturefocus>-</texturefocus>
