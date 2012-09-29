@@ -12,6 +12,7 @@
             <include>View_50_List</include>
             <include>View_511_LauncherPosterTall</include>
             <include>View_512_LauncherPosterWide</include>
+            <include>ScrollingLetter</include>
         </control>
         <control type="grouplist" id="9000">
             <posx>10</posx>

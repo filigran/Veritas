@@ -14,33 +14,7 @@
             <include>View_50_List</include>
             <include>View_51_Poster</include>
             <include>View_52_EpisodeList</include>
-            <control type="group">
-                <description>Scrolling letter</description>
-                <visible>Container.Scrolling</visible>
-                <animation effect="fade" time="100">Visible</animation>
-                <animation effect="fade" time="300">Hidden</animation>
-                <posx>600</posx>
-                <posy>324</posy>
-                <width>320</width>
-                <control type="image">
-                    <posx>0</posx>
-                    <posy>0</posy>
-                    <width>79</width>
-                    <height>80</height>
-                    <texture border="5">veritas/scrolling_letter.png</texture>
-                </control>
-                <control type="label">
-                    <posx>0</posx>
-                    <posy>0</posy>
-                    <width>79</width>
-                    <height>80</height>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <label>[B]$INFO[ListItem.SortLetter][/B]</label>
-                    <textcolor>Black</textcolor>
-                    <font>Normal_40</font>
-                </control>
-            </control>
+            <include>ScrollingLetter</include>
         </control>
         <control type="grouplist" id="9000">
             <posx>10</posx>
