@@ -197,7 +197,7 @@
                     <width>900</width>
                     <font>Light_Uppercase_36</font>
                     <textcolor>LightGrey</textcolor>
-                    <info>VideoPlayer.Title</info>
+                    <info>Player.Title</info>
                 </control>
                 <control type="label">
                     <description>Movie info</description>

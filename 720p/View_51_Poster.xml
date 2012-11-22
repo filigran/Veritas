@@ -104,6 +104,20 @@
                             <texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Icon]</texture>
                             <visible>!Window.IsVisible(2003) | [Window.IsVisible(2003) + !Control.HasFocus(50)]</visible>
                         </control>
+                        <control type="progress">
+                            <posx>6</posx>
+                            <posy>247</posy>
+                            <width>169</width>
+                            <height>5</height>
+                            <texturebg>-</texturebg>
+                            <lefttexture>-</lefttexture>
+                            <midtexture border="0">veritas/white.png</midtexture>
+                            <righttexture>-</righttexture>
+                            <overlaytexture>-</overlaytexture>
+                            <colordiffuse>Glow</colordiffuse>
+                            <info>Listitem.PercentPlayed</info>
+                            <visible>ListItem.IsResumable</visible>
+                        </control>
                         <control type="image">
                             <posx>0</posx>
                             <posy>0</posy>
@@ -169,9 +183,9 @@
                     <width>900</width>
                     <font>Light_Uppercase_19</font>
                     <textcolor>EpisodeInfo</textcolor>
+                    <label>$INFO[Window(Home).Property(NextAired.NextSeasonNumber),$LOCALIZE[32001]: (S]$INFO[Window(Home).Property(NextAired.NextEpisodeNumber),E,) ]$INFO[Window(Home).Property(NextAired.NextDate)]</label>
                     <label>$INFO[ListItem.Year]$INFO[ListItem.Genre, • ]$INFO[ListItem.Duration, • , $LOCALIZE[32000]]$INFO[ListItem.Rating, • ]</label>
                     <label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[32002]]$INFO[ListItem.Property(WatchedEpisodes), • , $LOCALIZE[32003]]$INFO[ListItem.Property(UnWatchedEpisodes), • , $LOCALIZE[32004]]</label>
-                    <label>$INFO[Window(Home).Property(NextAired.NextSeasonNumber),$LOCALIZE[32001]: (S]$INFO[Window(Home).Property(NextAired.NextEpisodeNumber),E,) ]$INFO[Window(Home).Property(NextAired.NextDate)]</label>
                     <pauseatend>5000</pauseatend>
                     <visible>Container.Content(TVShows)</visible>
                 </control>
